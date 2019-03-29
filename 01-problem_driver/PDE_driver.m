@@ -18,11 +18,13 @@ numerical_method_info = pde_info.numerical_method_info;
 postprocessing = pde_info.postprocessing;
 
 refine_number = pde_info.refinement;
+%{
 if  refine_number == 1
     refine_flag = "uniform";  
 else
     refine_flag = "non-uniform";
 end
+%}
 
 final_plot_flag = false;
 
@@ -72,7 +74,7 @@ if type == 101 % simple Laplacian equation
     
 %% for loops  
     % initial mesh
-    my_mesh      = mesh(mesh_nodes,refine_flag);
+    my_mesh      = mesh(mesh_nodes);
     
     for ii = 1:num_iter
         
@@ -89,9 +91,8 @@ if type == 101 % simple Laplacian equation
             num_sol = HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info);
         end
         
-        % No postprocessing, compute values at Quadrature points
+        % First No postprocessing, compute values at Quadrature points
         post_flag = 0;
-        
         % num_sol_0: (2*(N_GQ+1)+N_uhat) x N_ele
         % store the GQ point values of q_h, u_h and the end point values of
         % uhat

@@ -23,17 +23,11 @@ classdef mesh
             nds       = length(nodes);
             obj.nodes = nodes;
             obj.N_nds = nds;
-            
             temp_h = nodes(2:end) - nodes(1:end-1);
             max_h = max(temp_h);
             min_h = min(temp_h);
             
-            obj.max_h = max_h;
-            if max_h == min_h
-                obj.type = "uniform";
-            else
-                obj.type = "non-uniform";
-            end
+            obj.max_h - 
             
         end
         
@@ -86,8 +80,12 @@ classdef mesh
             nds = obj.all_nodes();
             temp = (nds(1:end-1)+nds(2:end))./numeric_t(2); % compute all midpoints
             new_nds = sort([nds temp]); % put together and sort
-            
-            new_mesh = mesh(new_nds);
+            if obj.mesh_type == "uniform"
+                flag = "uniform";
+            else
+                flag = "non-uniform";
+            end
+            new_mesh = mesh(new_nds, flag);
             
             
         end
@@ -109,7 +107,7 @@ classdef mesh
                 
                 new_nds = sort([nds add_pts]); % put together and sort
                 
-                new_mesh = mesh(new_nds);
+                new_mesh = mesh(new_nds,"non-uniform");
               
             end
         end
@@ -140,11 +138,6 @@ classdef mesh
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         function nds = all_nodes(obj)
             nds = obj.nodes;
-        end
-        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        function h = get_max_h(obj)
-            h = obj.max_h;
         end
         
         
