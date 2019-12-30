@@ -9,3 +9,23 @@ Main features of this 1D code
 2. Non-problem specific (it can be easily extended to different 2nd order pdes)
 3. Post-processing technique (Convolution filtering & Recovery method)
 4. Adaptivity
+
+
+
+All the folders and functions
+
+1. problem driver
+    * running scripts
+2. mesh
+    * everything aout the mesh: generate, refine
+3. FEM_basics
+    * basis functions and quadratures
+    * matrices of basis functions
+4. HDG_solver
+    * local and global HDG solver
+5. postprocessing
+6. functional
+7. adaptivity
+8. logs
+9. results
+10. tests
