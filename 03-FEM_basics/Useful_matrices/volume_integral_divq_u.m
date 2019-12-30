@@ -1,4 +1,4 @@
-function A = volume_integral_divq_u(N,N_GQ)
+function A = volume_integral_divq_u(N_q,N_u,N_GQ)
 
 % compute (grad_q_i,u_j) on reference element with Gauss quadrature N_GQ
 % {grad_q_i} grad_q-variable basis
@@ -9,8 +9,8 @@ function A = volume_integral_divq_u(N,N_GQ)
 
 %% Get Vandermonde matrix for the basis
 
-temp_grad_q = my_gradvandermonde_q(r,N);
-temp_u = my_vandermonde_u(r,N);
+temp_grad_q = my_gradvandermonde_q(r,N_q);
+temp_u = my_vandermonde_u(r,N_u);
 
 %% Numerical quadrature
 
