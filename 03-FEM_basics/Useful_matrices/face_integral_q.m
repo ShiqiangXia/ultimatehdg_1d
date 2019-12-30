@@ -1,4 +1,4 @@
-function face_integra_q()
+function F= face_integral_q(N,ref_x)
 % evalue all q basis at ref_x
 % return column N * 1
 
