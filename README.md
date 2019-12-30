@@ -1,8 +1,8 @@
 # UltimateHDG_1D
 
-This project is the completion and extension of my previous HDG 1D code. 
+This project is the completion and extension of my previous HDG 1D code.
 
-Main features of this 1D code
+## Main features of this 1D code
 
 1. FEM foundations (general mesh, basis, quadrature, error-order)
 2. HDG method (static condensation)
@@ -12,22 +12,33 @@ Main features of this 1D code
 
 
 
-All the folders and functions
+## All the folders and functions
+:white_check_mark: done
 
+:wrench: developing
+
+:bulb: Empty
 1. problem driver
-    * running scripts
+    *  :wrench:running scripts
 2. mesh
-    * generate mesh; 
-    * mesh properties; 
-    * refine mesh(uniform and non-uniform)
+    * :white_check_mark:generate mesh  ;
+    * :white_check_mark: mesh properties ;
+    * :white_check_mark: refine mesh(uniform and non-uniform)
 3. FEM_basics
-    * basis functions and quadratures
-    * matrices of basis functions
+    * :white_check_mark: basis functions and quadratures
+    * :white_check_mark: matrices of basis functions
 4. HDG_solver
-    * local and global HDG solver
+    * :wrench: local solver
+    * :wrench: global HDG solver
 5. postprocessing
+    * :bulb: convoltuion
+    * :bulb: Recovery
 6. functional
+    * :bulb: Volume integral
+    * :bulb: boundary integral
 7. adaptivity
+    * :bulb: adjoint-correction without postprocessing
+    * :bulb: postprocessing and adjoint-correction
 8. logs
 9. results
 10. tests
