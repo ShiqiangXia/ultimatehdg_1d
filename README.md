@@ -17,7 +17,9 @@ All the folders and functions
 1. problem driver
     * running scripts
 2. mesh
-    * everything aout the mesh: generate, refine
+    * generate mesh; 
+    * mesh properties; 
+    * refine mesh(uniform and non-uniform)
 3. FEM_basics
     * basis functions and quadratures
     * matrices of basis functions
