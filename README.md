@@ -19,7 +19,9 @@ This project is the completion and extension of my previous HDG 1D code.
 
 :bulb: Empty
 1. problem driver
-    *  :wrench:running scripts
+    * :white_check_mark:main driver
+    * :wrench: PDE_driver
+    * :bulb: Functional driver
 2. mesh
     * :white_check_mark:generate mesh  ;
     * :white_check_mark: mesh properties ;
@@ -42,3 +44,8 @@ This project is the completion and extension of my previous HDG 1D code.
 8. logs
 9. results
 10. tests
+
+
+## Potential problems
+
+1. linespace with precision? 

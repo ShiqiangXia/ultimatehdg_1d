@@ -5,7 +5,7 @@ global class_t;
 class_t=precision;
 
 %%
-if user_info.type == 0
+if user_info.type == 0 
 %% Solve PDE
 PDE_driver(user_info.info)
 

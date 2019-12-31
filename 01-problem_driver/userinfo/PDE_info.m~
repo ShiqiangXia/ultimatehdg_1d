@@ -1,0 +1,30 @@
+classdef PDE_info
+    properties
+        pb  % problem type number
+            % 101 Laplace equation
+        exact_u % exact solution
+        
+        mesh0 % initial mesh
+        num_iteration % number of iteration
+        
+        numerical_method_info % numerical method class
+        
+        
+        
+        postprocessing % prost-processing
+        refinement % "uniform"; "non-uniform"
+               
+    end
+    
+    methods
+        function obj = PDE_info(pb,exact_u,mesh0,num_iter,numerical_method,postprocessing,refine)
+            obj.pb = pb;
+            obj.exact_u = exact_u;
+            obj.mesh0 = mesh0;
+            obj.num_iteration = num_iter;
+            obj.num
+            obj.postprocessing = postprocessing;
+            obj.refinement = refine;
+        end
+    end
+end
