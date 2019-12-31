@@ -42,7 +42,9 @@ if type == 101 % simple Laplacian equation
         
         num_element_list(ii) = my_mesh.N_elemets;
         % Solve the problem
-        num_sol = HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info);
+        if numerical_method_info.method == 1 % HDG method
+            num_sol = HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info);
+        end
         
         % No postprocessing
         post_flag = 0;
