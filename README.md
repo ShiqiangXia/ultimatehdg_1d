@@ -22,6 +22,12 @@ This project is the completion and extension of my previous HDG 1D code.
     * :white_check_mark:main driver
     * :wrench: PDE_driver
     * :bulb: Functional driver
+    * :wrench: user_info (two types of info)  
+      * PDE_info
+        * problem
+        * Gauss Quadrature & numerical method
+        * Post processing & Adaptivity
+      * Functional_info
 2. mesh
     * :white_check_mark:generate mesh  ;
     * :white_check_mark: mesh properties ;
@@ -29,6 +35,7 @@ This project is the completion and extension of my previous HDG 1D code.
 3. FEM_basics
     * :white_check_mark: basis functions and quadratures
     * :white_check_mark: matrices of basis functions
+    * :bulb: Error Calculation
 4. HDG_solver
     * :wrench: local solver
     * :wrench: global HDG solver
@@ -48,4 +55,4 @@ This project is the completion and extension of my previous HDG 1D code.
 
 ## Potential problems
 
-1. linespace with precision? 
+1. linespace with precision?

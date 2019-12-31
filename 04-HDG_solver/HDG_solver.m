@@ -1,4 +1,4 @@
-function HDG_solver(type,my_mesh,numerical_method_info)
+function HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info)
 
 %% Step 1: get local matrix on reference elements
 

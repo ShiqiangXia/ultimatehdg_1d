@@ -4,7 +4,7 @@ classdef PDE_info
         % problem 
         pb  % problem type number
             % 101 Laplace equation
-        exact_sol % exact solution
+        exact_func % exact solution
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % mesh 
@@ -26,9 +26,9 @@ classdef PDE_info
     end
     
     methods
-        function obj = PDE_info(pb,exact_sol,mesh0,num_iter,GQ,numerical_method,postprocessing,refine)
+        function obj = PDE_info(pb,exact_func,mesh0,num_iter,GQ,numerical_method,postprocessing,refine)
             obj.pb = pb;
-            obj.exact_sol = exact_sol;
+            obj.exact_func = exact_func;
             
             obj.mesh0 = mesh0;
             obj.num_iteration = num_iter;

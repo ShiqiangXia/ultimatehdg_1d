@@ -4,7 +4,7 @@ function PDE_driver(pde_info)
 
 %% set up
 type = pde_info.pb;
-exact_sol = pde_info.exact_sol;
+exact_func = pde_info.exact_func;
 
 mesh0 = pde_info.mesh0;
 num_iter = pde_info.num_iteration;
@@ -42,20 +42,20 @@ if type == 101 % simple Laplacian equation
         
         num_element_list(ii) = my_mesh.N_elemets;
         % Solve the problem
-        num_sol = HDG_solver(type,my_mesh,N_GQ,numerical_method_info);
+        num_sol = HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info);
         
         % No postprocessing
         post_flag = 0;
         num_sol_0 = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag);
         
         % Calculate error
-        [error_list_uh(ii),error_list_qh(ii),error_list_uhat(ii)] = Error_cal(exact_sol,num_sol_0,N_GQ,numerical_method_info);
+        [error_list_uh(ii),error_list_qh(ii),error_list_uhat(ii)] = Error_cal(exact_func,num_sol_0,N_GQ,numerical_method_info);
         
         if postprocessing ~= 0
             % Postprocessing
             num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing);
             % Calculate error
-            [error_list_uh_star(ii),error_list_qh_star(ii),error_list_uhat_star(ii)] = Error_cal(exact_sol,num_sol_star,N_GQ,numerical_method_info);
+            [error_list_uh_star(ii),error_list_qh_star(ii),error_list_uhat_star(ii)] = Error_cal(exact_func,num_sol_star,N_GQ,numerical_method_info);
         end
         
         % Refine the mesh
