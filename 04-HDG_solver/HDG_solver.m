@@ -1,7 +1,7 @@
 function HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info)
 
 N_ele = my_mesh.N_elemets();
-N_nds = my_mesh.N_nodes();
+%N_nds = my_mesh.N_nodes();
 
 N_u = numerical_method_info.pk_u + 1;
 N_q = numerical_method_info.pk_q + 1;
@@ -65,15 +65,22 @@ end
 
 %% Step 3: Call global solver
 
-%{
+
 temp_diag = [numeric_t('1'), -(taus(1:end-1)+taus(2:end)),numeric_t('1')];
-ML = [reshape(M(1,1,:),N_ele,1),numeric_t('0')];
-Mmid =[numeric_t('0'), reshape(M(1,2,:),N_ele,1)+reshape(M(2,1,:),N_ele,1),numeric_t('0')];
-MR = [numeric_t('0'),reshape(M(2,2,:),N_ele,1)];
+
+ML = [reshape(M(2,1,:),N_ele,1),numeric_t('0')];
+Mmid =[numeric_t('0'), reshape(M(2,2,:),1:N_ele-1,1)+reshape(M(1,1,:),2:N_ele,1),numeric_t('0')];
+MR = [numeric_t('0'),reshape(M(1,2,:),N_ele,1)];
+
+NN = reshape(N(1,:),N_ele,1);
 
 A_global = numeric_t(diag(temp_diag))+numeric_t(diag(Mmid)) +numeric_t(diag(ML,-1))+numeric_t(diag(MR,1)) ;
-b_global = zeros(N_nds,1,numeric_t);
-%}
+b_global = [exact_func(numeric_t('0'),0), -NN(1:end-1)-NN(2:end),exact_func(numeric_t('1'),0)];
+
+A_global = numeric_t( sparse(A_global));
+
+uhat_vector = A_global\b_global;
+
 
 
 %% Step 4: Recovery local DOF
