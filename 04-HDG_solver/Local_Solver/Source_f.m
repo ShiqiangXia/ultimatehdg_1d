@@ -10,6 +10,6 @@ f_values = exact_func(Ref_phy_map(r,h,mid),2); % f = - Laplace u
 
 temp_basis = my_vandermonde_u(r,N_u);
 
-my_f  = temp_basis'*(w.*f_values);
+my_f  = temp_basis'*(w.*f_values) * h/numeric_t('2');
 
 end
