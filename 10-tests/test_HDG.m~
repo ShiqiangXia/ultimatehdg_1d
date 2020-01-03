@@ -1,0 +1,17 @@
+% test script
+
+
+% set precision
+precision = "double";
+
+% define pde problem
+pb = 101;
+exact_func = @smooth_func101;
+mesh0 = 10;
+num_iter = 3;
+GQ = 3;
+pk_u = 1
+numerical_method = Numerical_method_info(1, pk_u,pk_q,basis_u,basis_q,tao_pow)
+my_pde_info = PDE_info(pb,exact_func,mesh0,num_iter,GQ,numerical_method,postprocessing,refine)
+
+my_user_info = User_info(0,my_pde_info);

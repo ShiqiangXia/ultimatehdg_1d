@@ -11,7 +11,7 @@ function [A,B,C,D,E]=Local_matrix_ref(Nu,Nq,basis_u,basis_q,N_GQ)
     
     D = [temp_q_L', -temp_q_R'];
     
-    E = [temp_u_L',temp_u_R];
+    E = [temp_u_L',temp_u_R'];
     
     
 end
