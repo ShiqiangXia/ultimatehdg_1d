@@ -7,12 +7,12 @@ precision = "double";
 % define pde problem
 pb = 101;
 exact_func = @smooth_func101;
-mesh0 = 10;
-num_iter = 3;
+mesh0 = 5;
+num_iter = 5;
 GQ = 3;
 method = 1 ; % HDG method
-pk_u = 1;
-pk_q = 1; 
+pk_u = 4;
+pk_q = 4; 
 basis_u = 1;
 basis_q = 1; 
 tao_pow = 0;
