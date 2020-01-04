@@ -19,7 +19,7 @@ This project is the completion and extension of my previous HDG 1D code.
 
 :bulb: Empty
 1. problem driver
-    * :white_check_mark:main driver
+    * :white_check_mark: main driver
     * :white_check_mark: PDE_driver
     * :bulb: Functional driver
     * :wrench: user_info (two types of info)  
