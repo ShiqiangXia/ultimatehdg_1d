@@ -4,7 +4,7 @@ function my_f = Source_f(exact_func,xL,xR,N_GQ,N_u)
 [r,w] = my_quadrature(N_GQ);
 
 h = abs(xR - xL);
-mid = abs(xR+xL)/numeric_t('2');
+mid = (xR+xL)/numeric_t('2');
 
 f_values = exact_func(Ref_phy_map(r,h,mid),2); % f = - Laplace u
 

@@ -39,7 +39,7 @@ This project is the completion and extension of my previous HDG 1D code.
 4. HDG_solver
     * :wrench: local solver
     * :wrench: global HDG solver
-    * :wrench: local recovery 
+    * :wrench: local recovery
 5. postprocessing
     * :bulb: convoltuion
     * :bulb: Recovery
@@ -57,6 +57,7 @@ This project is the completion and extension of my previous HDG 1D code.
 ## Potential problems
 
 1. linespace with precision?
+2. pass GQ points and weights, instead of computing every time 
 
 
 

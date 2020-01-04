@@ -51,13 +51,13 @@ if type == 101 % simple Laplacian equation
         num_sol_0 = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag);
         
         % Calculate error
-        [error_list_uh(ii),error_list_qh(ii),error_list_uhat(ii)] = Error_cal(exact_func,num_sol_0,N_GQ,numerical_method_info);
+        [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(my_mesh,exact_func,num_sol_0,N_GQ,numerical_method_info);
         
         if postprocessing ~= 0
             % Postprocessing
             num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing);
             % Calculate error
-            [error_list_uh_star(ii),error_list_qh_star(ii),error_list_uhat_star(ii)] = Error_cal(exact_func,num_sol_star,N_GQ,numerical_method_info);
+            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(exact_func,num_sol_star,N_GQ,numerical_method_info);
         end
         
         % Refine the mesh
