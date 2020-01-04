@@ -14,7 +14,13 @@ numerical_method_info = pde_info.numerical_method_info;
 
 
 postprocessing = pde_info.postprocessing;
-refine_flag = pde_info.refinement;
+refine_number = pde_info.refinement
+if  refine_number == 1
+    refine_flag = "uniform";
+    
+else
+    refine_flag = "non-uniform";
+end
 
 
 
@@ -61,13 +67,13 @@ if type == 101 % simple Laplacian equation
         end
         
         % Refine the mesh
-        if refine_flag == 1
+        if refine_number == 1
             my_mesh = my_mesh.mesh_uniform_refine();
-        elseif refine_flag == 2
-            refine_vector = Adaptivity(refine_flag,num_sol_0,N_GQ);
+        elseif refine_number == 2
+            refine_vector = Adaptivity(refine_number,num_sol_0,N_GQ);
             my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
-        elseif refine_flag == 3
-            refine_vector = Adaptivity(refine_flag,num_sol_star.N_GQ);
+        elseif refine_number == 3
+            refine_vector = Adaptivity(refine_number,num_sol_star.N_GQ);
             my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
         end
            

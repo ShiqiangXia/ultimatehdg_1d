@@ -16,9 +16,7 @@ hs = zeros(N_ele,1,numeric_t);
 r1 = [r;numeric_t('-1');numeric_t('1')];
 
 
-error_list_u = zeros(N_ele,1,numeric_t);
-error_list_q = zeros(N_ele,1,numeric_t);
-error_list_uhat = zeros(N_ele+1,1,numeric_t);
+
 
 for ii = 1:N_ele
     nds = my_mesh.get_faces(ii);
@@ -35,12 +33,12 @@ diff_u_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:)
 error_list_q = (w' * (diff_q_mtrix.^2))'.* (hs./numeric_t('2'));
 error_list_u = (w' * (diff_u_mtrix.^2))'.* (hs./numeric_t('2'));
 
-error_list_uhat =( exact_func(my_mesh.all_nodes(),0) - [num_sol_gq_pts(end-1,:),num_sol_gq_pts(end,end)] )';
+error_list_uhat =( exact_func(my_mesh.all_nodes(),0) - [num_sol_gq_pts(end-1,:),num_sol_gq_pts(end,end)] );
 
 
-error_q = sum(error_list_q);
-error_u = sum(error_list_u);
-error_uhat =sum(error_list_uhat);
+error_q = sqrt(sum(error_list_q));
+error_u = sqrt(sum(error_list_u));
+error_uhat =sqrt(sum(error_list_uhat.^2));
 
 
 end
