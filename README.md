@@ -20,7 +20,7 @@ This project is the completion and extension of my previous HDG 1D code.
 :bulb: Empty
 1. problem driver
     * :white_check_mark:main driver
-    * :wrench: PDE_driver
+    * :white_check_mark: PDE_driver
     * :bulb: Functional driver
     * :wrench: user_info (two types of info)  
       * PDE_info
@@ -35,12 +35,13 @@ This project is the completion and extension of my previous HDG 1D code.
 3. FEM_basics
     * :white_check_mark: basis functions and quadratures
     * :white_check_mark: matrices of basis functions
-    * :bulb: Error Calculation
+    * :white_check_mark: Error Calculation and Error order
 4. HDG_solver
-    * :wrench: local solver
-    * :wrench: global HDG solver
-    * :wrench: local recovery
+    * :white_check_mark: local solver & Local matrix
+    * :white_check_mark: global HDG solver
+    * :white_check_mark: local recovery
 5. postprocessing
+    * :white_check_mark: Evaluate at quadrature points
     * :bulb: convoltuion
     * :bulb: Recovery
 6. functional
@@ -57,7 +58,7 @@ This project is the completion and extension of my previous HDG 1D code.
 ## Potential problems
 
 1. linespace with precision?
-2. pass GQ points and weights, instead of computing every time 
+2. pass GQ points and weights, instead of computing every time
 
 
 
