@@ -22,6 +22,8 @@ if post_flag == 0
     out(2*n+1:end,:) = num_sol(N_q+N_u+1:end,:);
 %% Case 1: Convolution filtering 
 elseif post_flag == 1
+    % load coefficents
+    % Compute Gauss quadrture point values 
     
 %% Case 2: Recovery method
 else
