@@ -43,6 +43,7 @@ This project is the completion and extension of my previous HDG 1D code.
 5. postprocessing
     * :white_check_mark: Evaluate at quadrature points
     * :bulb: convoltuion
+      * Coefficients
     * :bulb: Recovery
 6. functional
     * :bulb: Volume integral
