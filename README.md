@@ -22,12 +22,12 @@ This project is the completion and extension of my previous HDG 1D code.
     * :white_check_mark: main driver
     * :white_check_mark: PDE_driver
     * :bulb: Functional driver
-    * :wrench: user_info (two types of info)  
+    * :white_check_mark: user_info (two types of info)  
       * PDE_info
         * problem
         * Gauss Quadrature & numerical method
         * Post processing & Adaptivity
-      * Functional_info
+      * :wrench: Functional_info
 2. mesh
     * :white_check_mark:generate mesh  ;
     * :white_check_mark: mesh properties ;
