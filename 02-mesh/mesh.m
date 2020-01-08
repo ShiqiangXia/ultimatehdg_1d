@@ -1,11 +1,18 @@
+% Mesh in 1D
+%
+% Oliver Xia 12/28/2019
+%
+% Assume we number the elements from the left to the right in ascending
+% order.
 classdef mesh
+    
     
     properties(Access = private)
         
         %% hide all properties 
         N_nds % number of nodes
         nodes % all the face points
-        type %  1: uniform mesh; not:0
+        type %  "uniform"; "non-uniform"
     end
     
     methods
@@ -61,6 +68,7 @@ classdef mesh
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         function new_mesh = mesh_uniform_refine(obj)
+            % Uniformly refine mesh
             nds = obj.all_nodes();
             temp = (nds(1:end-1)+nds(2:end))./numeric_t(2); % compute all midpoints
             new_nds = sort([nds temp]); % put together and sort
@@ -92,29 +100,7 @@ classdef mesh
                 new_nds = sort([nds add_pts]); % put together and sort
                 
                 new_mesh = mesh(new_nds,"non-uniform");
-                
-                %{
-                %% old code without vectorization
-                temp_nodes = zeros(1,2*num_ele+1, numeric_t);
-                pointer = 0;
-                for ii = 1:num_ele
-                    pointer = pointer+1;
-                    temp_nodes(pointer) = nds(ii);
-                    if (refine_vector(ii) == 1)
-                        pointer = pointer+1;
-                        temp_point = (nds(ii)+ nds(ii+1))/numeric_t('2');
-                        temp_nodes(pointer) = temp_point;
-                    end
-                    
-                    
-                end
-                
-                pointer = pointer+1;
-                temp_nodes(pointer) = nds(num_ele+1);
-                new_mesh = mesh(temp_nodes(1:pointer),"non-uniform");
-                %}
-                
-                
+              
             end
         end
         

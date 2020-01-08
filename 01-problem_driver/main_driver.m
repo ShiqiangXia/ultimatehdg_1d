@@ -7,11 +7,11 @@ class_t=precision;
 %%
 if user_info.type == 0 
 %% Solve PDE
-PDE_driver(user_info.info)
+    PDE_driver(user_info.info)
 
 else
 %% Solve Functional
-functional_driver(user_info.info)
+    functional_driver(user_info.info)
 
 end
 

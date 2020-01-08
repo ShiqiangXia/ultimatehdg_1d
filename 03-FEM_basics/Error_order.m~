@@ -1,7 +1,0 @@
-function [order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uh)
-
-order_q = log(error_list_qh(1:end-1)./error_list_qh(2:end))./(num_element_list(2:end)./num_element_list(1:end));
-order_u = log(error_list_uh(1:end-1)./error_list_uh(2:end))./(num_element_list(2:end)./num_element_list(1:end));
-
-
-end
