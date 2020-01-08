@@ -1,5 +1,9 @@
+%Oliver Xia 01/06/2020
+% Post-processing script
+
 function out = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag)
 
+%% set up
 [~,N_ele] = size(num_sol);
 N_u = numerical_method_info.pk_u + 1;
 N_q = numerical_method_info.pk_q + 1;
@@ -8,6 +12,7 @@ N_uhat = 2;
 n = length(r);
 
 out = zeros(2*n+N_uhat,N_ele,numeric_t);
+
 %% Case 0: just evaluate at quadrature points
 if post_flag == 0 
     temp_q = my_vandermonde_q(r,N_q);

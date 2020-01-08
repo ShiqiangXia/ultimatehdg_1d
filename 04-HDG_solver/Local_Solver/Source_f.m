@@ -1,6 +1,7 @@
 function my_f = Source_f(exact_func,xL,xR,N_GQ,N_u)
 % compute the integral (f, basis_u) on interval (xL, xR) with GQ order
 % N_GQ;
+
 [r,w] = my_quadrature(N_GQ);
 
 h = abs(xR - xL);

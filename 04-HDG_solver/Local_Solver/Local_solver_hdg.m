@@ -1,5 +1,9 @@
+% Oliver Xia 01/02/2020
+% Returnlocal solvers (A_loc, b_loc) and  local matrix (M,N)
+
 function [A_loc,b_loc,M,N,taus]=Local_solver_hdg(type,my_mesh,A,B,C,D,E,N_u,N_q,N_uhat,tau_pow,N_GQ,exact_func)
 
+%% set up
 N_ele = my_mesh.N_elemets();
 
 A_loc = zeros(N_q+N_u,N_uhat,N_ele,numeric_t);
@@ -9,10 +13,10 @@ N = zeros(2,N_ele,numeric_t);
 taus = zeros(N_ele,1,numeric_t);
 
 
-temp_M = zeros(N_q+N_u,N_q+N_u,numeric_t);
+%temp_M = zeros(N_q+N_u,N_q+N_u,numeric_t);
 
+% Loop each element
 for ii = 1:N_ele
-    
     
     
     nds = my_mesh.get_faces(ii);
@@ -24,10 +28,14 @@ for ii = 1:N_ele
     
     if type == 101 % solve laplaican problem
         
+        temp_M = [A * h /numeric_t('2'),-B;B',tau_loc*C];
+        
+        %{
         temp_M(1:N_q,1:N_q) = A * h /numeric_t('2');
-        temp_M(1:N_q,N_q+1:end) = - B;
-        temp_M(N_q+1:end,1:N_q) = B';
-        temp_M(N_q+1:end,N_q+1:end) = tau_loc*C;
+        temp_M(1:N_q,N_q+1:N_q+N_u) = - B;
+        temp_M(N_q+1:N_q+N_u,1:N_q) = B';
+        temp_M(N_q+1:N_q+N_u,N_q+1:N_q+N_u) = tau_loc*C;
+        %}
     
         DE = [D;tau_loc*E];
         
