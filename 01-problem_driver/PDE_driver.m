@@ -57,7 +57,7 @@ if type == 101 % simple Laplacian equation
             cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
             BB = zeros(length(pts),Nu,4*kk+1);
             for ss = 1:2*kk+1
-                BB(:,:,:) = BB(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:));
+                BB(:,:,:) = BB(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');
             end
             
             
@@ -98,7 +98,7 @@ if type == 101 % simple Laplacian equation
             % u_hstar
             num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing,BB);
             % Calculate error
-            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(exact_func,num_sol_star,N_GQ,numerical_method_info);
+            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_func,num_sol_star,N_GQ,numerical_method_info);
         end
         
         % Refine the mesh
@@ -120,9 +120,19 @@ end
 
 %% error and results
 
+fprintf("HDG error\n");
 % compute error order 
 [order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uhat);
 % print the result
 Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
+
+
+if postprocessing == 1 % Convolution Filter
+fprintf("Convolution Filtering Error\n");
+% compute error order 
+[order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
+% print the result
+Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
+end
 
 end

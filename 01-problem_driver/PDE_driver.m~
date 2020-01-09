@@ -45,13 +45,20 @@ if type == 101 % simple Laplacian equation
         error_list_uhat_star = zeros(num_iter,1,numeric_t);
         if postprocessing == 1 % Convolution Filter
             % precompute necessary matrix
+            % sum_r ( Cr * A_nmrj)
             % points of interests on ref element(Quadrature points)
             [pts,~] = my_quadrature(N_GQ);
+            pts = [pts;numeric_t('-1');numeric_t('1')];
+            
             kk = numerical_method_info.pk_u;
             Nu = kk+1;
             AA = Convolution_matrix(kk,Nu,pts,N_GQ);
             str = ['c', num2str(kk)];
             cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
+            BB = zeros(length(pts),Nu,4*kk+1);
+            for ss = 1:2*kk+1
+                BB(:,:,:) = BB(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');
+            end
             
             
         end
@@ -89,9 +96,9 @@ if type == 101 % simple Laplacian equation
             % num_sol_star: (2*(N_GQ+1)+N_uhat) x N_ele
             % store the GQ point values of q_hstar, u_hstar and the end point values of
             % u_hstar
-            num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing);
+            num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing,BB);
             % Calculate error
-            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(exact_func,num_sol_star,N_GQ,numerical_method_info);
+            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_func,num_sol_star,N_GQ,numerical_method_info);
         end
         
         % Refine the mesh
@@ -117,5 +124,11 @@ end
 [order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uhat);
 % print the result
 Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
+
+% compute error order 
+[order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
+% print the result
+Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
+
 
 end
