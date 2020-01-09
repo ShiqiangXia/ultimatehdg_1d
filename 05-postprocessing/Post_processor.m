@@ -1,7 +1,7 @@
 %Oliver Xia 01/06/2020
 % Post-processing script
 
-function out = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag)
+function out = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag,BB)
 
 %% set up
 [~,N_ele] = size(num_sol);

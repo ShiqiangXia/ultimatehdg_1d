@@ -19,7 +19,7 @@ basis_u = 1; % basis type (so far we only have 1)
 basis_q = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)
 numerical_method = Numerical_method_info(method, pk_u,pk_q,basis_u,basis_q,tao_pow);
-postprocessing = 0; % postprocessing or not
+postprocessing = 1; % postprocessing or not
 refine = 1; % refinement method: 1-->Uniform, 2-->non-uniform
 
 %% define PDE info
