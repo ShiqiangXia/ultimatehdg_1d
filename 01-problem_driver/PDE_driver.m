@@ -48,6 +48,8 @@ if type == 101 % simple Laplacian equation
             % sum_r ( Cr * A_nmrj)
             % points of interests on ref element(Quadrature points)
             [pts,~] = my_quadrature(N_GQ);
+            pts = [pts;numeric_t('-1');numeric_t('1')];
+            
             kk = numerical_method_info.pk_u;
             Nu = kk+1;
             AA = Convolution_matrix(kk,Nu,pts,N_GQ);
