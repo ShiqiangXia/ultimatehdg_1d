@@ -1,0 +1,23 @@
+function [breaks,break_flag] = Bspline_breaks(deg_bspine,temp)
+knots = (-deg_bspine:2:deg_bspine)*numeric_t('0.5');
+s_l = temp - numeric_t('0.5');
+s_r = temp + numeric_t('0.5');
+
+if s_l >= knots(end) || s_r<=knots(1)
+    break_flag = 1;
+    breaks = 0;
+    
+elseif s_l< knots(1) && s_r>knots(1)
+    break_flag = 2;
+    breaks = [knots(1),s_r];
+    
+elseif s_r>knots(end) && s_l<knots(end)
+    break_flag = 2;
+    breaks = [s_l,knots(end)];
+else
+    for ii = 1:deg_bspine
+        temp_x = knots(ii);
+    end
+end
+
+end
