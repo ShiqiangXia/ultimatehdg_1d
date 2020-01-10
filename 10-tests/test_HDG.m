@@ -8,15 +8,15 @@ precision = "double";
 pb = 101;
 exact_func = @smooth_func101; % exact solution
 mesh0 = 5; % initial number of elements
-num_iter = 5; % number of refinements
+num_iter = 1; % number of refinements
 GQ = 3; % Gauss Quadrature order  ---> accuracy 2N+1
 
 %% define numerical method
 method = 1 ; % HDG method
-pk_u = 1;  % polynomial order u
-pk_q = 1;  % polynomial order q
-basis_u = 2; % basis type (so far we only have 1)
-basis_q = 2; % basis type (so far we only have 1)
+pk_u = 2;  % polynomial order u
+pk_q = 2;  % polynomial order q
+basis_u = 1; % basis type (so far we only have 1)
+basis_q = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)
 numerical_method = Numerical_method_info(method, pk_u,pk_q,basis_u,basis_q,tao_pow);
 postprocessing = 1; % postprocessing or not
