@@ -6,7 +6,7 @@ function out = Bspline_int(deg_bspine,center_pt,Nu,N_GQ)
 
 % integration for each break
 if break_flag == 1
-    out = 0;
+    out = numeric_t('0');
 elseif break_flag == 2 ||break_flag==4
     x_l = breaks(1);
     x_r = breaks(2);

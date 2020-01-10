@@ -58,7 +58,7 @@ if type == 101 % simple Laplacian equation
             cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
             % old script
             %[AA,cr] = kernel_DB(kk,kk,pts);
-            BB = zeros(length(pts),Nu,4*kk+1);
+            BB = zeros(length(pts),Nu,4*kk+1,numeric_t);
             for ss = 1:2*kk+1
                 BB(:,:,:) = BB(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');
             end
@@ -127,7 +127,7 @@ fprintf("HDG error\n");
 % compute error order 
 [order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uhat);
 % print the result
-Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
+%Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
 
 
 if postprocessing == 1 % Convolution Filter
@@ -135,7 +135,7 @@ fprintf("Convolution Filtering Error\n");
 % compute error order 
 [order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
 % print the result
-Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
+%Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
 end
 
 end

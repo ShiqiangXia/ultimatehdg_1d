@@ -47,7 +47,7 @@ for rr = -k:1:k
     for jj = -2*k:1:2*k
         for nn = 1:n
         % compute pt_n/2 - jj -r
-            center_pt = pts(nn)/numeric_t("2") - jj - rr;
+            center_pt = pts(nn)/numeric_t('2') - jj - rr;
             %[breaks,spline_flag] = Bspline_breaks(deg_bspine,temp);
         
         % compute Bspine_k+1 (pt_n/2 - jj - r_n/2 -r)

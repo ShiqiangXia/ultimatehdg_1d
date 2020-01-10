@@ -10,7 +10,7 @@ function num_sol=Local_recover_hdg(A_loc,b_loc,uhat_vector)
 
     [N_dof,~,N_ele] = size(A_loc);
 
-    num_sol = zeros(N_dof+2,N_ele);
+    num_sol = zeros(N_dof+2,N_ele,numeric_t);
 
     for ii = 1:N_ele % ocal solver to get q_h and u_h coefficents
         num_sol(1:N_dof,ii) = A_loc(:,:,ii) * uhat_vector(ii:ii+1) + b_loc(:,ii);
