@@ -9,13 +9,13 @@ pb = 101;
 exact_func = @smooth_func101; % exact solution
 %exact_func = @poly_func;
 mesh0 = 16; % initial number of elements
-num_iter = 7; % number of refinements
+num_iter = 4; % number of refinements
 GQ = 3; % Gauss Quadrature order  ---> accuracy 2N+1
 
 %% define numerical method
 method = 1 ; % HDG method
-pk_u = 3;  % polynomial order u
-pk_q = 3;  % polynomial order q
+pk_u = 1;  % polynomial order u
+pk_q = 1;  % polynomial order q
 basis_u_type = 1; % basis type (so far we only have 1)
 basis_q_type = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)
