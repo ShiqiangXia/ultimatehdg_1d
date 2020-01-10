@@ -1,4 +1,8 @@
 function out= Bspine_break_quadrature(deg_bspine,center_pt,x_l,x_r,r,w,Nu)
+% compute integral using quadratures
+
+
+% map to refer element
 half_h = abs(x_r-x_l)*numeric_t('0.5');
 mid    = (x_r+x_l) * numeric_t('0.5');
 spline_pts = half_h * r + mid;

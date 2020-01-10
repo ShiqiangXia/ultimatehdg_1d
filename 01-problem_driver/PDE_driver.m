@@ -47,15 +47,17 @@ if type == 101 % simple Laplacian equation
             % precompute necessary matrix
             % sum_r ( Cr * A_nmrj)
             % points of interests on ref element(Quadrature points)
+            
             [pts,~] = my_quadrature(N_GQ);
             pts = [pts;numeric_t('-1');numeric_t('1')];
             
             kk = numerical_method_info.pk_u;
             Nu = kk+1;
-            %AA = Convolution_matrix(kk,Nu,pts,2000);
-            %str = ['c', num2str(kk)];
-            %cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
-            [AA,cr] = kernel_DB(kk,kk,pts);
+            AA = Convolution_matrix(kk,Nu,pts,N_GQ);
+            str = ['c', num2str(kk)];
+            cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
+            % old script
+            %[AA,cr] = kernel_DB(kk,kk,pts);
             BB = zeros(length(pts),Nu,4*kk+1);
             for ss = 1:2*kk+1
                 BB(:,:,:) = BB(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');

@@ -1,4 +1,7 @@
 function [breaks,break_flag] = Bspline_breaks(deg_bspine,center_pt)
+% get spline breaks 
+% see details in Convolution_mtraix.m
+
 knots = (-deg_bspine:2:deg_bspine)*numeric_t('0.5');
 s_l = center_pt - numeric_t('0.5');
 s_r = center_pt + numeric_t('0.5');
