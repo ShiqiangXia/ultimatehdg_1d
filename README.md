@@ -42,8 +42,9 @@ This project is the completion and extension of my previous HDG 1D code.
     * :white_check_mark: local recovery
 5. postprocessing
     * :white_check_mark: Evaluate at quadrature points
-    * :bulb: convoltuion
-      * Coefficients
+    * :white_check_mark: convoltuion
+      * :white_check_mark: kernel coefficients Cr
+      * :white_check_mark: Convolution matrix
     * :bulb: Recovery
 6. functional
     * :bulb: Volume integral
@@ -58,11 +59,10 @@ This project is the completion and extension of my previous HDG 1D code.
 
 ## Potential problems
 
-1. linespace with precision?
-2. pass GQ points and weights, instead of computing every time
+
+1. pass GQ points and weights, instead of computing every time
+2. Evaluate error for convolution filtered solution (uh_star is not polynomial in each element.) 
 
 
 
 ## To do list
-
-Rewrite local solver and global solver into different routines because we want to do recovery later.
