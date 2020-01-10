@@ -35,6 +35,7 @@ diff_u_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:)
 %square error
 error_list_q = (w' * (diff_q_mtrix.^2))'.* (hs./numeric_t('2'));
 error_list_u = (w' * (diff_u_mtrix.^2))'.* (hs./numeric_t('2'));
+%error_list_u = error_list_u(2*2+1:end-2*2);
 
 error_list_uhat =( exact_func(my_mesh.all_nodes(),0) - [num_sol_gq_pts(end-1,:),num_sol_gq_pts(end,end)] );
 
