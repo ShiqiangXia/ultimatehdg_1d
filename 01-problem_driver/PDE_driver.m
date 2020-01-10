@@ -52,9 +52,10 @@ if type == 101 % simple Laplacian equation
             
             kk = numerical_method_info.pk_u;
             Nu = kk+1;
-            AA = Convolution_matrix(kk,Nu,pts,N_GQ);
-            str = ['c', num2str(kk)];
-            cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
+            %AA = Convolution_matrix(kk,Nu,pts,2000);
+            %str = ['c', num2str(kk)];
+            %cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
+            [AA,cr] = kernel_DB(kk,kk,pts);
             BB = zeros(length(pts),Nu,4*kk+1);
             for ss = 1:2*kk+1
                 BB(:,:,:) = BB(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');
