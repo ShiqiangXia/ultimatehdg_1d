@@ -131,7 +131,7 @@ Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,
 
 
 if postprocessing == 1 % Convolution Filter
-fprintf("\n Convolution Filtering Error\n");
+fprintf("\nConvolution Filtering Error\n");
 % compute error order 
 [order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
 % print the result
