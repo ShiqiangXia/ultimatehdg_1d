@@ -9,8 +9,8 @@ pb = 101;
 %exact_func = @smooth_func101; % exact solution
 %exact_func = @poly_func;
 exact_func = @singular_func101;
-mesh0 = 20; % initial number of elements
-num_iter = 6; % number of refinements
+mesh0 = 10; % initial number of elements
+num_iter = 1; % number of refinements
 GQ = 3; % Gauss Quadrature order  ---> accuracy 2N+1
 
 %% define numerical method
@@ -21,7 +21,7 @@ basis_u_type = 1; % basis type (so far we only have 1)
 basis_q_type = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)
 numerical_method = Numerical_method_info(method, pk_u,pk_q,basis_u_type,basis_q_type,tao_pow);
-postprocessing = 1; % postprocessing or not
+postprocessing = 0; % postprocessing or not
 refine = 1; % refinement method: 1-->Uniform, 2-->non-uniform
 
 %% define PDE info
