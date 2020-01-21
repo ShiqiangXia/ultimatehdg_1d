@@ -6,10 +6,11 @@ precision = 'double';
 
 %%  define pde problem
 pb = 101;
-exact_func = @smooth_func101; % exact solution
+%exact_func = @smooth_func101; % exact solution
 %exact_func = @poly_func;
-mesh0 = 16; % initial number of elements
-num_iter = 4; % number of refinements
+exact_func = @singular_func101;
+mesh0 = 20; % initial number of elements
+num_iter = 6; % number of refinements
 GQ = 3; % Gauss Quadrature order  ---> accuracy 2N+1
 
 %% define numerical method
