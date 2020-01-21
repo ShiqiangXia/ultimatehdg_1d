@@ -119,9 +119,11 @@ if type == 101 % simple Laplacian equation
     
 end
 
-
+ 
 
 %% error and results
+
+fprintf("HDG method\nk = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
 
 fprintf('\n%s\n','HDG Error');
 % compute error order 

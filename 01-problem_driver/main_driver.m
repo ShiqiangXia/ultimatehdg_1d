@@ -7,6 +7,8 @@ class_t=precision;
 %%
 if user_info.type == 0 
 %% Solve PDE
+    fprintf("--------------------\n")
+    fprintf("Solve PDE problem.\n")
     PDE_driver(user_info.info)
 
 else
