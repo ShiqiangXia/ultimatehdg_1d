@@ -12,8 +12,8 @@ exact_func = @smooth_func101; % exact solution
 %exact_func = @poly_func;
 %exact_func = @singular_func101; % C1 not C2
 %exact_func = @singular_func102;% 1st derivative blows up at x =0
-mesh0 = 20; % initial number of elements
-num_iter = 3; % number of refinements
+mesh0 = 10; % initial number of elements
+num_iter = 2; % number of refinements
 GQ = 3; % Gauss Quadrature order  ---> accuracy 2N+1
 
 

@@ -46,8 +46,10 @@ error_list_q = sqrt((w' * (diff_q_mtrix.^2))'.* (hs./numeric_t('2')));
 error_list_u = sqrt((w' * (diff_u_mtrix.^2))'.* (hs./numeric_t('2')));
 
 
+
 error_list_q_star = sqrt((w' * (diff_q_star_mtrix.^2))'.* (hs./numeric_t('2')));
 error_list_u_star = sqrt((w' * (diff_u_star_mtrix.^2))'.* (hs./numeric_t('2')));
+
 
 error_list_uh_uhstar = sqrt((w' * (diff_uh_uhstar_mtrx.^2))'.* (hs./numeric_t('2')));
 
