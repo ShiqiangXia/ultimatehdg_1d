@@ -22,12 +22,12 @@ classdef PDE_info
         
         postprocessing % prost-processing
         refinement % 1: "uniform"; 2: Adapt I; 3:Adapt II
-        final_plot % plot or not;
+        final_plot
                
     end
     
     methods
-        function obj = PDE_info(pb,exact_func,mesh0,num_iter,GQ,numerical_method,postprocessing,refine,final_plot)
+        function obj = PDE_info(pb,exact_func,mesh0,num_iter,GQ,numerical_method,postprocessing,refine)
             obj.pb = pb;
             obj.exact_func = exact_func;
             
@@ -39,7 +39,6 @@ classdef PDE_info
             
             obj.postprocessing = postprocessing;
             obj.refinement = refine;
-            obj.final_plot = final_plot;
         end
     end
 end

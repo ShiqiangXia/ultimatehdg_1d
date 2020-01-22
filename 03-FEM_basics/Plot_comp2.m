@@ -38,6 +38,9 @@ diff_u_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:)
 diff_q_star_mtrix = exact_func(gq_pts_ref(1:end-2,:),1) - num_sol_star_gq_pts(1:nn,:);
 diff_u_star_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_star_gq_pts(nn+1:2*nn,:);
 
+
+diff_uh_uhstar_mtrx = diff_u_mtrix - diff_u_star_mtrix;
+
 % L^2 error in each element
 error_list_q = sqrt((w' * (diff_q_mtrix.^2))'.* (hs./numeric_t('2')));
 error_list_u = sqrt((w' * (diff_u_mtrix.^2))'.* (hs./numeric_t('2')));
@@ -45,6 +48,9 @@ error_list_u = sqrt((w' * (diff_u_mtrix.^2))'.* (hs./numeric_t('2')));
 
 error_list_q_star = sqrt((w' * (diff_q_star_mtrix.^2))'.* (hs./numeric_t('2')));
 error_list_u_star = sqrt((w' * (diff_u_star_mtrix.^2))'.* (hs./numeric_t('2')));
+
+error_list_uh_uhstar = sqrt((w' * (diff_uh_uhstar_mtrx.^2))'.* (hs./numeric_t('2')));
+
 % plot
 
 
@@ -60,33 +66,39 @@ plot(gp_pts_global,diff_u_global,'--');
 hold on
 plot(gp_pts_global,diff_u_star_global);
 legend('u-u_h','u-u_h^*')
-title(['HDG: Error plot at GQ points with N = ',num2str(N_ele)])
+title({'HDG and Convolution Filter',['Error plot at GQ points with N = ',num2str(N_ele)]})
 hold off
 
+figure
+plot(1:N_ele,error_list_u,'*--');
+hold on
+plot(1:N_ele,error_list_u_star,'x--');
+hold on
+plot(1:N_ele,error_list_uh_uhstar,'o--');
+legend('||u-u_h||','||u-u_h^*||','||u_h^*-u_h||')
+title({'HDG and Convolution Filter',['Error plot in each element with N = ',num2str(N_ele)]})
+hold off
+
+
+%{
 figure
 plot(gp_pts_global,diff_q_global,'--');
 hold on
 plot(gp_pts_global,diff_q_star_global);
 legend('q-q_h','q-q_h^*')
-title(['HDG: Error plot at GQ points with N = ',num2str(N_ele)])
+title({'HDG and Convolution Filter',['Error plot at GQ points with N = ',num2str(N_ele)]})
 hold off
 
-figure
-plot(1:N_ele,error_list_u);
-hold on
-plot(1:N_ele,error_list_u_star);
-legend('||u-u_h||','||u-u_h^*||')
-title(['HDG: Error plot in each element with N = ',num2str(N_ele)])
-hold off
+
 
 figure
-plot(1:N_ele,error_list_q);
+plot(1:N_ele,error_list_q,'*--');
 hold on
-plot(1:N_ele,error_list_q_star);
+plot(1:N_ele,error_list_q_star,'x--');
 legend('||q-q_h||','||q-q_h^*||')
-title(['HDG: Error plot in each element with N = ',num2str(N_ele)])
+title({'HDG and Convolution Filter',['Error plot in each element with N = ',num2str(N_ele)]})
 hold off
-
+%}
     
 
 

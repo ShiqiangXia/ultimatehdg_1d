@@ -110,7 +110,7 @@ if type == 101 % simple Laplacian equation
             [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_func,num_sol_star,N_GQ);
         end
         
-        if final_plot_flag
+        if final_plot_flag && pde_info.final_plot
             if postprocessing == 0
                 Plot_comp1(my_mesh,exact_func,num_sol_0,N_GQ);
             else
