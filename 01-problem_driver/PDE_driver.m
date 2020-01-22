@@ -76,9 +76,11 @@ if type == 101 % simple Laplacian equation
     
     for ii = 1:num_iter
         
+        % plot or not
         if ii == num_iter
             final_plot_flag = true;
         end
+        
         num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
         % Solve the problem
         if numerical_method_info.method == 1 % HDG method
@@ -96,7 +98,7 @@ if type == 101 % simple Laplacian equation
         num_sol_0 = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag);
         
         % Calculate error
-        [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(my_mesh,exact_func,num_sol_0,N_GQ,numerical_method_info,final_plot_flag);
+        [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(my_mesh,exact_func,num_sol_0,N_GQ);
         
         if postprocessing ~= 0
             % Postprocessing, compute values at Quadrature points
@@ -105,7 +107,15 @@ if type == 101 % simple Laplacian equation
             % u_hstar
             num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing,BB);
             % Calculate error
-            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_func,num_sol_star,N_GQ,numerical_method_info,final_plot_flag);
+            [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_func,num_sol_star,N_GQ);
+        end
+        
+        if final_plot_flag
+            if postprocessing == 0
+                Plot_comp1(my_mesh,exact_func,num_sol_0,N_GQ);
+            else
+                Plot_comp2(my_mesh,exact_func,num_sol_0,num_sol_star,N_GQ)
+            end
         end
         
         % Refine the mesh
