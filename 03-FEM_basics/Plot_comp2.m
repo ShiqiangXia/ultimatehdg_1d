@@ -72,11 +72,11 @@ title({'HDG and Convolution Filter',['Error plot at GQ points with N = ',num2str
 hold off
 
 figure
-plot(1:N_ele,error_list_u,'*--');
+plot(1:N_ele,error_list_u,'*-');
 hold on
-plot(1:N_ele,error_list_u_star,'x--');
+plot(1:N_ele,error_list_u_star,'x-');
 hold on
-plot(1:N_ele,error_list_uh_uhstar,'o--');
+%plot(1:N_ele,error_list_uh_uhstar,'o--');
 legend('||u-u_h||','||u-u_h^*||','||u_h^*-u_h||')
 title({'HDG and Convolution Filter',['Error plot in each element with N = ',num2str(N_ele)]})
 hold off
