@@ -114,6 +114,18 @@ classdef mesh
             end
         end
         
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        function new_mesh = get_background_uniform_mesh(obj)
+            if obj.mesh_type == "uniform"
+                new_mesh = obj;
+            else
+                h = obj.max_h;
+                new_nodes = numeric_t('0'):h:numeric_t('1');
+                new_mesh = mesh(new_nodes);
+            end
+        end
+        
         
         %% methods to access mesh properties
         
