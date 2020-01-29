@@ -1,4 +1,4 @@
-function [error_q,error_u,error_uhat]=Error_cal(my_mesh,exact_func,num_sol_gq_pts,N_GQ)
+ function [error_q,error_u,error_uhat]=Error_cal(my_mesh,exact_func,num_sol_gq_pts,N_GQ)
 % num_sol_gq_pts is a matrix, each column is the GQ quadrature point values
 % of q_h, u_h and end point values of u_hat;
 

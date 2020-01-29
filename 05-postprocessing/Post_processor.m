@@ -30,7 +30,7 @@ elseif post_flag == 1
     
     odd_extend_qh_coeff     = Even_extension( num_sol(1:N_q,:));
     temp_qhstar             = Convolution_filtering(BB,odd_extend_qh_coeff);
-    out(1:n,:)              =temp_qhstar(1:n,:);
+    out(1:n,:)              = temp_qhstar(1:n,:);
     
 %% Case 2: Recovery method
 else
