@@ -2,7 +2,7 @@ function proj_num_sol = Mesh_projection(oldmesh,newmesh,num_sol,N_GQ,numerical_m
 % L2 projection from the old mesh to the new mesh 
 % num_sol is the coefficients of qh and uh on oldmesh
 % return proj_num_sol is the coefficients on newmesh
-eof = 1e-13;
+
 [~,old_N_ele] = size(num_sol);
 
 if old_N_ele ~= oldmesh.N_elemets  
@@ -41,16 +41,9 @@ end
 
 %% step 3. figure out how old elements are contained in new elements
 
-new_nodes = newmesh.all_nodes;
+marker = Mesh_relation(oldmesh,newmesh);
 
-marker = (new_N_ele+1)* ones(old_N_ele,1,numeric_t);
-old_nodes = oldmesh.all_nodes;
-old_nodes = old_nodes(2:end);
-for ii = 1:new_N_ele
-    test_node = new_nodes(ii+1);
-    idx = old_nodes<=test_node+eof;
-    marker(idx) = marker(idx) -1;
-end
+
 
 %% step 4. For each new element, solve the projection
 old_mesh_idx = 1:old_N_ele;

@@ -13,14 +13,14 @@ exact_func = @smooth_func101; % exact solution sin(Pi*x)
 %exact_func = @singular_func101; % C1 not C2
 %exact_func = @singular_func102;% 1st derivative blows up at x =0
 mesh0 = 10; % initial number of elements
-num_iter = 3; % number of refinements
+num_iter = 7; % number of refinements
 GQ = 5; % Gauss Quadrature order  ---> accuracy 2N+1
 
 
 %% define numerical method
 method = 1 ; % HDG method
-pk_u = 1;  % polynomial order u
-pk_q = 1;  % polynomial order q
+pk_u = 2;  % polynomial order u
+pk_q = 2;  % polynomial order q
 basis_u_type = 1; % basis type (so far we only have 1)
 basis_q_type = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)

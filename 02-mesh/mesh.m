@@ -20,7 +20,7 @@ classdef mesh
         %% general mesh based on all the nodes
         function obj = mesh(nodes)
             % assume the nodes are sorted in ascending order!!!!!
-            eof = 1e-12;
+            eof = numeric_t('1e-12');
             nds       = length(nodes);
             obj.nodes = nodes;
             obj.N_nds = nds;
