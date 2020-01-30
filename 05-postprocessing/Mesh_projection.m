@@ -2,7 +2,7 @@ function proj_num_sol = Mesh_projection(oldmesh,newmesh,num_sol,N_GQ,numerical_m
 % L2 projection from the old mesh to the new mesh 
 % num_sol is the coefficients of qh and uh on oldmesh
 % return proj_num_sol is the coefficients on newmesh
-
+eof = 1e-13;
 [~,old_N_ele] = size(num_sol);
 
 if old_N_ele ~= oldmesh.N_elemets  
@@ -15,10 +15,10 @@ N_u = numerical_method_info.pk_u + 1;
 N_q = numerical_method_info.pk_q + 1;
 N_uhat = 2;
 [r,w] = my_quadrature(N_GQ);
-%n = length(r);
+n = length(r);
 
 old_hs = zeros(old_N_ele,1,numeric_t);
-old_gq_pts_phy = zeros(nn+2,old_N_ele,numeric_t);
+old_gq_pts_phy = zeros(n,old_N_ele,numeric_t);
 
 proj_num_sol = zeros(N_u+N_q+N_uhat,new_N_ele,numeric_t);
 
@@ -48,7 +48,7 @@ old_nodes = oldmesh.all_nodes;
 old_nodes = old_nodes(2:end);
 for ii = 1:new_N_ele
     test_node = new_nodes(ii+1);
-    idx = old_nodes<=test_node;
+    idx = old_nodes<=test_node+eof;
     marker(idx) = marker(idx) -1;
 end
 
@@ -60,26 +60,31 @@ for ii = 1:new_N_ele
     n_halfh = (n_nds(2) - n_nds(1))/numeric_t('2');
     n_mid   = (n_nds(2)+n_nds(1))/numeric_t('2');
     idx = marker == ii;
-    uh_old_pts = uh_old(:,idx);
-    qh_old_pts = qh_old(:,idx);
-    temp_old_h = old_hs(idx);
-    temp_gq_old = old_gq_pts_phy(:,idx);
-    temp_gq_old_ref = (temp_gq_old - n_mid)./n_halfh ;
-    
-    temp_A1 = volume_integral_u_u(N_u,N_GQ)*n_halfh;
-    temp_A2 = volume_integral_q_q(N_q,N_GQ)*n_halfh;
-    b1 = Subinterval_Integral(uh_old_pts,temp_gq_old_ref,temp_old_h,w,N_u,0);
-    b2 = Subinterval_Integral(qh_old_pts,temp_gq_old_ref,temp_old_h,w,N_q,1);
-    
-    proj_num_sol(1:N_q,ii) = temp_A2\b2;
-    proj_num_sol(N_q+1:N_q+N_u,ii) = temp_A1\b1;
-    
     temp_old_idx= old_mesh_idx(idx);
+    if length(temp_old_idx) == 1
+        proj_num_sol(:,ii) = num_sol(:,temp_old_idx(1));
+    else
+        
+        uh_old_pts = uh_old(:,idx);
+        qh_old_pts = qh_old(:,idx);
+        temp_old_h = old_hs(idx);
+        temp_gq_old = old_gq_pts_phy(:,idx);
+        temp_gq_old_ref = (temp_gq_old - n_mid)./n_halfh ;
+    
+        temp_A1 = volume_integral_u_u(N_u,N_GQ)*n_halfh;
+        temp_A2 = volume_integral_q_q(N_q,N_GQ)*n_halfh;
+        b1 = Subinterval_Integral(uh_old_pts,temp_gq_old_ref,temp_old_h,w,N_u,0);
+        b2 = Subinterval_Integral(qh_old_pts,temp_gq_old_ref,temp_old_h,w,N_q,1);
+    
+        proj_num_sol(1:N_q,ii) = temp_A2\b2;
+        proj_num_sol(N_q+1:N_q+N_u,ii) = temp_A1\b1;
+    
+    
     
     %% step 5 add the face values for new elements.
-    proj_num_sol(end-1,ii) = num_sol(end-1,temp_old_idx(1));
-    proj_num_sol(end,ii) = num_sol(end,temp_old_idx(end));
-    
+        proj_num_sol(end-1,ii) = num_sol(end-1,temp_old_idx(1));
+        proj_num_sol(end,ii) = num_sol(end,temp_old_idx(end));
+    end
     
 end
 

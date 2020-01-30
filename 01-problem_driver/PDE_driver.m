@@ -101,17 +101,17 @@ if type == 101 % simple Laplacian equation
             % store the GQ point values of q_hstar, u_hstar and the end point values of
             % u_hstar
             
-            if mymesh.mesh_type == "uniform"
+            if my_mesh.mesh_type == "uniform"
                 
                 num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
                 
             else
                 
-                background_mesh = mymesh.get_background_uniform_mesh;
-                proj_num_sol = Mesh_projection(mymesh,background_mesh,num_sol,N_GQ,numerical_method_info);
+                background_mesh = my_mesh.get_background_uniform_mesh;
+                proj_num_sol = Mesh_projection(my_mesh,background_mesh,num_sol,N_GQ,numerical_method_info);
                 proj_num_sol_star = Post_processor(proj_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
                 %proj_num_sol_star = Point_to_Coff(proj_num_sol_0,numerical_method_info);
-                num_sol_star = Mesh_lifting(background_mesh,mymesh,proj_num_sol_star,N_GQ,numerical_method_info);
+                num_sol_star = Mesh_lifting(background_mesh,my_mesh,proj_num_sol_star,N_GQ,numerical_method_info);
                 
             end
             

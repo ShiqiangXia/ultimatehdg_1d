@@ -20,6 +20,7 @@ classdef mesh
         %% general mesh based on all the nodes
         function obj = mesh(nodes)
             % assume the nodes are sorted in ascending order!!!!!
+            eof = 1e-12;
             nds       = length(nodes);
             obj.nodes = nodes;
             obj.N_nds = nds;
@@ -29,7 +30,7 @@ classdef mesh
             min_h = min(temp_h);
             
             obj.max_h = max_h;
-            if max_h == min_h
+            if max_h - min_h <= eof
                 obj.type = "uniform";
             else
                 obj.type = "non-uniform";
