@@ -14,6 +14,7 @@ new_N_ele = newmesh.N_elemets;
 N_u = numerical_method_info.pk_u + 1;
 N_q = numerical_method_info.pk_q + 1;
 N_uhat = 2;
+
 [r,w] = my_quadrature(N_GQ);
 n = length(r);
 
