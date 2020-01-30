@@ -1,0 +1,8 @@
+function out = Subinterval_Integral(given_func_pts,gq_pts,hs,w,N_basis)
+
+[~,N_interval] = size(given_func_pts);
+out = zeros(N_basis,1,numeric_t);
+
+for ii = 
+
+end

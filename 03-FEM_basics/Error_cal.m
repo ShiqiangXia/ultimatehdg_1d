@@ -9,7 +9,7 @@ N_ele = my_mesh.N_elemets();
 %N_uhat = 2;
 nn = length(r);
 
-gq_pts_ref = zeros(nn+2,N_ele,numeric_t);
+gq_pts_phy = zeros(nn+2,N_ele,numeric_t);
 
 hs = zeros(N_ele,1,numeric_t);
 
@@ -23,15 +23,15 @@ for ii = 1:N_ele
     h = abs(nds(2)-nds(1));
     hs(ii) = h;
     mid = (nds(2)+nds(1))/numeric_t('2');
-    gq_pts_ref(:,ii) = Ref_phy_map(r1,h,mid);
+    gq_pts_phy(:,ii) = Ref_phy_map(r1,h,mid);
        
 end
 
 %% Compute error
 % difference
 
-diff_q_mtrix = exact_func(gq_pts_ref(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
-diff_u_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:);
+diff_q_mtrix = exact_func(gq_pts_phy(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
+diff_u_mtrix = exact_func(gq_pts_phy(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:);
 
 
 

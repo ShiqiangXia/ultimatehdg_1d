@@ -53,7 +53,6 @@ for ii = 1:new_N_ele
 end
 
 %% step 4. For each new element, solve the projection
-old_mesh_idx = 1:old_N_ele;
 
 for ii = 1:new_N_ele
     n_nds = newmesh.get_faces(ii);
@@ -74,16 +73,10 @@ for ii = 1:new_N_ele
     proj_num_sol(1:N_q,ii) = temp_A2\b2;
     proj_num_sol(N_q+1:N_q+N_u,ii) = temp_A1\b1;
     
-    temp_old_idx= old_mesh_idx(idx);
-    
-    %% step 5 add the face values for new elements.
-    proj_num_sol(end-1,ii) = num_sol(end-1,temp_old_idx(1));
-    proj_num_sol(end,ii) = num_sol(end,temp_old_idx(end));
-    
     
 end
 
-
+%% step 5 Add u_hat vales
 
 
 
