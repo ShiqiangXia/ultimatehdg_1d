@@ -1,4 +1,4 @@
-# UltimateHDG_1D
+µ# UltimateHDG_1D
 
 This project is the completion and extension of my previous HDG 1D code.
 
@@ -21,13 +21,18 @@ This project is the completion and extension of my previous HDG 1D code.
 1. problem driver
     * :white_check_mark: main driver
     * :white_check_mark: PDE_driver
-    * :bulb: Functional driver
+    * :wrench: Functional driver
     * :white_check_mark: user_info (two types of info)  
       * PDE_info
-        * problem
+        * PDE type & Exact function (to calculate error and define boundary condition)
         * Gauss Quadrature & numerical method
-        * Post processing & Adaptivity
+        * Post processing & Adaptivity & Plot
       * :wrench: Functional_info
+        * functional type
+        * PDE type & Exact functions for the primal and adjoint problem (to calculate error and define boundary condition)
+        * Gauss Quadrature & numerical method
+        * Post processing & Adaptivity & Plot
+
 2. mesh
     * :white_check_mark:generate mesh  ;
     * :white_check_mark: mesh properties ;
@@ -53,6 +58,7 @@ This project is the completion and extension of my previous HDG 1D code.
     * :bulb: adjoint-correction without postprocessing
     * :bulb: postprocessing and adjoint-correction
 8. logs
+  * PDE test with smooth function (Convolution filter)
 9. results
 10. tests
 
@@ -61,8 +67,17 @@ This project is the completion and extension of my previous HDG 1D code.
 
 
 1. pass GQ points and weights, instead of computing every time
-2. Evaluate error for convolution filtered solution (uh_star is not polynomial in each element.) 
+2. Evaluate error for convolution filtered solution (uh_star is not polynomial in each element.)
 
 
 
 ## To do list
+1. Check functional_driver
+2. Complete the following scripts:
+  1. Primal_Adjoint_Solver
+  2. Functinal_error_cal
+  3. Primal_Adjoint_Mesh_projection
+  4. Primal_Adjoint_Mesh_lifting
+  5. Functional_Adaptivity (think first)
+  5. Plot functional error (element-wise)
+  5. Print results for functional problem

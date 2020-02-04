@@ -20,7 +20,7 @@ classdef PDE_info
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % post processing
         
-        postprocessing % prost-processing
+        postprocessing % prost-processing 0: no; 1: Conv; 2 Recov 
         refinement % 1: "uniform"; 2: Adapt I; 3:Adapt II
         final_plot % plot or not;
                

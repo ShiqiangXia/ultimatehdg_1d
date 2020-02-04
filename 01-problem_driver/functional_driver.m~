@@ -150,30 +150,16 @@ if pde_type == 101 % simple Laplacian equation
         if final_plot_flag && functional_info.final_plot
             if postprocessing == 0
                 Plot_comp1(my_mesh,exact_primal_func,primal_num_sol_0,N_GQ);
-                % Plot functional error
+             
             else
-                Plot_comp2(my_mesh,exact_primal_func,primal_num_sol_0,primal_num_sol_star,N_GQ);
-                % Plot functional error
+                Plot_comp2(my_mesh,exact_primal_func,primal_num_sol_0,primal_num_sol_star,N_GQ)
             end
-        end
-        
-        % Refine the mesh
-        if refine_number == 1 % uniform refinement
-            my_mesh = my_mesh.mesh_uniform_refine();
-        elseif refine_number == 2 % refine the mesh by Adptive method 1
-            refine_vector = Functional_Adaptivity(refine_number,N_GQ);
-            my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
-        elseif refine_number == 3 % refine the mesh by Adptive method 2
-            refine_vector = Functional_Adaptivity(refine_number,N_GQ);
-            my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
         end
         
         
     end
     
 end
-
-%% error and results
 
 
 end

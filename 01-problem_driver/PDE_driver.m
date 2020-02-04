@@ -106,13 +106,14 @@ if type == 101 % simple Laplacian equation
                 num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
                 
             else
-                
-                background_mesh = my_mesh.get_background_uniform_mesh;
-                proj_num_sol = Mesh_projection(my_mesh,background_mesh,num_sol,N_GQ,numerical_method_info);
-                proj_num_sol_star = Post_processor(proj_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
-                %proj_num_sol_star = Point_to_Coff(proj_num_sol_0,numerical_method_info);
-                num_sol_star = Mesh_lifting(background_mesh,my_mesh,proj_num_sol_star,N_GQ,numerical_method_info);
-                
+                if postprocessing == 1
+                    % Post-processing by projectio to background mesh and convolution
+                    background_mesh = my_mesh.get_background_uniform_mesh;
+                    proj_num_sol = Mesh_projection(my_mesh,background_mesh,num_sol,N_GQ,numerical_method_info);
+                    proj_num_sol_star = Post_processor(proj_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
+                    %proj_num_sol_star = Point_to_Coff(proj_num_sol_0,numerical_method_info);
+                    num_sol_star = Mesh_lifting(background_mesh,my_mesh,proj_num_sol_star,N_GQ,numerical_method_info);
+                end
             end
             
             

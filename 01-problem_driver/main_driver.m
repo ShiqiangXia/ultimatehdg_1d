@@ -13,6 +13,8 @@ if user_info.type == 0
 
 else
 %% Solve Functional
+    fprintf("--------------------\n")
+    fprintf("Solve Functional problem.\n")
     functional_driver(user_info.info)
 
 end
