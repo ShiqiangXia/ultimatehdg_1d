@@ -9,12 +9,12 @@ precision = 'double';
 
 %%  define pde problem
 pb = 101;
-%exact_func = @smooth_func101; % exact solution sin(Pi*x)
+exact_func = @smooth_func101; % exact solution sin(Pi*x)
 %exact_func = @poly_func;
-exact_func = @singular_func101; % C1 not C2
+%exact_func = @singular_func101; % C1 not C2
 %exact_func = @singular_func102;% 1st derivative blows up at x =0
 mesh0 = 10; % initial number of elements
-num_iter = 2; % number of refinements
+num_iter = 4; % number of refinements
 GQ = 6; % Gauss Quadrature order  ---> accuracy 2N+1
 
 
@@ -26,8 +26,8 @@ basis_u_type = 1; % basis type (so far we only have 1)
 basis_q_type = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)
 numerical_method = Numerical_method_info(method, pk_u,pk_q,basis_u_type,basis_q_type,tao_pow);
-postprocessing = 1; % postprocessing or not
-refine = 2; % refinement method: 1-->Uniform, 2-->non-uniform
+postprocessing = 1; % postprocessing or not 0: no, 1: Conv; 2: Recovery
+refine = 1; % refinement method: 1-->Uniform, 2-->non-uniform
 %final_plot = false;
 final_plot = true;
 
