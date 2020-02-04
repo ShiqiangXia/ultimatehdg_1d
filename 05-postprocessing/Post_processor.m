@@ -28,6 +28,7 @@ elseif post_flag == 1
     odd_extend_uh_coeff     = Odd_extension(num_sol(N_q+1:N_q+N_u,:));
     out(n+1:2*n+N_uhat,:)   = Convolution_filtering(BB,odd_extend_uh_coeff);
     
+    % assume we do the same convolution filter for qh
     odd_extend_qh_coeff     = Even_extension( num_sol(1:N_q,:));
     temp_qhstar             = Convolution_filtering(BB,odd_extend_qh_coeff);
     out(1:n,:)              = temp_qhstar(1:n,:);
