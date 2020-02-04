@@ -125,7 +125,7 @@ for ii = 1:num_iter
     
     
     
-    [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,gq_pts_phy,numerical_method_info,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
+    [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,numerical_method_info,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
     error_list_j(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_pts,GQ_weights,numerical_method_info.tau_pow);
 
     if postprocessing ~= 0
