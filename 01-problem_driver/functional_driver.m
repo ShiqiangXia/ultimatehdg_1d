@@ -124,8 +124,10 @@ for ii = 1:num_iter
     [error_list_ph(ii),error_list_vh(ii),error_list_vhat(ii)] = Error_cal(hs,gq_pts_phy,exact_adjoint_func,adjoint_num_sol_0,GQ_weights);
     
     
+    temp_Nu = numerical_method_info.pk_u+1;
+    temp_Nq = numerical_method_info.pk_q+1;
     
-    [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,numerical_method_info,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
+    [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
     error_list_j(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_pts,GQ_weights,numerical_method_info.tau_pow);
 
     if postprocessing ~= 0
@@ -158,8 +160,10 @@ for ii = 1:num_iter
         % Calculate error
         [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,gq_pts_phy,exact_primal_func,primal_num_sol_star,GQ_weights);
         [error_list_ph_star(ii),error_list_vh_star(ii),error_list_vhat_star(ii)] = Error_cal(hs,gq_pts_phy,exact_adjoint_func,adjoint_num_sol_star,GQ_weights);
+        
+        [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
-        error_list_jstar(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star,adjoint_num_sol_star,GQ_weights,numerical_method_info.tau_pow);
+        error_list_jstar(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow);
 
 
     end
