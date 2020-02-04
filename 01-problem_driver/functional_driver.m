@@ -12,6 +12,7 @@ mesh0 = functional_info.mesh0;
 num_iter = functional_info.num_iteration;
 
 N_GQ = functional_info.GQ;
+[GQ_pts,GQ_weights] = my_quadrature(N_GQ);
 numerical_method_info = functional_info.numerical_method_info;
 
 postprocessing = functional_info.postprocessing;
@@ -58,12 +59,12 @@ if postprocessing ~=0
         % sum_r ( Cr * A_nmrj)
         % points of interests on ref element(Quadrature points)
 
-        [pts,~] = my_quadrature(N_GQ);
-        pts = [pts;numeric_t('-1');numeric_t('1')];
+     
+        pts = [GQ_pts;numeric_t('-1');numeric_t('1')];
 
         kk = numerical_method_info.pk_u;
         Nu = kk+1;
-        AA = Convolution_matrix(kk,Nu,pts,N_GQ);
+        AA = Convolution_matrix(kk,Nu,pts,GQ_pts,GQ_weights);
         str = ['c', num2str(kk)];
         cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
         % old script
@@ -90,6 +91,7 @@ for ii = 1:num_iter
     end
 
     num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
+    [hs,gq_pts_phy] = Mesh_phy_GQ_points(my_mesh,GQ_pts);
 
 
 
@@ -112,14 +114,19 @@ for ii = 1:num_iter
     % store the GQ point values of q_h, u_h and the end point values of
     % uhat
     post_flag = 0;
-    primal_num_sol_0 = Post_processor(primal_num_sol,N_GQ,numerical_method_info,post_flag);
-    adjoint_num_sol_0 = Post_processor(adjoint_num_sol,N_GQ,numerical_method_info,post_flag);
+    primal_num_sol_0 = Post_processor(primal_num_sol,GQ_pts,numerical_method_info,post_flag);
+    adjoint_num_sol_0 = Post_processor(adjoint_num_sol,GQ_pts,numerical_method_info,post_flag);
 
     % Calculate error
-    [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(my_mesh,exact_primal_func,primal_num_sol_0,N_GQ);
-    [error_list_ph(ii),error_list_vh(ii),error_list_vhat(ii)] = Error_cal(my_mesh,exact_adjoint_func,adjoint_num_sol_0,N_GQ);
-
-    error_list_j(ii) = Functional_error_cal(functional_type,my_mesh,exact_primal_func,exact_adjoint_func,primal_num_sol_0,adjoint_num_sol_0,N_GQ);
+    
+    
+    [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,gq_pts_phy,exact_primal_func,primal_num_sol_0,GQ_weights);
+    [error_list_ph(ii),error_list_vh(ii),error_list_vhat(ii)] = Error_cal(hs,gq_pts_phy,exact_adjoint_func,adjoint_num_sol_0,GQ_weights);
+    
+    
+    
+    [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,gq_pts_phy,numerical_method_info,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
+    error_list_j(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_pts,GQ_weights,numerical_method_info.tau_pow);
 
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
@@ -129,8 +136,8 @@ for ii = 1:num_iter
 
         if my_mesh.mesh_type == "uniform"
 
-            primal_num_sol_star = Post_processor(primal_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
-            adjoint_num_sol_star = Post_processor(adjoint_num_sol_0,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
+            primal_num_sol_star = Post_processor(primal_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
+            adjoint_num_sol_star = Post_processor(adjoint_num_sol_0,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
 
 
         else
@@ -139,8 +146,8 @@ for ii = 1:num_iter
                 background_mesh = my_mesh.get_background_uniform_mesh;
 
                 [proj_primal_num_sol,proj_adjoint_num_sol] = Primal_Adjoint_Mesh_projection(my_mesh,background_mesh,primal_num_sol,adjoint_num_sol_0,N_GQ,numerical_method_info);
-                proj_primal_num_sol_star = Post_processor(proj_primal_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
-                proj_adjoint_num_sol_star = Post_processor(proj_adjoint_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
+                proj_primal_num_sol_star = Post_processor(proj_primal_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
+                proj_adjoint_num_sol_star = Post_processor(proj_adjoint_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
 
                 [primal_num_sol_star, adjoint_num_sol_star] = Primal_Adjoint_Mesh_lifting(background_mesh,my_mesh,proj_primal_num_sol_star,proj_adjoint_num_sol_star,N_GQ,numerical_method_info);
             end
@@ -149,20 +156,20 @@ for ii = 1:num_iter
         end
 
         % Calculate error
-        [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_primal_func,primal_num_sol_star,N_GQ);
-        [error_list_ph_star(ii),error_list_vh_star(ii),error_list_vhat_star(ii)] = Error_cal(my_mesh,exact_adjoint_func,adjoint_num_sol_star,N_GQ);
+        [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,gq_pts_phy,exact_primal_func,primal_num_sol_star,GQ_weights);
+        [error_list_ph_star(ii),error_list_vh_star(ii),error_list_vhat_star(ii)] = Error_cal(hs,gq_pts_phy,exact_adjoint_func,adjoint_num_sol_star,GQ_weights);
 
-        error_list_jstar(ii) = Functinal_error_cal(functional_type,my_mesh,exact_primal_func,exact_adjoint_func,primal_num_sol_star,adjoint_num_sol_star,N_GQ);
+        error_list_jstar(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star,adjoint_num_sol_star,GQ_weights,numerical_method_info.tau_pow);
 
 
     end
 
     if final_plot_flag && functional_info.final_plot
         if postprocessing == 0
-            Plot_comp1(my_mesh,exact_primal_func,primal_num_sol_0,N_GQ);
+            Plot_comp1(hs,gq_pts_phy,exact_primal_func,primal_num_sol_0,GQ_weights);
             % Plot functional error
         else
-            Plot_comp2(my_mesh,exact_primal_func,primal_num_sol_0,primal_num_sol_star,N_GQ);
+            Plot_comp2(hs,gq_pts_phy,exact_primal_func,primal_num_sol_0,primal_num_sol_star,GQ_weights);
             % Plot functional error
         end
     end

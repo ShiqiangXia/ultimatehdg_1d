@@ -1,7 +1,9 @@
-function Plot_comp2(my_mesh,exact_func,num_sol_gq_pts,num_sol_star_gq_pts,N_GQ)
+function Plot_comp2(hs,gq_pts_phy,exact_func,num_sol_gq_pts,num_sol_star_gq_pts,w)
 
+[n_pts,N_ele] = size(gq_pts_phy);
+nn = n_pts - 2; 
 
-[r,w] = my_quadrature(N_GQ);
+%{
 N_ele = my_mesh.N_elemets();
 nn = length(r);
 
@@ -21,22 +23,23 @@ for ii = 1:N_ele
     mid = (nds(2)+nds(1))/numeric_t('2');
     gq_pts_ref(:,ii) = Ref_phy_map(r1,h,mid);
 end
+%}
 
 % difference at GQ points
-gp_pts_global  = reshape( gq_pts_ref(1:end-2,:),[nn*N_ele,1]);
-exact_q_global = reshape( exact_func(gq_pts_ref(1:end-2,:),1),[nn*N_ele,1]);
-exact_u_global = reshape( exact_func(gq_pts_ref(1:end-2,:),0),[nn*N_ele,1]);
+gp_pts_global  = reshape( gq_pts_phy(1:end-2,:),[nn*N_ele,1]);
+exact_q_global = reshape( exact_func(gq_pts_phy(1:end-2,:),1),[nn*N_ele,1]);
+exact_u_global = reshape( exact_func(gq_pts_phy(1:end-2,:),0),[nn*N_ele,1]);
 
 qh_global      = reshape( num_sol_gq_pts(1:nn,:),[nn*N_ele,1]);
 uh_global      = reshape( num_sol_gq_pts(nn+1:2*nn,:),[nn*N_ele,1]);
 qh_star_global = reshape( num_sol_star_gq_pts(1:nn,:),[nn*N_ele,1]);
 uh_star_global = reshape( num_sol_star_gq_pts(nn+1:2*nn,:),[nn*N_ele,1]);
 
-diff_q_mtrix = exact_func(gq_pts_ref(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
-diff_u_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:);
+diff_q_mtrix = exact_func(gq_pts_phy(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
+diff_u_mtrix = exact_func(gq_pts_phy(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:);
 
-diff_q_star_mtrix = exact_func(gq_pts_ref(1:end-2,:),1) - num_sol_star_gq_pts(1:nn,:);
-diff_u_star_mtrix = exact_func(gq_pts_ref(1:end-2,:),0) - num_sol_star_gq_pts(nn+1:2*nn,:);
+diff_q_star_mtrix = exact_func(gq_pts_phy(1:end-2,:),1) - num_sol_star_gq_pts(1:nn,:);
+diff_u_star_mtrix = exact_func(gq_pts_phy(1:end-2,:),0) - num_sol_star_gq_pts(nn+1:2*nn,:);
 
 
 diff_uh_uhstar_mtrx = diff_u_mtrix - diff_u_star_mtrix;

@@ -2,7 +2,7 @@
 % Return Convolution matrix 
 % #points x Nu x (2k+1) x (4k+1)
 
-function AA = Convolution_matrix(k,Nu,pts,N_GQ)
+function AA = Convolution_matrix(k,Nu,pts,GQ_points,GQ_weights)
 
 % use Bspine of order k+1;
 % Polynomial degree is Nu-1;
@@ -52,7 +52,7 @@ for rr = -k:1:k
         
         % compute Bspine_k+1 (pt_n/2 - jj - r_n/2 -r)
         % matrix: each row same point, diffent Gauss points rn
-            bspine_matrix = Bspline_int(deg_bspine,center_pt,Nu,N_GQ);
+            bspine_matrix = Bspline_int(deg_bspine,center_pt,Nu,GQ_points,GQ_weights);
             %bspine_matrix = Bspine(temp,deg_bspine);
         
         % numerical quadratue

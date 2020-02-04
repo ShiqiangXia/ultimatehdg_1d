@@ -1,5 +1,5 @@
-function out = Bspline_int(deg_bspine,center_pt,Nu,N_GQ)
-[r,w] = my_quadrature(N_GQ);
+function out = Bspline_int(deg_bspine,center_pt,Nu,r,w)
+
 
 % get breaks
 [breaks,break_flag] = Bspline_breaks(deg_bspine,center_pt);

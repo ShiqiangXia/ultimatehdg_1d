@@ -67,14 +67,15 @@ This project is the completion and extension of my previous HDG 1D code.
 
 
 1. pass GQ points and weights, instead of computing every time
+2. Compute GQ points on each element too many times (Error_cal, Functional_Error_Cal, Plot); may define another function for this and change the parameter of those functions mentioned above.
 2. Evaluate error for convolution filtered solution (uh_star is not polynomial in each element.)
 
 
 
 ## To do list
-1. Check functional_driver
+1. -- Check functional_driver --
 2. Complete the following scripts:
-  1. Primal_Adjoint_Solver
+  1. -- Primal_Adjoint_Solver -- no need
   2. Functinal_error_cal
   3. Primal_Adjoint_Mesh_projection
   4. Primal_Adjoint_Mesh_lifting

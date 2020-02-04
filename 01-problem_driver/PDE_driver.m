@@ -12,6 +12,7 @@ mesh0 = pde_info.mesh0;
 num_iter = pde_info.num_iteration;
 
 N_GQ = pde_info.GQ;
+[GQ_pts,GQ_weights] = my_quadrature(N_GQ);
 numerical_method_info = pde_info.numerical_method_info;
 
 
@@ -44,12 +45,12 @@ if postprocessing ~=0
         % sum_r ( Cr * A_nmrj)
         % points of interests on ref element(Quadrature points)
 
-        [pts,~] = my_quadrature(N_GQ);
-        pts = [pts;numeric_t('-1');numeric_t('1')];
+        
+        pts = [GQ_pts;numeric_t('-1');numeric_t('1')];
 
         kk = numerical_method_info.pk_u;
         Nu = kk+1;
-        AA = Convolution_matrix(kk,Nu,pts,N_GQ);
+        AA = Convolution_matrix(kk,Nu,pts,GQ_pts,GQ_weights);
         str = ['c', num2str(kk)];
         cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
         % old script
@@ -75,6 +76,8 @@ for ii = 1:num_iter
     if ii == num_iter
         final_plot_flag = true;
     end
+    
+    [hs,gq_pts_phy] = Mesh_phy_GQ_points(my_mesh,GQ_pts);
 
     num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
     % Solve the problem
@@ -89,10 +92,10 @@ for ii = 1:num_iter
     % store the GQ point values of q_h, u_h and the end point values of
     % uhat
     post_flag = 0;
-    num_sol_0 = Post_processor(num_sol,N_GQ,numerical_method_info,post_flag);
+    num_sol_0 = Post_processor(num_sol,GQ_pts,numerical_method_info,post_flag);
 
     % Calculate error
-    [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(my_mesh,exact_func,num_sol_0,N_GQ);
+    [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,gq_pts_phy,exact_func,num_sol_0,GQ_weights);
 
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
@@ -102,14 +105,14 @@ for ii = 1:num_iter
 
         if my_mesh.mesh_type == "uniform"
 
-            num_sol_star = Post_processor(num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
+            num_sol_star = Post_processor(num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
 
         else
             if postprocessing == 1
                 % Post-processing by projectio to background mesh and convolution
                 background_mesh = my_mesh.get_background_uniform_mesh;
                 proj_num_sol = Mesh_projection(my_mesh,background_mesh,num_sol,N_GQ,numerical_method_info);
-                proj_num_sol_star = Post_processor(proj_num_sol,N_GQ,numerical_method_info,postprocessing,Conv_matrix);
+                proj_num_sol_star = Post_processor(proj_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
                 %proj_num_sol_star = Point_to_Coff(proj_num_sol_0,numerical_method_info);
                 num_sol_star = Mesh_lifting(background_mesh,my_mesh,proj_num_sol_star,N_GQ,numerical_method_info);
             end
@@ -117,14 +120,14 @@ for ii = 1:num_iter
 
 
         % Calculate error
-        [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(my_mesh,exact_func,num_sol_star,N_GQ);
+        [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,gq_pts_phy,exact_func,num_sol_star,GQ_weights);
     end
 
     if final_plot_flag && pde_info.final_plot
         if postprocessing == 0
-            Plot_comp1(my_mesh,exact_func,num_sol_0,N_GQ);
+            Plot_comp1(hs,gq_pts_phy,exact_func,num_sol_0,GQ_weights);
         else
-            Plot_comp2(my_mesh,exact_func,num_sol_0,num_sol_star,N_GQ)
+            Plot_comp2(hs,gq_pts_phy,exact_func,num_sol_0,num_sol_star,GQ_weights)
         end
     end
 
