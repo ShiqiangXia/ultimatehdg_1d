@@ -3,7 +3,7 @@ function [error_jh,error_jh_adj] = Functional_error_cal(functional_type,hs,gq_pt
 %% set up
 
 [n_pt,~] = size(gq_pts_phy);
-nn = n_pts - 2; 
+nn = n_pt - 2; 
 %{
 N_ele = my_mesh.N_elemets();
 
@@ -29,10 +29,10 @@ end
 
 taus = (hs').^tau_pow;
 
-
+normal_vector = [numeric_t('-1');numeric_t('1')];
 %%% Get the all GQ values for the primal and adjoint solution
 qh = primal_num_sol(1:nn,:);
-qh_n_trace = primal_num_sol(nn+1:n_pt,:);
+qh_n_trace = normal_vector.* primal_num_sol(nn+1:n_pt,:);
 uh = primal_num_sol(n_pt+1:n_pt+nn,:);
 uh_trace = primal_num_sol(n_pt+nn+1:2*n_pt,:);
 graduh =primal_num_sol(2*n_pt+1:2*n_pt+nn,:);
@@ -40,7 +40,7 @@ uh_hat = primal_num_sol(3*n_pt+1:end,:);
 qh_hat_n = qh_n_trace + taus.*(uh_trace - uh_hat);
 
 ph = adjoint_num_sol(1:nn,:);
-ph_n_trace = adjoint_num_sol(nn+1:n_pt,:);
+ph_n_trace = normal_vector.* adjoint_num_sol(nn+1:n_pt,:);
 vh = adjoint_num_sol(n_pt+1:n_pt+nn,:);
 vh_trace = adjoint_num_sol(n_pt+nn+1:2*n_pt,:);
 gradvh =adjoint_num_sol(2*n_pt+1:2*n_pt+nn,:);

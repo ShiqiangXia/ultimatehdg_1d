@@ -35,6 +35,7 @@ error_list_ph = zeros(num_iter,1,numeric_t);
 error_list_vhat = zeros(num_iter,1,numeric_t);
 
 error_list_j         = zeros(num_iter,1,numeric_t);
+error_list_j_adj         = zeros(num_iter,1,numeric_t);
 
 
 num_element_list = zeros(num_iter,1,numeric_t);
@@ -52,6 +53,7 @@ if postprocessing ~=0
     error_list_vhat_star = zeros(num_iter,1,numeric_t);
 
     error_list_jstar         = zeros(num_iter,1,numeric_t);
+    error_list_jstar_adj     = zeros(num_iter,1,numeric_t);
 
 
     if postprocessing == 1 % Convolution Filter
@@ -128,7 +130,7 @@ for ii = 1:num_iter
     temp_Nq = numerical_method_info.pk_q+1;
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
-    error_list_j(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_pts,GQ_weights,numerical_method_info.tau_pow);
+    [error_list_j(ii),error_list_j_adj(ii)] = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow);
 
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
@@ -163,7 +165,7 @@ for ii = 1:num_iter
         
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
-        error_list_jstar(ii) = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow);
+        [error_list_jstar(ii),error_list_jstar_adj(ii)] = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow);
 
 
     end
@@ -194,6 +196,36 @@ end
 
 
 %% 3. error and results
+fprintf('Problem Info:\n')
+if functional_type == 1 
+    fprintf("1. Functional: J(u) = (u,g)\n");
+end
+if pde_type == 101
+    fprintf("2. PDE: Laplace equation\n");
+end
+fprintf("3. HDG method\n   k = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
 
+fprintf("--------------------\n")
+fprintf('No Post-processing:\n');
+%%%%%%%% compute and print pde error order 
+fprintf('\n%s\n','Solution Error');
+[order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uhat);
+Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
+
+%%%%%%%% compute and print functional error order
+fprintf('\n%s\n','Functional Error');
+[order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
+Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
+
+fprintf("--------------------\n")
+
+if postprocessing == 1 % Convolution Filter
+fprintf('Post-processing:\n');
+fprintf("\nConvolution Filtering Error\n");
+% compute error order 
+[order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
+% print the result
+Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
+end
 
 end

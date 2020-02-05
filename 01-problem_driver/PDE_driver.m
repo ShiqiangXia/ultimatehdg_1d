@@ -149,17 +149,24 @@ end
 
 
 %% 3. error and results
+fprintf('Problem Info:\n')
+if type == 101
+    fprintf("1. PDE: Laplace equation\n");
+end
+fprintf("2. HDG method\n   k = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
 
-fprintf("HDG method\nk = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
-
+fprintf("--------------------\n")
+fprintf('No Post-processing:\n');
 fprintf('\n%s\n','HDG Error');
 % compute error order 
 [order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uhat);
 % print the result
 Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
 
+fprintf("--------------------\n")
 
 if postprocessing == 1 % Convolution Filter
+fprintf('Post-processing:\n');
 fprintf("\nConvolution Filtering Error\n");
 % compute error order 
 [order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
