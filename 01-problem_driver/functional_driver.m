@@ -219,9 +219,14 @@ Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,o
 
 fprintf("--------------------\n")
 
-if postprocessing == 1 % Convolution Filter
-fprintf('Post-processing:\n');
-fprintf("\nConvolution Filtering Error\n");
+if postprocessing ~= 0 % Post-processing
+fprintf('Post-processing: ');
+if postprocessing == 1 %Convolution Filter
+    fprintf("Convolution Filtering\n")
+else
+    fprintf("Recovery method\n")
+end
+fprintf("\nSoltuion Error\n");
 % compute error order 
 [order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
 % print the result
