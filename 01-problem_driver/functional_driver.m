@@ -141,7 +141,7 @@ for ii = 1:num_iter
         if my_mesh.mesh_type == "uniform"
 
             primal_num_sol_star = Post_processor(primal_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
-            adjoint_num_sol_star = Post_processor(adjoint_num_sol_0,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
+            adjoint_num_sol_star = Post_processor(adjoint_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
 
 
         else
@@ -226,6 +226,12 @@ fprintf("\nConvolution Filtering Error\n");
 [order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
 % print the result
 Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
+
+%%%%%%%% compute and print functional error order
+fprintf('\n%s\n','Functional Error');
+[order_jstar,order_jstar_adj] = Error_order(num_element_list,error_list_jstar,error_list_jstar_adj,0);
+Print_func_error_result(num_element_list,error_list_jstar,error_list_jstar_adj,order_jstar,order_jstar_adj);
+
 end
 
 end

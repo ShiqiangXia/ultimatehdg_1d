@@ -196,25 +196,42 @@ end
 
 
 %% 3. error and results
+fprintf('Problem Info:\n')
+if functional_type == 1 
+    fprintf("1. Functional: J(u) = (u,g)\n");
+end
+if pde_type == 101
+    fprintf("2. PDE: Laplace equation\n");
+end
+fprintf("3. HDG method\n   k = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
 
-fprintf("HDG method\nk = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
-
-% compute and print pde error order 
-fprintf('\n%s\n','HDG Error');
+fprintf("--------------------\n")
+fprintf('No Post-processing:\n');
+%%%%%%%% compute and print pde error order 
+fprintf('\n%s\n','Solution Error');
 [order_q,order_u,order_uhat] = Error_order(num_element_list,error_list_qh,error_list_uh,error_list_uhat);
 Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
 
-% compute and print functional error order
+%%%%%%%% compute and print functional error order
 fprintf('\n%s\n','Functional Error');
 [order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
 Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
 
+fprintf("--------------------\n")
+
 if postprocessing == 1 % Convolution Filter
+fprintf('Post-processing:\n');
 fprintf("\nConvolution Filtering Error\n");
 % compute error order 
 [order_q_star,order_u_star,order_uhat_star] = Error_order(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star);
 % print the result
 Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_list_uhat_star,order_q_star,order_u_star,order_uhat_star);
+
+%%%%%%%% compute and print functional error order
+fprintf('\n%s\n','Functional Error');
+[order_jstar,order_jstar_adj] = Error_order(num_element_list,error_list_jstar,error_list_jstar_adj,0);
+Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
+
 end
 
 end
