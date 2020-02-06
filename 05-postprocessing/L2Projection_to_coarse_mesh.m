@@ -1,4 +1,4 @@
-function [proj_num_sol,marker] = Mesh_projection(oldmesh,newmesh,old_num_sol,old_num_sol_0,old_hs,old_gq_pts_phy,GQ_weights,numerical_method_info)
+function [proj_num_sol,marker] = L2Projection_to_coarse_mesh(oldmesh,newmesh,old_num_sol,old_num_sol_0,old_hs,old_gq_pts_phy,GQ_weights,numerical_method_info)
 % L2 projection from the old mesh to the new mesh 
 %
 % Solve 

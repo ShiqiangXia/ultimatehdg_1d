@@ -1,4 +1,4 @@
-function lift_pts = Mesh_lifting(oldmesh,newmesh,marker,old_pts,GQ_points,new_gq_pts_phy,numerical_method_info)
+function lift_pts = Eval_on_finer_mesh(oldmesh,newmesh,mesh_relation,old_pts,GQ_points,new_gq_pts_phy,numerical_method_info)
 % compute more quadrature point values on new mesh
 
 N_u = numerical_method_info.pk_u + 1;
@@ -27,7 +27,7 @@ V_u = temp_u_mtrix' * temp_u_mtrix;
 new_mesh_idx = 1:new_N_ele;
 
 for ii = 1:old_N_ele
-    idx = marker == ii;
+    idx = mesh_relation == ii;
     temp_new_idx= new_mesh_idx(idx);
     N_sub_ele = length(temp_new_idx) ;
     
