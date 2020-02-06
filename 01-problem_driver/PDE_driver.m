@@ -4,7 +4,9 @@
 function PDE_driver(pde_info)
 
 
-%% 1. set up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 1. Set up
+%--------------------------------------------------------------------------
+
 
 %%%% PDE type and exact solution
 type = pde_info.pb;
@@ -41,30 +43,23 @@ if postprocessing ~=0
     if postprocessing == 1 % Convolution Filter
         % precompute necessary matrix
         % sum_r ( Cr * A_nmrj)
-        % points of interests on ref element(Quadrature points)
-
         
+        % points of interests on ref element(Quadrature points)
         pts = [GQ_pts;numeric_t('-1');numeric_t('1')];
-
         kk = numerical_method_info.pk_u;
         Nu = kk+1;
-        AA = Convolution_matrix(kk,Nu,pts,GQ_pts,GQ_weights);
-        str = ['c', num2str(kk)];
-        cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
-        % old script
-        %[AA,cr] = kernel_DB(kk,kk,pts);
-        Conv_matrix = zeros(length(pts),Nu,4*kk+1,numeric_t);
-        for ss = 1:2*kk+1
-            Conv_matrix(:,:,:) = Conv_matrix(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');
-        end
-
+        
+        Conv_matrix = Get_convolution_matrix(pts,kk,Nu,GQ_pts,GQ_weights);
+        
 
     end
 
 end
 
 
-%% 2. for loops %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 2. for loops
+%--------------------------------------------------------------------------
+
 
 %%%% initial mesh
 h0 = numeric_t('1')/mesh0;
@@ -73,7 +68,8 @@ my_mesh      = mesh(mesh_nodes);
 
 %%%% star for-loops
 for ii = 1:num_iter
-
+    
+%---------------------- Start new mesh ------------------------------------
     % plot or not
     if ii == num_iter
         final_plot_flag = true;
@@ -84,13 +80,16 @@ for ii = 1:num_iter
 
     num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
     
-    
+%---------------------- Solve the problem  --------------------------------
+
     % Solve the problem
     if numerical_method_info.method == 1 % HDG method
         % num_sol: (N_q+N_u+N_hat) x N_ele matrix , it stores the
         % coefficents of the HDG solution in order q_h, u_h, uhat
         num_sol = HDG_solver(type,exact_func,my_mesh,N_GQ,numerical_method_info);
     end
+
+%----------------------  Calculate Error   --------------------------------
 
     % First No postprocessing, compute values at Quadrature points
     % num_sol_0: (2*(N_GQ+1)+N_uhat) x N_ele
@@ -99,8 +98,10 @@ for ii = 1:num_iter
     post_flag = 0;
     num_sol_0 = Post_processor(num_sol,GQ_pts,numerical_method_info,post_flag);
 
-    % Calculate error
+    % Calculate numerical method error
     [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,GQ_End_points_phy,exact_func,num_sol_0,GQ_weights);
+
+%----------------------  Post-processing   --------------------------------
 
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
@@ -124,11 +125,13 @@ for ii = 1:num_iter
                 num_sol_star = Eval_on_finer_mesh(background_mesh,my_mesh,mesh_relation,proj_num_sol_star,GQ_pts,GQ_End_points_phy,numerical_method_info);
             end
         end
-
-
-        % Calculate error
+        
+%----------------------  Calculate Error   --------------------------------
+      
         [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,GQ_End_points_phy,exact_func,num_sol_star,GQ_weights);
     end
+
+%----------------------        Plot        --------------------------------
 
     if final_plot_flag && pde_info.final_plot
         if postprocessing == 0
@@ -138,7 +141,8 @@ for ii = 1:num_iter
         end
     end
 
-    % Refine the mesh
+%----------------------   Refine Mesh      --------------------------------
+  
     if refine_number == 1 % uniform refinement
         my_mesh = my_mesh.mesh_uniform_refine();
     elseif refine_number == 2 % refine the mesh by Adptive method 1
@@ -150,17 +154,20 @@ for ii = 1:num_iter
     end
 
 end
-
-
-
-
+%--------------------------------------------------------------------------
 
 %% 3. error and results
+%--------------------------------------------------------------------------
+
+%----------------------  Problem Info      --------------------------------
+
 fprintf('Problem Info:\n')
 if type == 101
     fprintf("1. PDE: Laplace equation\n");
 end
 fprintf("2. HDG method\n   k = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
+
+%---------------------- Result: numerical method     ----------------------
 
 fprintf("--------------------\n")
 fprintf('No Post-processing:\n');
@@ -170,8 +177,8 @@ fprintf('\n%s\n','HDG Error');
 % print the result
 Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,order_q,order_u,order_uhat);
 
+%----------------------  Result: Post-processing    -----------------------
 fprintf("--------------------\n")
-
 if postprocessing ~= 0 % Convolution Filter
 fprintf('Post-processing:');
 if postprocessing == 1 %Convolution Filter

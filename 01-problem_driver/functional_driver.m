@@ -2,34 +2,39 @@ function functional_driver(functional_info)
 % script to approximate functional based on functional_info
 
 %% 1. Set up
+%--------------------------------------------------------------------------
+
+
+%%%% Functional type, PDE type and exact solutions
 functional_type = functional_info.functional_type;
 pde_type = functional_info.pde_type;
 
 exact_primal_func = functional_info.exact_primal_func;
 exact_adjoint_func = functional_info.exact_adjoint_func;
 
+%%%% Initial mesh and Iterations
 mesh0 = functional_info.mesh0;
 num_iter = functional_info.num_iteration;
 
+%%%% GQ points and weights
 N_GQ = functional_info.GQ;
 [GQ_pts,GQ_weights] = my_quadrature(N_GQ);
+
+%%%% Numerical method
 numerical_method_info = functional_info.numerical_method_info;
 
+%%%% Post-process and Refinement
 postprocessing = functional_info.postprocessing;
 refine_number = functional_info.refinement;
 final_plot_flag = false;
 
-
-h0 = numeric_t('1')/mesh0;
-mesh_nodes = (0:mesh0)*h0; % initial mesh 
-
-% store errors
+%%%% store errors
 % primal
 error_list_uh = zeros(num_iter,1,numeric_t);
 error_list_qh = zeros(num_iter,1,numeric_t);
 error_list_uhat = zeros(num_iter,1,numeric_t);
 
-%adjoint
+% adjoint
 error_list_vh = zeros(num_iter,1,numeric_t);
 error_list_ph = zeros(num_iter,1,numeric_t);
 error_list_vhat = zeros(num_iter,1,numeric_t);
@@ -40,14 +45,14 @@ error_list_j_adj         = zeros(num_iter,1,numeric_t);
 
 num_element_list = zeros(num_iter,1,numeric_t);
 
-% store errors if postprocessing
+%%%% store errors if postprocessing
 if postprocessing ~=0
-    %primal
+    % primal
     error_list_uh_star = zeros(num_iter,1,numeric_t);
     error_list_qh_star = zeros(num_iter,1,numeric_t);
     error_list_uhat_star = zeros(num_iter,1,numeric_t);
 
-    %adjoint
+    % adjoint
     error_list_vh_star = zeros(num_iter,1,numeric_t);
     error_list_ph_star = zeros(num_iter,1,numeric_t);
     error_list_vhat_star = zeros(num_iter,1,numeric_t);
@@ -59,45 +64,43 @@ if postprocessing ~=0
     if postprocessing == 1 % Convolution Filter
         % precompute necessary matrix
         % sum_r ( Cr * A_nmrj)
+        
         % points of interests on ref element(Quadrature points)
-
-     
         pts = [GQ_pts;numeric_t('-1');numeric_t('1')];
-
         kk = numerical_method_info.pk_u;
         Nu = kk+1;
-        AA = Convolution_matrix(kk,Nu,pts,GQ_pts,GQ_weights);
-        str = ['c', num2str(kk)];
-        cr = numeric_t(struct2array( load("Convolution_Cr_deg1_5.mat",str)));
-        % old script
-        %[AA,cr] = kernel_DB(kk,kk,pts);
-        Conv_matrix = zeros(length(pts),Nu,4*kk+1,numeric_t);
-        for ss = 1:2*kk+1
-            Conv_matrix(:,:,:) = Conv_matrix(:,:,:) + cr(ss)*squeeze(AA(:,:,ss,:))*numeric_t('0.5');
-        end
-
+        
+        Conv_matrix = Get_convolution_matrix(pts,kk,Nu,GQ_pts,GQ_weights);
 
     end
 
 end
 
 %% 2. for loops  
+%--------------------------------------------------------------------------
+
 % initial mesh
+h0 = numeric_t('1')/mesh0;
+mesh_nodes = (0:mesh0)*h0; % initial mesh 
 my_mesh      = mesh(mesh_nodes);
 
 for ii = 1:num_iter
+    
+%---------------------- Start new mesh ------------------------------------
 
     % plot final mesh result or not
     if ii == num_iter
         final_plot_flag = true;
     end
 
-    num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
+    % h and physical GQ+end points in each element
     [hs,GQ_End_points_phy] = Mesh_phy_GQ_points(my_mesh,GQ_pts);
+    
+    num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
+    
+%---------------------- Solve the problem  --------------------------------
 
-
-
-    % Solve the problem
+ 
     if numerical_method_info.method == 1 % HDG method
         % num_sol: (N_q+N_u+N_hat) x N_ele matrix , it stores the
         % coefficents of the HDG solution in order q_h, u_h, uhat
@@ -119,12 +122,10 @@ for ii = 1:num_iter
     primal_num_sol_0 = Post_processor(primal_num_sol,GQ_pts,numerical_method_info,post_flag);
     adjoint_num_sol_0 = Post_processor(adjoint_num_sol,GQ_pts,numerical_method_info,post_flag);
 
-    % Calculate error
-    
+%----------------------  Calculate Error   --------------------------------
     
     [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,GQ_End_points_phy,exact_primal_func,primal_num_sol_0,GQ_weights);
     [error_list_ph(ii),error_list_vh(ii),error_list_vhat(ii)] = Error_cal(hs,GQ_End_points_phy,exact_adjoint_func,adjoint_num_sol_0,GQ_weights);
-    
     
     temp_Nu = numerical_method_info.pk_u+1;
     temp_Nq = numerical_method_info.pk_q+1;
@@ -132,6 +133,8 @@ for ii = 1:num_iter
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
     [error_list_j(ii),error_list_j_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow);
 
+%----------------------  Post-processing   --------------------------------
+ 
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
         % num_sol_star: (2*(N_GQ+1)+N_uhat) x N_ele
@@ -157,14 +160,12 @@ for ii = 1:num_iter
                 
                 primal_num_sol_star = Eval_on_finer_mesh(background_mesh,my_mesh,mesh_relation,proj_primal_num_sol_star,GQ_pts,GQ_End_points_phy,numerical_method_info);
                 adjoint_num_sol_star = Eval_on_finer_mesh(background_mesh,my_mesh,mesh_relation,proj_adjoint_num_sol_star,GQ_pts,GQ_End_points_phy,numerical_method_info);
-
-                
+   
             end
-
-
         end
 
-        % Calculate error
+%----------------------  Calculate Error   --------------------------------
+
         [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,GQ_End_points_phy,exact_primal_func,primal_num_sol_star,GQ_weights);
         [error_list_ph_star(ii),error_list_vh_star(ii),error_list_vhat_star(ii)] = Error_cal(hs,GQ_End_points_phy,exact_adjoint_func,adjoint_num_sol_star,GQ_weights);
         
@@ -172,8 +173,9 @@ for ii = 1:num_iter
 
         [error_list_jstar(ii),error_list_jstar_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow);
 
-
     end
+
+%----------------------        Plot        --------------------------------
 
     if final_plot_flag && functional_info.final_plot
         if postprocessing == 0
@@ -185,7 +187,8 @@ for ii = 1:num_iter
         end
     end
 
-    % Refine the mesh
+%----------------------   Refine Mesh      --------------------------------
+
     if refine_number == 1 % uniform refinement
         my_mesh = my_mesh.mesh_uniform_refine();
     elseif refine_number == 2 % refine the mesh by Adptive method 1
@@ -198,9 +201,14 @@ for ii = 1:num_iter
 
 
 end
+%--------------------------------------------------------------------------
 
 
 %% 3. error and results
+%--------------------------------------------------------------------------
+
+%----------------------  Problem Info      --------------------------------
+
 fprintf('Problem Info:\n')
 if functional_type == 1 
     fprintf("1. Functional: J(u) = (u,g)\n");
@@ -209,6 +217,8 @@ if pde_type == 101
     fprintf("2. PDE: Laplace equation\n");
 end
 fprintf("3. HDG method\n   k = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
+
+%---------------------- Result: numerical method     ----------------------
 
 fprintf("--------------------\n")
 fprintf('No Post-processing:\n');
@@ -221,6 +231,8 @@ Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,
 fprintf('\n%s\n','Functional Error');
 [order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
 Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
+
+%----------------------  Result: Post-processing    -----------------------
 
 fprintf("--------------------\n")
 

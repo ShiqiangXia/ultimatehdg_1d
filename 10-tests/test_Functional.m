@@ -5,7 +5,7 @@
 %%  set precision
 close all;
 
-precision = 'mp';
+precision = 'double';
 
 %%  define functional problem
 functional_type = 1;
@@ -28,7 +28,7 @@ basis_q_type = 1; % basis type (so far we only have 1)
 tao_pow = 0; % tau (h^power)
 numerical_method = Numerical_method_info(method, pk_u,pk_q,basis_u_type,basis_q_type,tao_pow);
 postprocessing = 1; % postprocessing or not 0: no, 1: Conv; 2: Recovery
-refine = 2; % refinement method: 1-->Uniform, 2-->non-uniform
+refine = 1; % refinement method: 1-->Uniform, 2-->non-uniform
 final_plot = false;
 %final_plot = true;
 
