@@ -1,9 +1,9 @@
-function proj_num_sol = Mesh_projection(oldmesh,newmesh,num_sol,num_sol_0,old_hs,old_gq_pts_phy,GQ_weights,numerical_method_info)
+function proj_num_sol = Mesh_projection(oldmesh,newmesh,num_sol,num_sol_0,old_hs,old_gq_pts_phy,w,numerical_method_info)
 % L2 projection from the old mesh to the new mesh 
 % num_sol is the coefficients of qh and uh on oldmesh
 % num_sol_0 is the GQ points values of qh and uh in each element on oldmesh
 % old_hs: h of each element in oldmesh
-% old_gq_pts_phy: physical GQ points in each element on oldmesh
+% old_gq_pts_phy: GQ poin
 % return proj_num_sol is the coefficients on newmesh
 
 %% step 0: set up 
@@ -61,8 +61,8 @@ for ii = 1:new_N_ele
     
         temp_A1 = volume_integral_u_u(N_u,N_GQ)*n_halfh;
         temp_A2 = volume_integral_q_q(N_q,N_GQ)*n_halfh;
-        b1 = Subinterval_Integral(uh_old_pts,temp_gq_old_ref,temp_old_h,GQ_weights,N_u,0);
-        b2 = Subinterval_Integral(qh_old_pts,temp_gq_old_ref,temp_old_h,GQ_weights,N_q,1);
+        b1 = Subinterval_Integral(uh_old_pts,temp_gq_old_ref,temp_old_h,w,N_u,0);
+        b2 = Subinterval_Integral(qh_old_pts,temp_gq_old_ref,temp_old_h,w,N_q,1);
     
         proj_num_sol(1:N_q,ii) = temp_A2\b2;
         proj_num_sol(N_q+1:N_q+N_u,ii) = temp_A1\b1;

@@ -77,6 +77,7 @@ for ii = 1:num_iter
         final_plot_flag = true;
     end
     
+    % h and physical GQ+end points in each element
     [hs,gq_pts_phy] = Mesh_phy_GQ_points(my_mesh,GQ_pts);
 
     num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
@@ -111,7 +112,9 @@ for ii = 1:num_iter
             if postprocessing == 1
                 % Post-processing by projectio to background mesh and convolution
                 background_mesh = my_mesh.get_background_uniform_mesh;
-                proj_num_sol = Mesh_projection(my_mesh,background_mesh,num_sol,N_GQ,numerical_method_info);
+                
+                proj_num_sol = Mesh_projection(my_mesh,background_mesh,num_sol,num_sol_0,hs,gq_pts_phy(1:N_GQ+1,:),GQ_weights,numerical_method_info);
+                
                 proj_num_sol_star = Post_processor(proj_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
                 %proj_num_sol_star = Point_to_Coff(proj_num_sol_0,numerical_method_info);
                 num_sol_star = Mesh_lifting(background_mesh,my_mesh,proj_num_sol_star,N_GQ,numerical_method_info);
