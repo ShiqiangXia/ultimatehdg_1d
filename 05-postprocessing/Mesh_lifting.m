@@ -1,4 +1,4 @@
-function lift_pts = Mesh_lifting(oldmesh,newmesh,old_pts,N_GQ,numerical_method_info)
+function lift_pts = Mesh_lifting(oldmesh,newmesh,marker,old_pts,GQ_points,new_gq_pts_phy,numerical_method_info)
 % compute more quadrature point values on new mesh
 
 N_u = numerical_method_info.pk_u + 1;
@@ -7,34 +7,22 @@ N_uhat = 2;
 
 N_u_star = 2*N_u;
 N_q_star = 2*N_q;
-[r,~] = my_quadrature(N_GQ);
-n = length(r);
 
-r1 = [r;numeric_t('-1');numeric_t('1')];
+n = length(GQ_points);
+
+
 
 new_N_ele = newmesh.N_elemets;
 old_N_ele = oldmesh.N_elemets;
 
 lift_pts  = zeros(n+n+N_uhat,new_N_ele,numeric_t);
-%new_hs = zeros(old_N_ele,1,numeric_t);
-new_gq_pts_phy = zeros(n+2,new_N_ele,numeric_t);
 
-temp_q_mtrix = my_vandermonde_q(r,N_q_star);
+
+temp_q_mtrix = my_vandermonde_q(GQ_points,N_q_star);
 V_q = temp_q_mtrix' * temp_q_mtrix; %A'A
-temp_u_mtrix = my_vandermonde_u(r,N_u_star);
+temp_u_mtrix = my_vandermonde_u(GQ_points,N_u_star);
 V_u = temp_u_mtrix' * temp_u_mtrix;
 
-
-for ii = 1:new_N_ele
-    nds = newmesh.get_faces(ii);
-    h = abs(nds(2)-nds(1));
-    %new_hs(ii) = h;
-    mid = (nds(2)+nds(1))/numeric_t('2');
-    new_gq_pts_phy(:,ii) = Ref_phy_map(r1,h,mid);
-       
-end
-
-marker = Mesh_relation(newmesh,oldmesh);
 
 new_mesh_idx = 1:new_N_ele;
 

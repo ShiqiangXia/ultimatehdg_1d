@@ -1,7 +1,11 @@
-function proj_num_sol = Mesh_projection(oldmesh,newmesh,num_sol,num_sol_0,old_hs,old_gq_pts_phy,GQ_weights,numerical_method_info)
+function [proj_num_sol,marker] = Mesh_projection(oldmesh,newmesh,old_num_sol,old_num_sol_0,old_hs,old_gq_pts_phy,GQ_weights,numerical_method_info)
 % L2 projection from the old mesh to the new mesh 
-% num_sol is the coefficients of qh and uh on oldmesh
-% num_sol_0 is the GQ points values of qh and uh in each element on oldmesh
+%
+% Solve 
+% (u_new, basis) = sum_{sub interval}:(u_old, basis)
+%
+% old_num_sol is the coefficients of qh and uh on oldmesh
+% old_num_sol_0 is the GQ points values of qh and uh in each element on oldmesh
 % old_hs: h of each element in oldmesh
 % old_gq_pts_phy: physical GQ points in each element on oldmesh
 % return proj_num_sol is the coefficients on newmesh
@@ -26,8 +30,8 @@ proj_num_sol = zeros(N_u+N_q+N_uhat,new_N_ele,numeric_t);
 
 %% step 1. GQ values on old mesh
     
-    qh_old = num_sol_0(1:Num_GQ,:); % qh
-    uh_old = num_sol_0(Num_GQ+1:2*Num_GQ,:); % uh
+    qh_old = old_num_sol_0(1:Num_GQ,:); % qh
+    uh_old = old_num_sol_0(Num_GQ+1:2*Num_GQ,:); % uh
 
 %% step 2. compute all the GQ points on the phyical element
 
@@ -50,7 +54,7 @@ for ii = 1:new_N_ele
     idx = marker == ii;
     temp_old_idx= old_mesh_idx(idx);
     if length(temp_old_idx) == 1
-        proj_num_sol(:,ii) = num_sol(:,temp_old_idx(1));
+        proj_num_sol(:,ii) = old_num_sol(:,temp_old_idx(1));
     else
         
         uh_old_pts = uh_old(:,idx);
@@ -70,8 +74,8 @@ for ii = 1:new_N_ele
     
     
     %% step 5 add the face values for new elements.
-        proj_num_sol(end-1,ii) = num_sol(end-1,temp_old_idx(1));
-        proj_num_sol(end,ii) = num_sol(end,temp_old_idx(end));
+        proj_num_sol(end-1,ii) = old_num_sol(end-1,temp_old_idx(1));
+        proj_num_sol(end,ii) = old_num_sol(end,temp_old_idx(end));
     end
     
 end
