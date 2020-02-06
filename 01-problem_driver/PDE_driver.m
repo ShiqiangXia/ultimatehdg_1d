@@ -4,30 +4,28 @@
 function PDE_driver(pde_info)
 
 
-%% 1. set up
+%% 1. set up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% PDE type and exact solution
 type = pde_info.pb;
 exact_func = pde_info.exact_func;
 
+%%%% Initial mesh and number of iterations
 mesh0 = pde_info.mesh0;
 num_iter = pde_info.num_iteration;
 
+%%%% Gauss Quadrature points and weights on reference elements
 N_GQ = pde_info.GQ;
 [GQ_pts,GQ_weights] = my_quadrature(N_GQ);
+
+%%%% Numerical method
 numerical_method_info = pde_info.numerical_method_info;
 
-
+%%%% Postprocess and Refinement
 postprocessing = pde_info.postprocessing;
-
 refine_number = pde_info.refinement;
-
-
 final_plot_flag = false;
 
-
-
-%mesh_nodes = linspace(0,1,mesh0+1);
-h0 = numeric_t('1')/mesh0;
-mesh_nodes = (0:mesh0)*h0; % initial mesh 
 
 % store errors
 error_list_uh = zeros(num_iter,1,numeric_t);
@@ -66,10 +64,14 @@ if postprocessing ~=0
 end
 
 
-%% 2. for loops  
-% initial mesh
+%% 2. for loops %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% initial mesh
+h0 = numeric_t('1')/mesh0;
+mesh_nodes = (0:mesh0)*h0; % initial mesh 
 my_mesh      = mesh(mesh_nodes);
 
+%%%% star for-loops
 for ii = 1:num_iter
 
     % plot or not
@@ -78,9 +80,11 @@ for ii = 1:num_iter
     end
     
     % h and physical GQ+end points in each element
-    [hs,gq_pts_phy] = Mesh_phy_GQ_points(my_mesh,GQ_pts);
+    [hs,GQ_End_points_phy] = Mesh_phy_GQ_points(my_mesh,GQ_pts);
 
     num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
+    
+    
     % Solve the problem
     if numerical_method_info.method == 1 % HDG method
         % num_sol: (N_q+N_u+N_hat) x N_ele matrix , it stores the
@@ -96,7 +100,7 @@ for ii = 1:num_iter
     num_sol_0 = Post_processor(num_sol,GQ_pts,numerical_method_info,post_flag);
 
     % Calculate error
-    [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,gq_pts_phy,exact_func,num_sol_0,GQ_weights);
+    [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,GQ_End_points_phy,exact_func,num_sol_0,GQ_weights);
 
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
@@ -113,24 +117,24 @@ for ii = 1:num_iter
                 % Post-processing by projectio to background mesh and convolution
                 background_mesh = my_mesh.get_background_uniform_mesh;
                 
-                [proj_num_sol,mesh_relation] = L2Projection_to_coarse_mesh(my_mesh,background_mesh,num_sol,num_sol_0,hs,gq_pts_phy(1:N_GQ+1,:),GQ_weights,numerical_method_info);
+                [proj_num_sol,mesh_relation] = L2Projection_to_coarse_mesh(my_mesh,background_mesh,num_sol,num_sol_0,hs,GQ_End_points_phy(1:N_GQ+1,:),GQ_weights,numerical_method_info);
                 
                 proj_num_sol_star = Post_processor(proj_num_sol,GQ_pts,numerical_method_info,postprocessing,Conv_matrix);
                 
-                num_sol_star = Eval_on_finer_mesh(background_mesh,my_mesh,mesh_relation,proj_num_sol_star,GQ_pts,gq_pts_phy,numerical_method_info);
+                num_sol_star = Eval_on_finer_mesh(background_mesh,my_mesh,mesh_relation,proj_num_sol_star,GQ_pts,GQ_End_points_phy,numerical_method_info);
             end
         end
 
 
         % Calculate error
-        [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,gq_pts_phy,exact_func,num_sol_star,GQ_weights);
+        [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,GQ_End_points_phy,exact_func,num_sol_star,GQ_weights);
     end
 
     if final_plot_flag && pde_info.final_plot
         if postprocessing == 0
-            Plot_comp1(hs,gq_pts_phy,exact_func,num_sol_0,GQ_weights);
+            Plot_comp1(hs,GQ_End_points_phy,exact_func,num_sol_0,GQ_weights);
         else
-            Plot_comp2(hs,gq_pts_phy,exact_func,num_sol_0,num_sol_star,GQ_weights)
+            Plot_comp2(hs,GQ_End_points_phy,exact_func,num_sol_0,num_sol_star,GQ_weights)
         end
     end
 
