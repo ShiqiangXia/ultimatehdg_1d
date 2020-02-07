@@ -79,12 +79,14 @@ if functional_type == 1
     
     % first adjoint-correction term
     % (f,vh) + (qh, grad_vh) - <qh_hat_n,vh>
-    AC1 = ( GQ_weights'*(temp_f.*vh + qh.* gradvh) )*hs /numeric_t('2') - sum(sum( qh_hat_n.*vh_trace));
-    
+    temp1 = ( GQ_weights'*(temp_f.*vh + qh.* gradvh) ).*hs' /numeric_t('2') - sum( qh_hat_n.*vh_trace);
+    %AC1 = ( GQ_weights'*(temp_f.*vh + qh.* gradvh) )*hs /numeric_t('2') - sum(sum( qh_hat_n.*vh_trace));
+    AC1 = sum(temp1);
     % second adjoint-correction term
     % (qh + grad_uh, ph) - <uh-uh_hat,ph_n>;
-    AC2 = (GQ_weights'*((qh+graduh).*ph))*hs /numeric_t('2') - sum(sum((uh_trace - uh_hat).*ph_n_trace ));
-    
+    temp2 = (GQ_weights'*((qh+graduh).*ph)).*hs' /numeric_t('2') - sum((uh_trace - uh_hat).*ph_n_trace );
+    %AC2 = (GQ_weights'*((qh+graduh).*ph))*hs /numeric_t('2') - sum(sum((uh_trace - uh_hat).*ph_n_trace ));
+    AC2 = sum(temp2);
     % third adjoint-correcton term
     % <qh_hat_n, vh_hat>_{all interior faces}
     temp_AC3 = qh_hat_n.*vh_hat;
@@ -92,7 +94,8 @@ if functional_type == 1
     
     % fourth adjoint-correction term
     % <uh - uh_hat, ph_n - ph_hat_n>
-    AC4 = sum(sum( (uh_trace - uh_hat).*(ph_n_trace - ph_hat_n)));
+    temp4 = sum( (uh_trace - uh_hat).*(ph_n_trace - ph_hat_n));
+    AC4 = sum(temp4);
     
     AC_total = AC1+AC2+AC3+AC4;
     
