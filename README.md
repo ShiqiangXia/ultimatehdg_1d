@@ -52,7 +52,7 @@ This project is the completion and extension of my previous HDG 1D code.
       * :white_check_mark: Convolution matrix
     * :bulb: Recovery
 6. functional
-    * :bulb: Volume integral
+    * :white_check_mark: Volume integral
     * :bulb: boundary integral
 7. adaptivity
     * :bulb: adjoint-correction without postprocessing
@@ -75,11 +75,5 @@ This project is the completion and extension of my previous HDG 1D code.
 ## To do list
 1. -- Check functional_driver --
 2. Complete the following scripts:
-  1. -- Primal_Adjoint_Solver --g no need
-  2. -- Functinal_error_cal ---
-  3. --- Test functional error without adaptivity--
-  3. Primal_Adjoint_Mesh_projection
-  4. Primal_Adjoint_Mesh_lifting
   5. Functional_Adaptivity (think first)
   5. Plot functional error (element-wise)
-  5. Print results for functional problem
