@@ -131,7 +131,7 @@ for ii = 1:num_iter
     temp_Nq = numerical_method_info.pk_q+1;
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
-    [error_list_j(ii),error_list_j_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow);
+    [error_list_j(ii),error_list_j_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
 
 %----------------------  Post-processing   --------------------------------
  
@@ -171,7 +171,7 @@ for ii = 1:num_iter
         
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
-        [error_list_jstar(ii),error_list_jstar_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow);
+        [error_list_jstar(ii),error_list_jstar_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
 
     end
 
