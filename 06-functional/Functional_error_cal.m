@@ -1,4 +1,4 @@
-function [error_jh,error_jh_adj] = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol,adjoint_num_sol,GQ_weights,tau_pow,grad_lag)
+function [error_jh,error_jh_adj,temp1,temp4] = Functional_error_cal(functional_type,hs,gq_pts_phy,exact_primal_func,exact_adjoint_func,primal_num_sol,adjoint_num_sol,GQ_weights,tau_pow,grad_lag)
 
 % grad_grad_lag: 0 use qh; 1: use -grad uh as qh
 %% set up
@@ -96,6 +96,7 @@ if functional_type == 1
     % <uh - uh_hat, ph_n - ph_hat_n>
     temp4 = sum( (uh_trace - uh_hat).*(ph_n_trace - ph_hat_n));
     AC4 = sum(temp4);
+    fprintf("%d\n",AC4);
     
     AC_total = AC1+AC2+AC3+AC4;
     

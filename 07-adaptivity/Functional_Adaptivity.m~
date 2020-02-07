@@ -1,0 +1,6 @@
+function Functional_Adaptivity(refine_number,error_estimator,tol,adp_strategy)
+if refine_number == 2 % First Adaptive method 
+    
+else % second apative method
+end
+end

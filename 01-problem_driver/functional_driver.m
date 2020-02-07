@@ -4,7 +4,7 @@ function functional_driver(functional_info)
 %% 1. Set up
 %--------------------------------------------------------------------------
 
-
+tol =  numeric_t('1e-4');
 %%%% Functional type, PDE type and exact solutions
 functional_type = functional_info.functional_type;
 pde_type = functional_info.pde_type;
@@ -131,7 +131,7 @@ for ii = 1:num_iter
     temp_Nq = numerical_method_info.pk_q+1;
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
-    [error_list_j(ii),error_list_j_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
+    [error_list_j(ii),error_list_j_adj(ii),~,error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
 
 %----------------------  Post-processing   --------------------------------
  
@@ -171,7 +171,7 @@ for ii = 1:num_iter
         
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
-        [error_list_jstar(ii),error_list_jstar_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator,~] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
 
     end
 
@@ -190,13 +190,19 @@ for ii = 1:num_iter
 %----------------------   Refine Mesh      --------------------------------
 
     if refine_number == 1 % uniform refinement
+        
         my_mesh = my_mesh.mesh_uniform_refine();
-    elseif refine_number == 2 % refine the mesh by Adptive method 1
-        refine_vector = Functional_Adaptivity(refine_number,N_GQ);
+        
+    else  % refine the mesh by Adptive method
+        
+        if postprocessing == 0
+            refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,1);
+        elseif postprocessing == 1
+            refine_vector = Functional_Adaptivity(refine_number,Post_error_estimator,tol,1);
+        end
+        
         my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
-    elseif refine_number == 3 % refine the mesh by Adptive method 2
-        refine_vector = Functional_Adaptivity(refine_number,N_GQ);
-        my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
+    
     end
 
 

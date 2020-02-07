@@ -86,7 +86,7 @@ my_mesh      = mesh(mesh_nodes);
 
 for ii = 1:num_iter
     
-%%%%%%%%%%%%%%%%%%%%% Start new mesh %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------- Start new mesh ------------------------------------
 
     % plot final mesh result or not
     if ii == num_iter
@@ -98,8 +98,8 @@ for ii = 1:num_iter
     
     num_element_list(ii) = my_mesh.N_elemets; % store the # of elements
     
+%---------------------- Solve the problem  --------------------------------
 
- %%%%%%%%%%%%%%  Solve the problem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
     if numerical_method_info.method == 1 % HDG method
         % num_sol: (N_q+N_u+N_hat) x N_ele matrix , it stores the
@@ -122,7 +122,7 @@ for ii = 1:num_iter
     primal_num_sol_0 = Post_processor(primal_num_sol,GQ_pts,numerical_method_info,post_flag);
     adjoint_num_sol_0 = Post_processor(adjoint_num_sol,GQ_pts,numerical_method_info,post_flag);
 
-%%%%%%%%%%%%%%%%%%%%% Calculate error %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------  Calculate Error   --------------------------------
     
     [error_list_qh(ii),error_list_uh(ii),error_list_uhat(ii)] = Error_cal(hs,GQ_End_points_phy,exact_primal_func,primal_num_sol_0,GQ_weights);
     [error_list_ph(ii),error_list_vh(ii),error_list_vhat(ii)] = Error_cal(hs,GQ_End_points_phy,exact_adjoint_func,adjoint_num_sol_0,GQ_weights);
@@ -131,9 +131,9 @@ for ii = 1:num_iter
     temp_Nq = numerical_method_info.pk_q+1;
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
-    [error_list_j(ii),error_list_j_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow);
+    [error_list_j(ii),error_list_j_adj(ii),~,error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
 
- %%%%%%%%%%%%%%%%%%%%% Post-processing   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------  Post-processing   --------------------------------
  
     if postprocessing ~= 0
         % Postprocessing, compute values at Quadrature points
@@ -164,18 +164,18 @@ for ii = 1:num_iter
             end
         end
 
-%%%%%%%%%%%%%%%%%%%%% Calculate error %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------  Calculate Error   --------------------------------
 
         [error_list_qh_star(ii),error_list_uh_star(ii),error_list_uhat_star(ii)] = Error_cal(hs,GQ_End_points_phy,exact_primal_func,primal_num_sol_star,GQ_weights);
         [error_list_ph_star(ii),error_list_vh_star(ii),error_list_vhat_star(ii)] = Error_cal(hs,GQ_End_points_phy,exact_adjoint_func,adjoint_num_sol_star,GQ_weights);
         
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
-        [error_list_jstar(ii),error_list_jstar_adj(ii)] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow);
+        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator,~] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
 
     end
 
-%%%%%%%%%%%%%%%%%%%%%%% Plot %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------        Plot        --------------------------------
 
     if final_plot_flag && functional_info.final_plot
         if postprocessing == 0
@@ -187,27 +187,28 @@ for ii = 1:num_iter
         end
     end
 
-%%%%%%%%%%%%%%%%%%%%%%% Refine the mesh %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------   Refine Mesh      --------------------------------
 
     if refine_number == 1 % uniform refinement
         my_mesh = my_mesh.mesh_uniform_refine();
     elseif refine_number == 2 % refine the mesh by Adptive method 1
-        refine_vector = Functional_Adaptivity(refine_number,N_GQ);
+        refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,flag);
         my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
     elseif refine_number == 3 % refine the mesh by Adptive method 2
-        refine_vector = Functional_Adaptivity(refine_number,N_GQ);
+        refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,N_GQ);
         my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
     end
 
 
 end
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------------------------------------------------------------
+
 
 %% 3. error and results
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------------------------------------------------------------
 
+%----------------------  Problem Info      --------------------------------
 
-%%% Problem Info
 fprintf('Problem Info:\n')
 if functional_type == 1 
     fprintf("1. Functional: J(u) = (u,g)\n");
@@ -217,7 +218,8 @@ if pde_type == 101
 end
 fprintf("3. HDG method\n   k = %d, tau = h^%d \n", numerical_method_info.pk_u,numerical_method_info.tau_pow);
 
-%%% Results for the numerical method
+%---------------------- Result: numerical method     ----------------------
+
 fprintf("--------------------\n")
 fprintf('No Post-processing:\n');
 %%%%%%%% compute and print pde error order 
@@ -230,7 +232,7 @@ fprintf('\n%s\n','Functional Error');
 [order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
 Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
 
-% Results with post-processing
+%----------------------  Result: Post-processing    -----------------------
 
 fprintf("--------------------\n")
 
