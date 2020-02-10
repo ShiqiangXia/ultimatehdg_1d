@@ -62,12 +62,16 @@ if functional_type == 1
     % u*g at GQ points 
     J_matrix = exact_primal_func(gq_pts_phy(1:nn,:),0).*temp_g;
     % get J(u)
-    J_eval = (GQ_weights'*J_matrix)*hs/numeric_t('2');
+    element_J_eval = (GQ_weights'*J_matrix).*hs'/numeric_t('2');
+    J_eval = sum(element_J_eval);
+    %J_eval = (GQ_weights'*J_matrix)*hs/numeric_t('2');
     
     % u_h*g at GQ points
     Jh_matrix = uh.*temp_g;
     % get J(u_h)
-    Jh_eval = (GQ_weights'*Jh_matrix)*hs/numeric_t('2');
+    element_Jh_eval = (GQ_weights'*Jh_matrix).*hs'/numeric_t('2');
+    Jh_eval = sum(element_Jh_eval);
+    %Jh_eval = (GQ_weights'*Jh_matrix)*hs/numeric_t('2');
     
     % error of J(u) - J(u_h)
     error_jh = abs(J_eval - Jh_eval);
@@ -104,6 +108,12 @@ if functional_type == 1
     
     error_jh_adj = abs(J_eval - Jh_adj_eval);
     
+    close all;
+    plot(abs(element_J_eval-element_Jh_eval),"x-");
+    hold on
+    plot(abs(temp4),"o-");
+    title("Compare");
+    %}
 elseif functional_type == 2
     
     %J(u) = <-u', g>

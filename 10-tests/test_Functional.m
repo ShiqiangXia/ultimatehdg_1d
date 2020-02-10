@@ -12,13 +12,13 @@ functional_type = 1;
 pb = 101;
 exact_adjoint_func = @smooth_func101;
 
-%exact_primal_func = @smooth_func101; % exact solution sin(Pi*x)
+exact_primal_func = @smooth_func101; % exact solution sin(Pi*x)
 %exact_primal_func = @poly_func;
 %exact_primal_func = @singular_func101; % C1 not C2
 %exact_primal_func = @singular_func102;% 1st derivative blows up at x =0
-exact_primal_func = @singular_func103; % C1 not C2
-mesh0 = 10; % initial number of elements
-num_iter = 4; % number of refinements
+%exact_primal_func = @singular_func103; % C1 not C2
+mesh0 = 20; % initial number of elements
+num_iter = 8; % number of refinements
 GQ = 5; % Gauss Quadrature order  ---> accuracy 2N+1
 
 %% define numerical method
