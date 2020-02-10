@@ -96,7 +96,7 @@ if functional_type == 1
     % <uh - uh_hat, ph_n - ph_hat_n>
     temp4 = sum( (uh_trace - uh_hat).*(ph_n_trace - ph_hat_n));
     AC4 = sum(temp4);
-    fprintf("%d\n",AC4);
+    %fprintf("%d\n",AC4);
     
     AC_total = AC1+AC2+AC3+AC4;
     
