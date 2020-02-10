@@ -1,8 +1,8 @@
 function out = poly_func(x,flag)
-% exact solution sin(pi*x)
+% exact solution x^2-x
 
 
-%my_pi = numeric_t('pi');
+
 
 if flag == 0 % exact solution u
     out = x.^2-x;

@@ -2,7 +2,7 @@ function refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol
 [~,N_ele] = size(error_estimator);
 error_estimator = abs(error_estimator);
 refine_vector = zeros(1,N_ele,numeric_t);
-percent = 0.2;
+percent = 0.9;
 if refine_number == 2 % First Adaptive method 
     if adp_strategy == 1
         %e_tol = tol/N_ele;
