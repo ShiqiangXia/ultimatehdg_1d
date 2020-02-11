@@ -103,7 +103,7 @@ if functional_type == 1
     %fprintf("%d\n",AC4);
     
     AC_total = AC1+AC2+AC3+AC4;
-    
+    element_Jh_adj_eval = element_Jh_eval+temp1+temp2+temp4;
     Jh_adj_eval = Jh_eval + AC_total;
     
     error_jh_adj = abs(J_eval - Jh_adj_eval);
@@ -112,6 +112,8 @@ if functional_type == 1
     plot(abs(element_J_eval-element_Jh_eval),"x-");
     hold on
     plot(abs(temp4),"o-");
+    hold on
+    plot(abs(element_J_eval-element_Jh_adj_eval),"*-");
     title("Compare");
     %}
 elseif functional_type == 2
