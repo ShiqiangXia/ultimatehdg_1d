@@ -7,7 +7,7 @@ if refine_number == 2 % First Adaptive method
     if adp_strategy == 1
         % adaptive strategy 1
         % refine elements such that 
-        % local_error_estimate > max_local_error_estimate * x%
+        % local_error_estimate > percent * max_local_error_estimate
         e_tol = max(error_estimator);     
         idx = (error_estimator>percent*e_tol);
         refine_vector(idx) = 1;
@@ -15,18 +15,7 @@ if refine_number == 2 % First Adaptive method
         % adaptive strategy 1
         % refine elements such that 
         % rank local error esimators in decreasing order
-        % refine the first x percent
-        e_N = floor(percent*N_ele);
-        [~,idx] = maxk(error_estimator,e_N);
-        refine_vector(idx) = 1;
-    elseif adp_strategy == 3
-        % adaptive strategy 1
-        % refine elements such that 
-        % refine: local_error_estimate > TOL/N
-        e_tol = tol/N_ele;
-        idx = (error_estimator>e_tol);
-        refine_vector(idx) =1;
-        
+        %
         
     end
     

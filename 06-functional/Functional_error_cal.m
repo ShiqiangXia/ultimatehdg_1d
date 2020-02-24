@@ -112,8 +112,8 @@ if functional_type == 1
     plot(abs(element_J_eval-element_Jh_eval),"x-");
     hold on
     plot(abs(temp4),"o-");
-    hold on
-    plot(abs(element_J_eval-element_Jh_adj_eval),"*-");
+%    hold on
+ %   plot(abs(element_J_eval-element_Jh_adj_eval),"*-");
     title("Compare");
     %}
 elseif functional_type == 2

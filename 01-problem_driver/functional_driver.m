@@ -42,6 +42,8 @@ error_list_vhat = zeros(num_iter,1,numeric_t);
 error_list_j         = zeros(num_iter,1,numeric_t);
 error_list_j_adj         = zeros(num_iter,1,numeric_t);
 
+error_bound_list    = zeros(num_iter,1,numeric_t);
+
 
 num_element_list = zeros(num_iter,1,numeric_t);
 
@@ -59,6 +61,10 @@ if postprocessing ~=0
 
     error_list_jstar         = zeros(num_iter,1,numeric_t);
     error_list_jstar_adj     = zeros(num_iter,1,numeric_t);
+    error_bound_adj_list    = zeros(num_iter,1,numeric_t);
+    
+    
+
 
 
     if postprocessing == 1 % Convolution Filter
@@ -132,6 +138,7 @@ for ii = 1:num_iter
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
     [error_list_j(ii),error_list_j_adj(ii),~,error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
+    error_bound_list(ii) = sum(abs(error_estimator));
 
 %----------------------  Post-processing   --------------------------------
  
@@ -172,6 +179,7 @@ for ii = 1:num_iter
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
         [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator,~] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+        error_bound_adj_list(ii) = sum(Post_error_estimator);
 
     end
 
@@ -194,11 +202,12 @@ for ii = 1:num_iter
         my_mesh = my_mesh.mesh_uniform_refine();
         
     else  % refine the mesh by Adptive method
+        my_adptive_strategy = 2;
         
         if postprocessing == 0
-            refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,1);
+            refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,my_adptive_strategy);
         elseif postprocessing == 1
-            refine_vector = Functional_Adaptivity(refine_number,Post_error_estimator,tol,1);
+            refine_vector = Functional_Adaptivity(refine_number,Post_error_estimator,tol,my_adptive_strategy);
         end
         
         my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
