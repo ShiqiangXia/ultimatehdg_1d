@@ -98,12 +98,12 @@ if functional_type == 1
     % first adjoint-correction term
     % (f,vh) + (qh, grad_vh) - <qh_hat_n,vh>
     temp1 = ( GQ_weights'*(temp_f.*vh + qh.* gradvh) ).*hs' /numeric_t('2') - sum( qh_hat_n.*vh_trace);
-    %AC1 = ( GQ_weights'*(temp_f.*vh + qh.* gradvh) )*hs /numeric_t('2') - sum(sum( qh_hat_n.*vh_trace));
+    
     AC1 = sum(temp1);
     % second adjoint-correction term
     % (qh + grad_uh, ph) - <uh-uh_hat,ph_n>;
     temp2 = (GQ_weights'*((qh+graduh).*ph)).*hs' /numeric_t('2') - sum((uh_trace - uh_hat).*ph_n_trace );
-    %AC2 = (GQ_weights'*((qh+graduh).*ph))*hs /numeric_t('2') - sum(sum((uh_trace - uh_hat).*ph_n_trace ));
+    
     AC2 = sum(temp2);
     % third adjoint-correcton term
     % <qh_hat_n, vh_hat>_{all interior faces}
@@ -121,6 +121,7 @@ if functional_type == 1
     
     AC_total = AC1+AC2+AC3+AC4;
     %element_Jh_adj_eval = element_Jh_eval+temp1+temp2+temp4;
+    
     Jh_adj_eval = Jh_eval + AC_total;
     
     error_jh_adj = abs(J_eval - Jh_adj_eval);
