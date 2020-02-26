@@ -4,7 +4,7 @@ function functional_driver(functional_info)
 %% 1. Set up
 %--------------------------------------------------------------------------
 
-
+tol =  numeric_t('1e-4');
 %%%% Functional type, PDE type and exact solutions
 functional_type = functional_info.functional_type;
 pde_type = functional_info.pde_type;
@@ -42,6 +42,8 @@ error_list_vhat = zeros(num_iter,1,numeric_t);
 error_list_j         = zeros(num_iter,1,numeric_t);
 error_list_j_adj         = zeros(num_iter,1,numeric_t);
 
+error_bound_list    = zeros(num_iter,1,numeric_t);
+
 
 num_element_list = zeros(num_iter,1,numeric_t);
 
@@ -59,6 +61,10 @@ if postprocessing ~=0
 
     error_list_jstar         = zeros(num_iter,1,numeric_t);
     error_list_jstar_adj     = zeros(num_iter,1,numeric_t);
+    error_bound_adj_list    = zeros(num_iter,1,numeric_t);
+    
+    
+
 
 
     if postprocessing == 1 % Convolution Filter
@@ -132,6 +138,8 @@ for ii = 1:num_iter
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
     [error_list_j(ii),error_list_j_adj(ii),~,error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
+    error_bound_list(ii) = abs(sum(error_estimator));
+    %error_bound_list(ii) = sum(abs(error_estimator));
 
 %----------------------  Post-processing   --------------------------------
  
@@ -172,6 +180,8 @@ for ii = 1:num_iter
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
         [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator,~] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+        error_bound_adj_list(ii) = abs(sum(Post_error_estimator));
+        %error_bound_adj_list(ii) = sum(abs(Post_error_estimator));
 
     end
 
@@ -190,13 +200,20 @@ for ii = 1:num_iter
 %----------------------   Refine Mesh      --------------------------------
 
     if refine_number == 1 % uniform refinement
+        
         my_mesh = my_mesh.mesh_uniform_refine();
-    elseif refine_number == 2 % refine the mesh by Adptive method 1
-        refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,flag);
+        
+    else  % refine the mesh by Adptive method
+        my_adptive_strategy = 2;
+        
+        if postprocessing == 0
+            refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,my_adptive_strategy);
+        elseif postprocessing == 1
+            refine_vector = Functional_Adaptivity(refine_number,Post_error_estimator,tol,my_adptive_strategy);
+        end
+        
         my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
-    elseif refine_number == 3 % refine the mesh by Adptive method 2
-        refine_vector = Functional_Adaptivity(refine_number,error_estimator,tol,N_GQ);
-        my_mesh = my_mesh.mesh_nonuniform_refine(refine_vector);
+    
     end
 
 
@@ -231,6 +248,19 @@ Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,
 fprintf('\n%s\n','Functional Error');
 [order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
 Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
+fprintf("--------------------\n")
+
+%if refine_number~=1
+    fprintf('Results for estimator\n')
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-J(u_h)','esti_1','ratio')
+    Print_Estimator_result(num_element_list,error_list_j,error_bound_list);
+    fprintf('\n');
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-Jh(u_h)','esti_1','ratio')
+    Print_Estimator_result(num_element_list,error_list_j_adj,error_bound_list);
+    
+    
+    
+%end
 
 %----------------------  Result: Post-processing    -----------------------
 
@@ -253,6 +283,14 @@ Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_
 fprintf('\n%s\n','Functional Error');
 [order_jstar,order_jstar_adj] = Error_order(num_element_list,error_list_jstar,error_list_jstar_adj,0);
 Print_func_error_result(num_element_list,error_list_jstar,error_list_jstar_adj,order_jstar,order_jstar_adj);
+
+fprintf("--------------------\n")
+    fprintf('Results for estimator\n')
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-J(u*_h)','esti_2','ratio')
+    Print_Estimator_result(num_element_list,error_list_jstar,error_bound_adj_list);
+    fprintf('\n');
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-Jh(u*_h)','esti_2','ratio')
+    Print_Estimator_result(num_element_list,error_list_jstar_adj,error_bound_adj_list);
 
 end
 

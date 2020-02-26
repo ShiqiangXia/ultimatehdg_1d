@@ -137,8 +137,9 @@ for ii = 1:num_iter
     temp_Nq = numerical_method_info.pk_q+1;
     
     [primal_num_sol_0_ex,adjoint_num_sol_0_ex] = Points_extension(hs,temp_Nu,temp_Nq,GQ_pts,primal_num_sol_0,adjoint_num_sol_0);
-    [error_list_j(ii),error_list_j_adj(ii),~,error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
-    error_bound_list(ii) = sum(abs(error_estimator));
+    [error_list_j(ii),error_list_j_adj(ii),error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_0_ex,adjoint_num_sol_0_ex,GQ_weights,numerical_method_info.tau_pow,post_flag);
+    error_bound_list(ii) = abs(sum(error_estimator));
+    %error_bound_list(ii) = sum(abs(error_estimator));
 
 %----------------------  Post-processing   --------------------------------
  
@@ -178,8 +179,9 @@ for ii = 1:num_iter
         
         [primal_num_sol_star_ex,adjoint_num_sol_star_ex] = Points_extension(hs,2*temp_Nu,2*temp_Nq,GQ_pts,primal_num_sol_star,adjoint_num_sol_star);
 
-        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator,~] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
-        error_bound_adj_list(ii) = sum(Post_error_estimator);
+        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+        error_bound_adj_list(ii) = abs(sum(Post_error_estimator));
+        %error_bound_adj_list(ii) = sum(abs(Post_error_estimator));
 
     end
 
@@ -246,6 +248,19 @@ Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,
 fprintf('\n%s\n','Functional Error');
 [order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
 Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
+fprintf("--------------------\n")
+
+%if refine_number~=1
+    fprintf('Results for estimator\n')
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-J(u_h)','esti_1','ratio')
+    Print_Estimator_result(num_element_list,error_list_j,error_bound_list);
+    fprintf('\n');
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-Jh(u_h)','esti_1','ratio')
+    Print_Estimator_result(num_element_list,error_list_j_adj,error_bound_list);
+    
+    
+    
+%end
 
 %----------------------  Result: Post-processing    -----------------------
 
@@ -268,6 +283,14 @@ Print_error_result(num_element_list,error_list_qh_star,error_list_uh_star,error_
 fprintf('\n%s\n','Functional Error');
 [order_jstar,order_jstar_adj] = Error_order(num_element_list,error_list_jstar,error_list_jstar_adj,0);
 Print_func_error_result(num_element_list,error_list_jstar,error_list_jstar_adj,order_jstar,order_jstar_adj);
+
+fprintf("--------------------\n")
+    fprintf('Results for estimator\n')
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-J(u*_h)','esti_2','ratio')
+    Print_Estimator_result(num_element_list,error_list_jstar,error_bound_adj_list);
+    fprintf('\n');
+    fprintf('%-4s | %-14s %-14s %-6s \n','N','J(u)-Jh(u*_h)','esti_2','ratio')
+    Print_Estimator_result(num_element_list,error_list_jstar_adj,error_bound_adj_list);
 
 end
 

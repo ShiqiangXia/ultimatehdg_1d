@@ -94,9 +94,6 @@ if functional_type == 1
     % third adjoint-correcton term
     % <qh_hat_n, vh_hat>_{all interior faces}
     temp_AC3 = qh_hat_n.*vh_hat;
-    my_temp_AC3 = temp_AC3;
-    my_temp_AC3(2,1:end-1) = (my_temp_AC3(2,1:end-1)+temp_AC3(1,2:end))*numeric_t(0.5);
-    my_temp_AC3(1,2:end) = (my_temp_AC3(1,2:end)+temp_AC3(2,1:end-1))*numeric_t(0.5);
     AC3 = sum(sum(temp_AC3)) - temp_AC3(1,1)-temp_AC3(end,end);
     
     % fourth adjoint-correction term
@@ -111,20 +108,17 @@ if functional_type == 1
     
     error_jh_adj = abs(J_eval - Jh_adj_eval);
     
-    estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
+    estimator_ACh = temp1+temp2+temp4+sum(temp_AC3);
     
     close all;
-    plot((element_J_eval-element_Jh_eval),"s-");
+    plot(element_J_eval-element_Jh_eval,"x-");
     hold on
-    plot((estimator_ACh),"o-");
-    %{
+    plot(estimator_ACh,"o-");
     hold on
     plot(element_J_eval-element_Jh_adj_eval,"*-");
     hold on
     plot(-temp1,"s-");
-    %}
-    title("Compare the functional error and the estimator on each element");
-    legend('J(u)-J(u_h)','AC_h');
+    title("Compare");
     %}
 elseif functional_type == 2
     
@@ -133,5 +127,5 @@ elseif functional_type == 2
     
 end
 
-estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
+
 end
