@@ -122,8 +122,7 @@ for ii = 1:num_iter
 
     % First No postprocessing, compute values at Quadrature points
     % num_sol_0: (2*(N_GQ+1)+N_uhat) x N_ele
-    % store the GQ point values of q_h, u_h and the end point values of
-    % uhat
+    % store the GQ point values of q_h, u_h and the end point values of uhat
     post_flag = 0;
     primal_num_sol_0 = Post_processor(primal_num_sol,GQ_pts,numerical_method_info,post_flag);
     adjoint_num_sol_0 = Post_processor(adjoint_num_sol,GQ_pts,numerical_method_info,post_flag);

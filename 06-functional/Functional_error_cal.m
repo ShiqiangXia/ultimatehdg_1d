@@ -15,14 +15,21 @@ taus = (hs').^tau_pow;
 normal_vector = [numeric_t('-1');numeric_t('1')];
 %%% Get the all GQ values for the primal and adjoint solution
 if grad_lag == 0
+    % use qh from HDG method
     qh = primal_num_sol(1:nn,:);
     qh_n_trace = normal_vector.* primal_num_sol(nn+1:n_pt,:);
+    %uh_trace = primal_num_sol(n_pt+nn+1:2*n_pt,:);
     
 else
+    %------------
     %qh = primal_num_sol(1:nn,:);
     %qh_n_trace = normal_vector.* primal_num_sol(nn+1:n_pt,:);
+    %------------
+    
+    % use qh = -graduh (post-processing)
     qh = - primal_num_sol(2*n_pt+1:2*n_pt+nn,:);
     qh_n_trace = - normal_vector.* primal_num_sol(2*n_pt+nn+1:3*n_pt,:);
+    %uh_trace = primal_num_sol(3*n_pt+1:end,:);
 end
 
 
@@ -33,14 +40,21 @@ uh_hat = primal_num_sol(3*n_pt+1:end,:);
 qh_hat_n = qh_n_trace + taus.*(uh_trace - uh_hat);
 
 if grad_lag == 0
+    % use ph from HDG method
     ph = adjoint_num_sol(1:nn,:);
     ph_n_trace = normal_vector.* adjoint_num_sol(nn+1:n_pt,:);
-    
+    %vh_trace = adjoint_num_sol(n_pt+nn+1:2*n_pt,:);
 else
+    
+    %--------
     %ph = adjoint_num_sol(1:nn,:);
     %ph_n_trace = normal_vector.* adjoint_num_sol(nn+1:n_pt,:);
+    %--------
+    
+    % use ph as -grad vh (post-processing)
     ph = -adjoint_num_sol(2*n_pt+1:2*n_pt+nn,:);
     ph_n_trace =- normal_vector.* adjoint_num_sol(2*n_pt+nn+1:3*n_pt,:);
+    %vh_trace = adjoint_num_sol(3*n_pt+1:end,:);
 end
 
 
@@ -106,7 +120,7 @@ if functional_type == 1
     %fprintf("%d\n",AC4);
     
     AC_total = AC1+AC2+AC3+AC4;
-    element_Jh_adj_eval = element_Jh_eval+temp1+temp2+temp4;
+    %element_Jh_adj_eval = element_Jh_eval+temp1+temp2+temp4;
     Jh_adj_eval = Jh_eval + AC_total;
     
     error_jh_adj = abs(J_eval - Jh_adj_eval);
