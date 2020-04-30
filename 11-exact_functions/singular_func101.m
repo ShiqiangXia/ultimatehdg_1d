@@ -7,8 +7,8 @@ function out = singular_func101(x,flag)
 my_pi = numeric_t('pi');
 my_two = numeric_t('2');
 my_half_pi = numeric_t('pi/2');
-a = numeric_t('0.3');
-b = numeric_t('0.7');
+a = numeric_t('0');
+b = numeric_t('1');
 out = zeros(size(x),numeric_t);
 
 idx = (x>a) == (x<b);

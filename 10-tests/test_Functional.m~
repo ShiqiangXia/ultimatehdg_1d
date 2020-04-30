@@ -5,7 +5,7 @@
 %%  set precision
 close all;
 
-precision = 'double';
+precision = 'mp';
 
 %%  define functional problem
 functional_type = 1;
@@ -14,18 +14,18 @@ exact_adjoint_func = @smooth_func101;
 %exact_adjoint_func = @poly_func;% 
 
 
-exact_primal_func = @smooth_func101; % exact solution sin(Pi*x)
+%exact_primal_func = @smooth_func101; % exact solution sin(Pi*x)
 %exact_primal_func = @poly_func;
-%exact_primal_func = @singular_func101; % C1 not C2
+exact_primal_func = @singular_func101; % C1 not C2
 %exact_primal_func = @singular_func102;% 1st derivative blows up at x =0
 %exact_primal_func = @singular_func103; % C1 not C2
-mesh0 = 30; % initial number of elements
-num_iter = 3; % number of refinements
-GQ = 7; % Gauss Quadrature order  ---> accuracy 2N+1
+mesh0 = 40; % initial number of elements
+num_iter = 1; % number of refinements
+GQ = 5; % Gauss Quadrature order  ---> accuracy 2N+1
 
 %% define numerical method
 method = 1 ; % HDG method
-pk_u = 2;  % polynomial order u
+pk_u = 3;  % polynomial order u
 pk_q = 2;  % polynomial order q
 basis_u_type = 1; % basis type (so far we only have 1)
 basis_q_type = 1; % basis type (so far we only have 1)

@@ -247,6 +247,20 @@ Print_error_result(num_element_list,error_list_qh,error_list_uh,error_list_uhat,
 fprintf('\n%s\n','Functional Error');
 [order_j,order_j_adj] = Error_order(num_element_list,error_list_j,error_list_j_adj,0);
 Print_func_error_result(num_element_list,error_list_j,error_list_j_adj,order_j,order_j_adj);
+
+figure;
+plot(log10(num_element_list),log10(error_list_j),'x-');
+xlabel('log(N)');
+ylabel('log(|J(u)-J(u_h)|)');
+title({'Convergence result for HDG method'; 'log(|J(u)-J(u_h)|) vs log(N)'});
+
+figure;
+plot(log10(num_element_list),log10(error_list_j_adj),'x-');
+xlabel('log(N)');
+ylabel('log(|J(u)-Jh|)');
+title({'Convergence result for HDG method'; 'log(|J(u)-J(u_h)-AC_h|) vs log(N)'});
+
+
 fprintf("--------------------\n")
 
 %if refine_number~=1

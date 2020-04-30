@@ -129,9 +129,9 @@ if functional_type == 1
     estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
     
     close all;
-    plot((element_J_eval-element_Jh_eval),"s-");
+    plot(abs(element_J_eval-element_Jh_eval),"s-");
     hold on
-    plot((estimator_ACh),"o-");
+    plot(abs(estimator_ACh),"x-");
     %{
     hold on
     plot(element_J_eval-element_Jh_adj_eval,"*-");
