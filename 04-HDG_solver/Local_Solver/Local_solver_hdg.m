@@ -24,7 +24,8 @@ for ii = 1:N_ele
     tau_loc = h^(tau_pow);
     taus(ii) = tau_loc;
     
-    if N_ele == 1 && isequal(exact_func,@singular_func102) % special handle for singular functions
+    if ii == 1 && isequal(exact_func,@singular_func102) % special handle for singular functions
+        
         loc_f =[ zeros(N_q,1,numeric_t); Source_f_singular(exact_func,nds(1),nds(2),N_GQ,N_u)];
     else
         loc_f =[ zeros(N_q,1,numeric_t); Source_f(exact_func,nds(1),nds(2),N_GQ,N_u)];
