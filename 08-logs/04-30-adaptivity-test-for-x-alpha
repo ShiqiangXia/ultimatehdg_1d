@@ -634,4 +634,1137 @@ N    | J(u)-J(u_h)    esti_1         ratio
 33   | 1.02e-15       8.18e-17       0.08   |
 42   | 7.40e-17       9.82e-18       0.13   |
 54   | 6.32e-17       8.42e-19       0.01   |
-70   | 4.77e-18       9.40e
+70   | 4.77e-18       9.40e-20       0.02   |
+91   | 4.68e-18       8.56e-21       0.00   |
+118  | 3.65e-19       6.77e-22       0.00   |
+153  | 2.87e-20       8.10e-23       0.00   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+10   | 1.24e-09       8.25e-10       0.67   |
+13   | 2.60e-11       8.27e-12       0.32   |
+16   | 6.09e-13       1.18e-13       0.19   |
+20   | 1.97e-14       7.74e-15       0.39   |
+26   | 1.15e-15       6.75e-16       0.59   |
+33   | 9.34e-16       8.18e-17       0.09   |
+42   | 6.41e-17       9.82e-18       0.15   |
+54   | 6.23e-17       8.42e-19       0.01   |
+70   | 4.68e-18       9.40e-20       0.02   |
+91   | 4.68e-18       8.56e-21       0.00   |
+118  | 3.64e-19       6.77e-22       0.00   |
+153  | 2.86e-20       8.10e-23       0.00   |
+--------------------
+% convergence order of J(u)-J(u_h)  is about 8.2
+
+test_Mesh_Projection
+mesh1.all_nodes
+
+ans = 
+
+
+Columns 1 through 4
+
+        0.0000e+00        1.0000e-01        2.0000e-01        3.0000e-01    
+
+Columns 5 through 8
+
+        4.0000e-01        5.0000e-01        6.0000e-01        7.0000e-01    
+
+Columns 9 through 11
+
+        8.0000e-01        9.0000e-01        1.0000e+00    
+
+mp.FollowMatlabNumericFormat(1)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+mp.FollowMatlabNumericFormat
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+format shortG
+mesh1.all_nodes
+
+ans = 
+
+
+Columns 1 through 6
+
+          0        0.1        0.2        0.3        0.4        0.5    
+
+Columns 7 through 11
+
+        0.6        0.7        0.8        0.9          1    
+
+mesh2.all_nodes
+
+ans = 
+
+
+Columns 1 through 6
+
+           0         0.1         0.2        0.25         0.3         0.4    
+
+Columns 7 through 12
+
+         0.5         0.6         0.7         0.8         0.9           1    
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+background_mesh.all_nodes
+
+ans = 
+
+
+Columns 1 through 6
+
+          0        0.1        0.2        0.3        0.4        0.5    
+
+Columns 7 through 10
+
+        0.6        0.7        0.8        0.9    
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+proj_num_sol
+
+proj_num_sol = 
+
+
+Columns 1 through 4
+
+            -4.3702            -3.9424            -3.1287            -2.0087    
+           0.061743            0.17919            0.28359            0.35167    
+            0.22029            0.63931            0.99587             1.2547    
+            0.14694            0.13256           0.092314           0.067542    
+        -1.5407e-34            0.30902            0.58779            0.80902    
+            0.30902            0.58779            0.80902            0.95106    
+
+Columns 5 through 8
+
+           -0.69217            0.69217             2.0087             3.1287    
+            0.38983            0.38983            0.35167            0.27909    
+             1.3909             1.3909             1.2547            0.99574    
+           0.023273          -0.023273          -0.067542            -0.1052    
+            0.95106                  1            0.95106            0.80902    
+                  1            0.95106            0.80902            0.58779    
+
+Columns 9 through 9
+
+             3.9424    
+            0.17919    
+            0.63931    
+           -0.13256    
+            0.58779    
+            0.30902    
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+proj_num_sol(1,:)
+
+ans = 
+
+
+Columns 1 through 4
+
+         -4.3702         -3.9424         -3.1287         -2.0087    
+
+Columns 5 through 8
+
+        -0.69217         0.69217          2.0087          3.1287    
+
+Columns 9 through 9
+
+          3.9424    
+
+proj_num_sol(:,1)
+
+ans = 
+
+            -4.3702    
+           0.061743    
+            0.22029    
+            0.14694    
+        -1.5407e-34    
+            0.30902    
+
+num_sol2(:,1)
+
+ans = 
+
+            -4.3702    
+           0.061743    
+            0.22029    
+            0.14694    
+        -1.5407e-34    
+            0.30902    
+
+proj_num_sol(:,2)
+
+ans = 
+
+        -3.9424    
+        0.17919    
+        0.63931    
+        0.13256    
+        0.30902    
+        0.58779    
+
+num_sol2(:,2)
+
+ans = 
+
+        -3.9424    
+        0.17919    
+        0.63931    
+        0.13256    
+        0.30902    
+        0.58779    
+
+proj_num_sol(:,3)
+
+ans = 
+
+         -3.1287    
+         0.28359    
+         0.99587    
+        0.092314    
+         0.58779    
+         0.80902    
+
+num_sol2(:,3)
+
+ans = 
+
+         -3.3749    
+         0.12962    
+          0.9175    
+        0.052721    
+         0.58779    
+         0.70711    
+
+num_sol2(:,5)
+
+ans = 
+
+         -2.0087    
+         0.35167    
+          1.2547    
+        0.067542    
+         0.80902    
+         0.95106    
+
+proj_num_sol(:,4)
+
+ans = 
+
+         -2.0087    
+         0.35167    
+          1.2547    
+        0.067542    
+         0.80902    
+         0.95106    
+
+num_sol2(:,10)
+
+ans = 
+
+          3.9424    
+         0.17919    
+         0.63931    
+        -0.13256    
+         0.58779    
+         0.30902    
+
+num_sol2(:,9)
+
+ans = 
+
+         3.1287    
+        0.27909    
+        0.99574    
+        -0.1052    
+        0.80902    
+        0.58779    
+
+num_sol2
+
+num_sol2 = 
+
+
+Columns 1 through 4
+
+            -4.3702            -3.9424            -3.3749            -2.8825    
+           0.061743            0.17919            0.12962            0.15177    
+            0.22029            0.63931             0.9175             1.0743    
+            0.14694            0.13256           0.052721           0.045028    
+        -1.5407e-34            0.30902            0.58779            0.70711    
+            0.30902            0.58779            0.70711            0.80902    
+
+Columns 5 through 8
+
+            -2.0087           -0.69217            0.69217             2.0087    
+            0.35167            0.38983            0.38983            0.35167    
+             1.2547             1.3909             1.3909             1.2547    
+           0.067542           0.023273          -0.023273          -0.067542    
+            0.80902            0.95106                  1            0.95106    
+            0.95106                  1            0.95106            0.80902    
+
+Columns 9 through 11
+
+             3.1287             3.9424             4.3702    
+            0.27909            0.17919           0.061743    
+            0.99574            0.63931            0.22029    
+            -0.1052           -0.13256           -0.14694    
+            0.80902            0.58779            0.30902    
+            0.58779            0.30902         8.6718e-35    
+
+proj_num_sol
+
+proj_num_sol = 
+
+
+Columns 1 through 4
+
+            -4.3702            -3.9424            -3.1287            -2.0087    
+           0.061743            0.17919            0.28359            0.35167    
+            0.22029            0.63931            0.99587             1.2547    
+            0.14694            0.13256           0.092314           0.067542    
+        -1.5407e-34            0.30902            0.58779            0.80902    
+            0.30902            0.58779            0.80902            0.95106    
+
+Columns 5 through 8
+
+           -0.69217            0.69217             2.0087             3.1287    
+            0.38983            0.38983            0.35167            0.27909    
+             1.3909             1.3909             1.2547            0.99574    
+           0.023273          -0.023273          -0.067542            -0.1052    
+            0.95106                  1            0.95106            0.80902    
+                  1            0.95106            0.80902            0.58779    
+
+Columns 9 through 9
+
+             3.9424    
+            0.17919    
+            0.63931    
+           -0.13256    
+            0.58779    
+            0.30902    
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+newmesh.all_nodes
+
+ans = 
+
+
+Columns 1 through 6
+
+          0        0.1        0.2        0.3        0.4        0.5    
+
+Columns 7 through 10
+
+        0.6        0.7        0.8        0.9    
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+background_mesh.all_nodes
+
+ans = 
+
+
+Columns 1 through 6
+
+          0        0.1        0.2        0.3        0.4        0.5    
+
+Columns 7 through 10
+
+        0.6        0.7        0.8        0.9    
+
+mesh2.all_nodes
+
+ans = 
+
+
+Columns 1 through 6
+
+           0         0.1         0.2        0.25         0.3         0.4    
+
+Columns 7 through 12
+
+         0.5         0.6         0.7         0.8         0.9           1    
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+0:0.1:1
+
+ans =
+
+  Columns 1 through 7
+
+            0          0.1          0.2          0.3          0.4          0.5          0.6
+
+  Columns 8 through 11
+
+          0.7          0.8          0.9            1
+
+numeric_t('0'):h:numeric_t('1')
+
+ans = 
+
+
+Columns 1 through 6
+
+          0        0.1        0.2        0.3        0.4        0.5    
+
+Columns 7 through 10
+
+        0.6        0.7        0.8        0.9    
+
+numeric_t('0'):0.1:numeric_t('1')
+
+ans = 
+
+
+Columns 1 through 6
+
+          0        0.1        0.2        0.3        0.4        0.5    
+
+Columns 7 through 10
+
+        0.6        0.7        0.8        0.9    
+
+0:0.1:1
+
+ans =
+
+  Columns 1 through 7
+
+            0          0.1          0.2          0.3          0.4          0.5          0.6
+
+  Columns 8 through 11
+
+          0.7          0.8          0.9            1
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+precision
+
+precision =
+
+    'mp'
+
+precision='double';
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+format shortE
+0:h:1
+
+ans = 
+
+
+Columns 1 through 4
+
+        0.0000e+00        1.0000e-01        2.0000e-01        3.0000e-01    
+
+Columns 5 through 8
+
+        4.0000e-01        5.0000e-01        6.0000e-01        7.0000e-01    
+
+Columns 9 through 10
+
+        8.0000e-01        9.0000e-01    
+
+precision='double';
+precision
+
+precision =
+
+    'double'
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+global class_t;
+class_t=precision;
+
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+numeric_t('0'):h:numeric_t('1')
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 10
+
+   7.0000e-01   8.0000e-01   9.0000e-01
+
+h
+
+h =
+
+   1.0000e-01
+
+h-0.1
+
+ans =
+
+   8.3267e-17
+
+0:0.1:1
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 11
+
+   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+0:h:1
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 10
+
+   7.0000e-01   8.0000e-01   9.0000e-01
+
+obj
+
+obj = 
+
+  <a href="matlab:helpPopup mesh" style="font-weight:bold">mesh</a> with no properties.
+
+obj.all_nodes
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   2.5000e-01   3.0000e-01   4.0000e-01   5.0000e-01
+
+  Columns 8 through 12
+
+   6.0000e-01   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+obj.max_h
+
+ans =
+
+   1.0000e-01
+
+obj.max_h-0.1
+
+ans =
+
+   8.3267e-17
+
+obj.max_h
+
+ans =
+
+   1.0000e-01
+
+0:obj.max_h:1
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 10
+
+   7.0000e-01   8.0000e-01   9.0000e-01
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+h
+{Undefined function or variable 'h'.
+} 
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+h
+
+h =
+
+   1.0000e-01
+
+1/h
+
+ans =
+
+   1.0000e+01
+
+linspace(0,1,1/h)
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.2500e-01   2.5000e-01   3.7500e-01   5.0000e-01   6.2500e-01   7.5000e-01
+
+  Columns 8 through 9
+
+   8.7500e-01   1.0000e+00
+
+1/h-10
+
+ans =
+
+  -8.8818e-15
+
+linspace(0,1,10)
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.1111e-01   2.2222e-01   3.3333e-01   4.4444e-01   5.5556e-01   6.6667e-01
+
+  Columns 8 through 10
+
+   7.7778e-01   8.8889e-01   1.0000e+00
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+a= 0.1
+
+a =
+
+   1.0000e-01
+
+a-0.1
+
+ans =
+
+     0
+
+a= 0.2-0.1
+
+a =
+
+   1.0000e-01
+
+a-0.1
+
+ans =
+
+     0
+
+test_Mesh_Projection
+mesh1
+
+mesh1 = 
+
+  <a href="matlab:helpPopup mesh" style="font-weight:bold">mesh</a> with no properties.
+
+mesh1.get_max_h
+
+ans =
+
+   1.0000e-01
+
+mesh1.get_max_h-0.1
+
+ans =
+
+   8.3267e-17
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+linspace(0,1,2)
+
+ans =
+
+     0     1
+
+linspace(0,1,11)
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 11
+
+   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+test_Mesh_Projection
+mesh1.get_max_h-0.1
+
+ans =
+
+   8.3267e-17
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',20,1)">20  </a>refine_vec = zeros(N0,1,numeric_t);
+if system_dependent('IsDebugMode')==1, dbcont; end
+obj.all_nodes
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   2.5000e-01   3.0000e-01   4.0000e-01   5.0000e-01
+
+  Columns 8 through 12
+
+   6.0000e-01   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+ss = obj.all_nodes;
+ss
+
+ss =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   2.5000e-01   3.0000e-01   4.0000e-01   5.0000e-01
+
+  Columns 8 through 12
+
+   6.0000e-01   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+sh = ss(2:end)-ss(1:end-1)
+
+sh =
+
+  Columns 1 through 7
+
+   1.0000e-01   1.0000e-01   5.0000e-02   5.0000e-02   1.0000e-01   1.0000e-01   1.0000e-01
+
+  Columns 8 through 11
+
+   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01
+
+sh==obj.max_h
+
+ans =
+
+  1×11 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   0   0   0   0   0   0   0   0   1   0   0
+
+(sh-obj.max_h)<10^(-12)
+
+ans =
+
+  1×11 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   1   1   1   1   1   1   1   1   1   1   1
+
+(sh-obj.max_h)
+
+ans =
+
+  Columns 1 through 7
+
+  -8.3267e-17  -8.3267e-17  -5.0000e-02  -5.0000e-02  -5.5511e-17  -1.1102e-16  -1.1102e-16
+
+  Columns 8 through 11
+
+  -1.1102e-16            0  -1.1102e-16  -1.1102e-16
+
+abs(sh-obj.max_h)<10^(-12)
+
+ans =
+
+  1×11 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   1   1   0   0   1   1   1   1   1   1   1
+
+ss
+
+ss =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   2.5000e-01   3.0000e-01   4.0000e-01   5.0000e-01
+
+  Columns 8 through 12
+
+   6.0000e-01   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+mesh1.all_nodes
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 11
+
+   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+mesh1.get_max_h-0.1
+
+ans =
+
+   8.3267e-17
+
+h0
+
+h0 =
+
+   1.0000e-01
+
+h0-0.1
+
+ans =
+
+     0
+
+mesh1.get_max_h-h0
+
+ans =
+
+   8.3267e-17
+
+mesh_nodes(2:end)-mesh_nodes(1:end-1)
+
+ans =
+
+  Columns 1 through 7
+
+   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01
+
+  Columns 8 through 10
+
+   1.0000e-01   1.0000e-01   1.0000e-01
+
+ss = (mesh_nodes(2:end)-mesh_nodes(1:end-1))
+
+ss =
+
+  Columns 1 through 7
+
+   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01
+
+  Columns 8 through 10
+
+   1.0000e-01   1.0000e-01   1.0000e-01
+
+ss-0.1
+
+ans =
+
+  Columns 1 through 7
+
+            0            0   2.7756e-17  -2.7756e-17  -2.7756e-17   8.3267e-17  -2.7756e-17
+
+  Columns 8 through 10
+
+  -2.7756e-17  -2.7756e-17  -2.7756e-17
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+abs(old_nodes(2:end)-old_nodes(1:end-1))
+
+ans =
+
+  Columns 1 through 7
+
+   1.0000e-01   1.0000e-01   5.0000e-02   5.0000e-02   1.0000e-01   1.0000e-01   5.0000e-02
+
+  Columns 8 through 12
+
+   5.0000e-02   1.0000e-01   1.0000e-01   1.0000e-01   1.0000e-01
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+test_Mesh_Projection
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/02-mesh/mesh.m',129,1)">129 </a>                new_nodes = numeric_t('0'):h:numeric_t('1');
+n1 = old_nodes(1:end-1);
+n2 = old_nodes(2:end);
+idx
+
+idx =
+
+  1×12 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   1   1   0   0   1   1   0   0   1   1   1   1
+
+n1(idx)
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   3.0000e-01   4.0000e-01   6.0000e-01   7.0000e-01   8.0000e-01
+
+  Column 8
+
+   9.0000e-01
+
+n2(idx)
+
+ans =
+
+  Columns 1 through 7
+
+   1.0000e-01   2.0000e-01   4.0000e-01   5.0000e-01   7.0000e-01   8.0000e-01   9.0000e-01
+
+  Column 8
+
+   1.0000e+00
+
+z1 = n1(idx);
+z2=n2(idx);
+union(z1,z2)
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 11
+
+   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+background_mesh.all_nodes
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   6.0000e-01
+
+  Columns 8 through 11
+
+   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbcont; end
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     8.9263e-03       1.0737e-02        5.2400e-15   
+     8.7102e-03       1.0201e-02        5.0316e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     8.9263e-03       1.0737e-02        5.2400e-15   
+     8.7537e-03       9.8889e-03        1.1065e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     8.9263e-03       1.0737e-02        5.2400e-15   
+     8.7537e-03       9.8889e-03        1.1065e-15   
+
+test_Mesh_Projection
+{Matrix dimensions must agree.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Error_cal', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Error_cal.m', 37)" style="font-weight:bold">Error_cal</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Error_cal.m',37,0)">line 37</a>)
+diff_q_mtrix = exact_func(gq_pts_phy(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 76)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',76,0)">line 76</a>)
+[error_list_qh(2),error_list_uh(2),error_list_uhat(2)] =
+Error_cal(hs,GQ_End_points_phy,exact_func,proj_num_sol_star,GQ_weights);
+} 
+opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',76,0)
+test_Mesh_Projection
+{Matrix dimensions must agree.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Error_cal', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Error_cal.m', 37)" style="font-weight:bold">Error_cal</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Error_cal.m',37,0)">line 37</a>)
+diff_q_mtrix = exact_func(gq_pts_phy(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 76)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',76,0)">line 76</a>)
+[error_list_qh(2),error_list_uh(2),error_list_uhat(2)] =
+Error_cal(hs,GQ_End_points_phy,exact_func,proj_num_sol_star,GQ_weights);
+} 
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     8.9263e-03       1.0737e-02        5.2400e-15   
+     8.7537e-03       9.8889e-03        1.1065e-15   
+
+test_Mesh_Projection
+mesh2.get_background_uniform_mesh;
+mesh2.get_background_uniform_mesh
+
+ans = 
+
+  <a href="matlab:helpPopup mesh" style="font-weight:bold">mesh</a> with no properties.
+
+background_mesh.all_nodes
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   2.0000e-01   3.0000e-01   4.0000e-01   5.0000e-01   7.0000e-01
+
+  Columns 8 through 10
+
+   8.0000e-01   9.0000e-01   1.0000e+00
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbcont; end
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     8.9263e-03       1.0737e-02        5.2400e-15   
+     8.6796e-03       9.3332e-03        7.3342e-15   
+
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/02-mesh/mesh.m',128,1)">128 </a>                new_nodes = zeros(obj.N_nodes,1,numeric_t);
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/02-mesh/mesh.m',151,1)">151 </a>                new_mesh = mesh(new_nodes);
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/02-mesh/mesh.m',152,1)">152 </a>                new_mesh = mesh(new_nodes);
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbquit all; end
+test_Mesh_Projection
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     8.9263e-03       1.0737e-02        5.2400e-15   
+     8.5199e-03       1.0480e-02        4.3755e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     4.6442e-03       6.5981e-03        1.4612e-12   
+
+test_HDG
+--------------------
+Solve PDE problem.
+Problem Info:
+1. PDE: Laplace equation
+2. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+HDG Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 6.60e-03       0.00   | 4.66e-03       0.00   | 1.46e-12       0.00  |
+--------------------
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     5.3527e+00       1.7638e+00        2.4025e-07   
+     5.3521e+00       1.7414e+00        2.4025e-07   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     5.3527e+00       1.7638e+00        2.4025e-07   
+     5.2171e+00       1.5250e+00        1.9491e-07   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     5.3527e+00       1.7638e+00        2.4025e-07   
+     5.2171e+00       1.5250e+00        1.9491e-07   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     5.3527e+00       1.7638e+00        2.4025e-07   
+     4.6360e+00       1.5428e+00        2.3477e-07   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     5.3527e+00       1.7638e+00        2.4025e-07   
+     4.6360e+00       1.5428e+00        2.3477e-07   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     5.3527e+00       1.7638e+00        2.4025e-07   
+     4.6360e+00       1.5428e+00        2.3477e-07   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>____________

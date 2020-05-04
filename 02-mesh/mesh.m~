@@ -133,20 +133,17 @@ classdef mesh
                     % check 
                     pt = old_nodes(ii);
                     left_pt = new_nodes(pointer);
-                    if(abs(pt-left_pt-h)<=eof)
+                    if(abs(pt-left_pt)<=eof)
                         pointer = pointer+1;
-                        new_nodes(pointer) = pt;
-                        ii = ii+1;
+                        new_nodes(pointer)
                     else
-                        ii = ii+1;
                     end
                 end
-                new_nodes = new_nodes(1:pointer);
                 
-                %idx = abs(old_nodes(2:end)-old_nodes(1:end-1)-h)<eof;
-                %left_end_pts = old_nodes(1:end-1);
-                %right_end_pts = old_nodes(2:end);
-                %new_nodes = union(right_end_pts(idx),left_end_pts(idx));
+                idx = abs(old_nodes(2:end)-old_nodes(1:end-1)-h)<eof;
+                left_end_pts = old_nodes(1:end-1);
+                right_end_pts = old_nodes(2:end);
+                new_nodes = union(right_end_pts(idx),left_end_pts(idx));
                 
                 %new_nodes = numeric_t('0'):h:numeric_t('1');
                 new_mesh = mesh(new_nodes);

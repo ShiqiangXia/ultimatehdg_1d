@@ -15,9 +15,9 @@ pb = 101;
 exact_func = @singular_func102;% 1st derivative blows up at x =0
 %exact_func = @singular_func103; % C1 not C2
 
-mesh0 = 20; % initial number of elements
-num_iter = 4; % number of refinements
-GQ = 6; % Gauss Quadrature order  ---> accuracy 2N+1
+mesh0 = 10; % initial number of elements
+num_iter = 1; % number of refinements
+GQ = 5; % Gauss Quadrature order  ---> accuracy 2N+1
 
 
 %% define numerical method
