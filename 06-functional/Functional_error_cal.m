@@ -119,16 +119,16 @@ if functional_type == 1
     AC4 = sum(temp4);
     %fprintf("%d\n",AC4);
     
-    %AC_total = AC1+AC2+AC3+AC4;
-    AC_total = AC2+AC3+AC4;
+    AC_total = AC1+AC2+AC3+AC4;
+    %AC_total = AC2+AC3+AC4;
     %element_Jh_adj_eval = element_Jh_eval+temp1+temp2+temp4;
     
     Jh_adj_eval = Jh_eval + AC_total;
     
     error_jh_adj = abs(J_eval - Jh_adj_eval);
     
-    %estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
-    estimator_ACh = temp2+temp4+sum(my_temp_AC3);
+    estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
+    %estimator_ACh = temp2+temp4+sum(my_temp_AC3);
     
     close all;
     plot(abs(element_J_eval-element_Jh_eval),"s-");
@@ -150,6 +150,6 @@ elseif functional_type == 2
     
 end
 
-%estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
-estimator_ACh = temp2+temp4+sum(my_temp_AC3);
+estimator_ACh = temp1+temp2+temp4+sum(my_temp_AC3);
+%estimator_ACh = temp2+temp4+sum(my_temp_AC3);
 end

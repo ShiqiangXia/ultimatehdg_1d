@@ -2,35 +2,19 @@ function Plot_comp1(hs,gq_pts_phy,exact_func,num_sol_gq_pts,w)
 
 [n_pts,N_ele] = size(gq_pts_phy);
 nn = n_pts - 2; 
-%{
-N_ele = my_mesh.N_elemets();
-nn = length(r);
 
-gq_pts_ref = zeros(nn+2,N_ele,numeric_t);
-
-hs = zeros(N_ele,1,numeric_t);
-
-r1 = [r;numeric_t('-1');numeric_t('1')];
-
-
-
-%% Compute Gauss Quadrature points at physical elements
-for ii = 1:N_ele
-    nds = my_mesh.get_faces(ii);
-    h = abs(nds(2)-nds(1));
-    hs(ii) = h;
-    mid = (nds(2)+nds(1))/numeric_t('2');
-    gq_pts_ref(:,ii) = Ref_phy_map(r1,h,mid);
-end
-%}
 % difference at GQ points
 gp_pts_global  = reshape( gq_pts_phy(1:end-2,:),[nn*N_ele,1]);
+
+%{
 exact_q_global = reshape( exact_func(gq_pts_phy(1:end-2,:),1),[nn*N_ele,1]);
 exact_u_global = reshape( exact_func(gq_pts_phy(1:end-2,:),0),[nn*N_ele,1]);
 
 qh_global      = reshape( num_sol_gq_pts(1:nn,:),[nn*N_ele,1]);
 uh_global      = reshape(num_sol_gq_pts(nn+1:2*nn,:),[nn*N_ele,1]);
+%}
 
+% element by element difference at GQ points
 diff_q_mtrix = exact_func(gq_pts_phy(1:end-2,:),1) - num_sol_gq_pts(1:nn,:);
 diff_u_mtrix = exact_func(gq_pts_phy(1:end-2,:),0) - num_sol_gq_pts(nn+1:2*nn,:);
 
@@ -40,9 +24,9 @@ error_list_u = sqrt((w' * (diff_u_mtrix.^2))'.* (hs./numeric_t('2')));
 
 % plot
 
-
-diff_q_global = exact_q_global - qh_global;
-diff_u_global = exact_u_global - uh_global;
+% difference on all elemenets (change matrix N_GQ x N_ele ---> long vector )
+diff_q_global = reshape(diff_q_mtrix,[nn*N_ele,1]);
+diff_u_global = reshape(diff_u_mtrix,[nn*N_ele,1]);
 
 %gp_pts_global = gq_pts_ref(1:end-2,:);
 %{

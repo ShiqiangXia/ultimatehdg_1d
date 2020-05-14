@@ -1767,4 +1767,2704 @@ test_Mesh_Projection
 
 test_Mesh_Projection
     <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
-    <strong>____________
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7610e-03       1.4126e-03        5.8765e-14   
+
+test_Mesh_Projection
+{Undefined function or variable 'gq_pts_phy'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 79)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',79,0)">line 79</a>)
+Plot_comp3(hs,gq_pts_phy,exact_func,num_sol_1,proj_num_sol_star,w)
+} 
+opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',79,0)
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7610e-03       1.4126e-03        5.8765e-14   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7610e-03       1.4126e-03        5.8765e-14   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7610e-03       1.4126e-03        5.8765e-14   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     2.0177e-03       2.5299e-03        1.4601e-12   
+     1.2265e-03       2.0914e-04        6.2429e-14   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     2.0177e-03       2.5299e-03        1.4601e-12   
+     2.0177e-03       2.5299e-03        1.4614e-12   
+
+close all
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     2.0177e-03       2.5299e-03        1.4601e-12   
+     2.0177e-03       2.5299e-03        1.4614e-12   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     2.0177e-03       2.5299e-03        1.4601e-12   
+     2.0177e-03       2.5299e-03        1.4614e-12   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     9.0770e-04       1.1291e-03        4.6153e-13   
+     5.4642e-04       9.4822e-05        4.5881e-13   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7631e-03       1.5772e-03        1.4332e-12   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7631e-03       1.5772e-03        1.4332e-12   
+
+close all
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7631e-03       1.5772e-03        1.4332e-12   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     3.3488e-02       4.1340e-02        6.6268e-16   
+     3.3242e-02       4.1175e-02        1.4284e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     3.3488e-02       4.1340e-02        6.6268e-16   
+     3.3429e-02       3.6755e-02        6.2508e-16   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     4.6505e-03       6.5626e-03        4.7167e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     4.6505e-03       6.5626e-03        4.7167e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     4.6505e-03       6.5626e-03        4.7167e-15   
+
+test_Mesh_Projection
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',34,1)">34  </a>N_GQ = 5;
+mesh2.all_nodes
+
+ans =
+
+  Columns 1 through 7
+
+            0   1.0000e-01   1.2500e-01   1.5000e-01   2.0000e-01   3.0000e-01   4.0000e-01
+
+  Columns 8 through 13
+
+   5.0000e-01   6.0000e-01   7.0000e-01   8.0000e-01   9.0000e-01   1.0000e+00
+
+a=mesh2.get_background_uniform_mesh
+
+a = 
+
+  <a href="matlab:helpPopup mesh" style="font-weight:bold">mesh</a> with no properties.
+
+a.all_nodes
+
+ans =
+
+            0
+   1.0000e-01
+   2.0000e-01
+   3.0000e-01
+   4.0000e-01
+   5.0000e-01
+   6.0000e-01
+   7.0000e-01
+   8.0000e-01
+   9.0000e-01
+   1.0000e+00
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     4.6504e-03       6.5621e-03        5.7581e-15   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7428e-03       1.1296e-03        1.4282e-12   
+
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     3.7428e-03       1.1296e-03        1.4282e-12   
+
+test_Mesh_Projection
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('table', '/Applications/MATLAB_R2019a.app/toolbox/matlab/datatypes/@table/table.m', 255)" style="font-weight:bold">table</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2019a.app/toolbox/matlab/datatypes/@table/table.m',255,0)">line 255</a>)
+Invalid parameter name: Uniform meshNon-uniform meshNon-uniform mesh L^2 project to uniform.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 94)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',94,0)">line 94</a>)
+my_table = table(Numerics,error_list_qh,error_list_uh,error_list_uhat);
+
+Caused by:
+    You might have intended to create a one-row table with the character vector 'Uniform
+    meshNon-uniform meshNon-uniform mesh L^2 project to uniform' as one of its variables. To
+    store text data in a table, use a string array or a cell array of character vectors rather
+    than character arrays. Alternatively, create a cell array with one row, and convert that to a
+    table using CELL2TABLE.
+} 
+test_Mesh_Projection
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 93)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',93,0)">line 93</a>)
+Dimensions of arrays being concatenated are not consistent.
+} 
+test_Mesh_Projection
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 93)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',93,0)">line 93</a>)
+Dimensions of arrays being concatenated are not consistent.
+} 
+opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',93,0)
+opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',93,0)
+test_Mesh_Projection
+    <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+     4.6570e-03       6.6020e-03        1.4609e-12   
+     1.3588e-03       1.6927e-03        1.9878e-12   
+     3.7428e-03       1.1296e-03        1.4282e-12   
+
+Numerics=['Uniform mesh';'Non-uniform mesh';'Non-uniform mesh L^2 project to uniform'];
+{Dimensions of arrays being concatenated are not consistent.
+} 
+Numerics=["Uniform mesh";"Non-uniform mesh";"Non-uniform mesh L^2 project to uniform"];
+Numerics
+
+Numerics = 
+
+  3×1 <a href="matlab:helpPopup string" style="font-weight:bold">string</a> array
+
+    "Uniform mesh"
+    "Non-uniform mesh"
+    "Non-uniform mesh L^2 project to uniform"
+
+test_Mesh_Projection
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot')" style="font-weight:bold">plot</a>
+Vectors must be the same length.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Plot_comp4', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Plot_comp4.m', 50)" style="font-weight:bold">Plot_comp4</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Plot_comp4.m',50,0)">line 50</a>)
+plot(gp_pts_global,diff_u_global3,'x-');
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 92)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',92,0)">line 92</a>)
+Plot_comp4(hs,GQ_End_points_phy,exact_func,num_sol_1,proj_num_sol_star,GQ_weights,hs2,GQ_End_points_phy2,num_sol_2)} 
+opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Plot_comp4.m',50,0)
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       4.6570e-03       6.6020e-03        1.4609e-12   
+    "Non-uni"                   1.3588e-03       1.6927e-03        1.9878e-12   
+    "Non-uni + L^2 project"     3.7428e-03       1.1296e-03        1.4282e-12   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       4.6570e-03       6.6020e-03        1.4609e-12   
+    "Non-uni"                   1.3588e-03       1.6927e-03        1.9878e-12   
+    "Non-uni + L^2 project"     3.7428e-03       1.1296e-03        1.4282e-12   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       5.3527e+00       1.7638e+00        2.4025e-07   
+    "Non-uni"                   5.0802e+00       1.6218e+00        1.9574e-07   
+    "Non-uni + L^2 project"     5.2175e+00       1.5541e+00        1.9491e-07   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.3488e-02       4.1340e-02        6.6268e-16   
+    "Non-uni"                   3.2688e-02       4.0600e-02        7.3648e-16   
+    "Non-uni + L^2 project"     3.3225e-02       4.0611e-02        6.6498e-16   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.3488e-02       4.1340e-02        6.6268e-16   
+    "Non-uni"                   3.2688e-02       4.0600e-02        7.3648e-16   
+    "Non-uni + L^2 project"     3.3225e-02       4.0611e-02        6.6498e-16   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.1987e-01       3.7544e-01        4.2244e-12   
+    "Non-uni"                   3.1987e-01       3.7544e-01        4.2248e-12   
+    "Non-uni + L^2 project"     3.1987e-01       3.7544e-01        4.2244e-12   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       5.3527e+00       1.7638e+00        2.4025e-07   
+    "Non-uni"                   4.6736e+00       2.2543e+00        2.1691e-07   
+    "Non-uni + L^2 project"     4.7881e+00       1.7624e+00        2.0373e-07   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       5.3527e+00       1.7638e+00        2.4025e-07   
+    "Non-uni"                   4.3778e+00       2.2026e+00        2.4191e-07   
+    "Non-uni + L^2 project"     4.6360e+00       1.5428e+00        2.3477e-07   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       5.3527e+00       1.7638e+00        2.4025e-07   
+    "Non-uni"                   4.3579e+00       2.1434e+00        2.4193e-07   
+    "Non-uni + L^2 project"     4.6362e+00       1.5500e+00        2.3478e-07   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.2187e-03       8.5539e-03        1.1200e-14   
+    "Non-uni + L^2 project"     8.7768e-03       8.5347e-03        7.9088e-15   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7334e-03       9.3728e-03        7.8581e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4486e-03        6.6578e-15   
+
+class_t
+
+class_t =
+
+    'double'
+
+global class_t
+class_t = 'mp'
+
+class_t =
+
+    'mp'
+
+test_Mesh_Projection
+           <strong>Numerics</strong>                                        <strong>error_list_qh</strong>                                                            <strong>error_list_uh</strong>                                                            <strong>error_list_uhat</strong>                             
+    <strong>_______________________</strong>    <strong>_____________________________________________________________________</strong>    <strong>_____________________________________________________________________</strong>    <strong>________________________________________________________________________</strong>
+
+    "Uni"                           0.0089263        
+    0.00773341        
+    0.00866286        
+         0.0107366        
+    0.00937279        
+    0.00944861        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+
+    "Non-uni"                       0.0089263        
+    0.00773341        
+    0.00866286        
+         0.0107366        
+    0.00937279        
+    0.00944861        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+
+    "Non-uni + L^2 project"         0.0089263        
+    0.00773341        
+    0.00866286        
+         0.0107366        
+    0.00937279        
+    0.00944861        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+
+
+class_t = 'mp'
+
+class_t =
+
+    'mp'
+
+global class_t
+class_t = 'double'
+
+class_t =
+
+    'double'
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7334e-03       9.3728e-03        7.8581e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4486e-03        6.6578e-15   
+
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 4, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 6.74e-04       0.00   | 6.26e-04       0.00   | 6.12e-15       0.00  |
+0013 | 7.64e-05       8.30   | 9.98e-05       7.00   | 1.66e-15       4.97  |
+0016 | 1.59e-05       7.55   | 1.46e-05       9.25   | 5.97e-15       -6.16 |
+0020 | 3.99e-06       6.20   | 3.89e-06       5.93   | 1.34e-14       -3.62 |
+0026 | 6.02e-07       7.21   | 5.47e-07       7.48   | 5.63e-15       3.30  |
+0033 | 4.38e-07       1.33   | 3.98e-07       1.33   | 1.31e-13       -13.21|
+0042 | 3.70e-07       0.69   | 3.37e-07       0.69   | 5.48e-13       -5.93 |
+0054 | 3.70e-07       0.00   | 3.37e-07       0.00   | 7.42e-13       -1.20 |
+0070 | 3.69e-07       0.01   | 3.35e-07       0.02   | 2.24e-12       -4.25 |
+0091 | 3.44e-07       0.27   | 3.12e-07       0.27   | 7.31e-12       -4.51 |
+0118 | 3.44e-07       -0.00  | 3.12e-07       -0.00  | 2.13e-11       -4.12 |
+0153 | 3.44e-07       -0.00  | 3.12e-07       -0.00  | 6.21e-11       -4.12 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 5.64e-11       0.00   | 1.24e-09       0.00   |
+0013 | 2.48e-11       3.13   | 4.40e-10       3.94   |
+0016 | 6.91e-14       28.34  | 2.35e-12       25.19  |
+0020 | 4.00e-14       2.45   | 5.78e-13       6.30   |
+0026 | 1.33e-14       4.19   | 7.55e-15       16.53  |
+0033 | 1.64e-13       -10.53 | 1.26e-13       -11.81 |
+0042 | 5.84e-13       -5.27  | 4.75e-13       -5.50  |
+0054 | 7.62e-13       -1.05  | 5.87e-13       -0.84  |
+0070 | 1.63e-12       -2.94  | 1.53e-12       -3.68  |
+0091 | 4.50e-12       -3.87  | 4.36e-12       -4.00  |
+0118 | 1.21e-11       -3.79  | 1.12e-11       -3.62  |
+0153 | 2.49e-11       -2.80  | 2.74e-11       -3.45  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 1.24e-09       1.18e-09       0.95   |
+0013 | 4.40e-10       4.15e-10       0.94   |
+0016 | 2.35e-12       2.28e-12       0.97   |
+0020 | 5.78e-13       6.17e-13       1.07   |
+0026 | 7.55e-15       5.48e-15       0.73   |
+0033 | 1.26e-13       3.85e-14       0.31   |
+0042 | 4.75e-13       1.09e-13       0.23   |
+0054 | 5.87e-13       1.75e-13       0.30   |
+0070 | 1.53e-12       1.08e-13       0.07   |
+0091 | 4.36e-12       1.43e-13       0.03   |
+0118 | 1.12e-11       8.82e-13       0.08   |
+0153 | 2.74e-11       2.44e-12       0.09   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 5.64e-11       1.18e-09       20.90  |
+0013 | 2.48e-11       4.15e-10       16.71  |
+0016 | 6.91e-14       2.28e-12       33.09  |
+0020 | 4.00e-14       6.17e-13       15.44  |
+0026 | 1.33e-14       5.48e-15       0.41   |
+0033 | 1.64e-13       3.85e-14       0.23   |
+0042 | 5.84e-13       1.09e-13       0.19   |
+0054 | 7.62e-13       1.75e-13       0.23   |
+0070 | 1.63e-12       1.08e-13       0.07   |
+0091 | 4.50e-12       1.43e-13       0.03   |
+0118 | 1.21e-11       8.82e-13       0.07   |
+0153 | 2.49e-11       2.44e-12       0.10   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 3.75e-01       0.00   | 3.20e-01       0.00   | 7.00e-15       0.00  |
+0013 | 1.41e-01       3.73   | 1.35e-01       3.28   | 2.47e-15       3.97  |
+0016 | 7.87e-02       2.81   | 6.36e-02       3.63   | 5.86e-15       -4.16 |
+0020 | 2.63e-02       4.91   | 2.32e-02       4.52   | 1.32e-14       -3.64 |
+0026 | 1.79e-02       1.46   | 1.77e-02       1.04   | 1.57e-14       -0.66 |
+0033 | 1.01e-02       2.41   | 8.04e-03       3.30   | 3.46e-14       -3.32 |
+0042 | 6.30e-03       1.95   | 4.99e-03       1.98   | 9.58e-14       -4.22 |
+0054 | 4.63e-03       1.22   | 3.73e-03       1.16   | 2.31e-13       -3.51 |
+0070 | 1.75e-03       3.75   | 1.38e-03       3.84   | 5.11e-13       -3.05 |
+0091 | 1.38e-03       0.92   | 1.08e-03       0.91   | 7.02e-13       -1.21 |
+0118 | 5.79e-04       3.33   | 4.53e-04       3.35   | 1.71e-12       -3.42 |
+0153 | 4.20e-04       1.24   | 3.28e-04       1.24   | 2.75e-12       -1.83 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 8.78e-04       0.00   | 3.71e-02       0.00   |
+0013 | 6.73e-03       -7.76  | 2.36e-03       10.50  |
+0016 | 1.32e-04       18.92  | 3.69e-03       -2.16  |
+0020 | 1.09e-04       0.87   | 5.07e-04       8.90   |
+0026 | 1.26e-04       -0.56  | 2.64e-04       2.48   |
+0033 | 2.26e-05       7.21   | 6.73e-05       5.73   |
+0042 | 1.63e-05       1.36   | 2.77e-05       3.68   |
+0054 | 1.73e-05       -0.23  | 4.98e-06       6.83   |
+0070 | 2.46e-06       7.50   | 5.74e-06       -0.55  |
+0091 | 1.87e-06       1.06   | 2.75e-06       2.80   |
+0118 | 3.28e-07       6.69   | 1.06e-06       3.66   |
+0153 | 2.62e-07       0.87   | 4.69e-07       3.15   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 3.71e-02       3.62e-02       0.98   |
+0013 | 2.36e-03       9.09e-03       3.85   |
+0016 | 3.69e-03       3.83e-03       1.04   |
+0020 | 5.07e-04       6.16e-04       1.21   |
+0026 | 2.64e-04       3.90e-04       1.48   |
+0033 | 6.73e-05       8.99e-05       1.34   |
+0042 | 2.77e-05       4.40e-05       1.59   |
+0054 | 4.98e-06       2.22e-05       4.46   |
+0070 | 5.74e-06       8.21e-06       1.43   |
+0091 | 2.75e-06       4.62e-06       1.68   |
+0118 | 1.06e-06       1.39e-06       1.31   |
+0153 | 4.69e-07       7.31e-07       1.56   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 8.78e-04       3.62e-02       41.24  |
+0013 | 6.73e-03       9.09e-03       1.35   |
+0016 | 1.32e-04       3.83e-03       28.92  |
+0020 | 1.09e-04       6.16e-04       5.65   |
+0026 | 1.26e-04       3.90e-04       3.09   |
+0033 | 2.26e-05       8.99e-05       3.98   |
+0042 | 1.63e-05       4.40e-05       2.70   |
+0054 | 1.73e-05       2.22e-05       1.29   |
+0070 | 2.46e-06       8.21e-06       3.33   |
+0091 | 1.87e-06       4.62e-06       2.48   |
+0118 | 3.28e-07       1.39e-06       4.25   |
+0153 | 2.62e-07       7.31e-07       2.79   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 3.75e-01       0.00   | 3.20e-01       0.00   | 7.00e-15       0.00  |
+0013 | 2.78e-01       1.15   | 2.40e-01       1.09   | 4.26e-15       1.89  |
+0016 | 1.29e-01       3.68   | 1.28e-01       3.04   | 1.31e-14       -5.42 |
+0020 | 8.29e-02       1.99   | 6.68e-02       2.91   | 8.49e-15       1.96  |
+0026 | 8.27e-02       0.01   | 6.61e-02       0.04   | 5.81e-14       -7.33 |
+0033 | 8.25e-02       0.01   | 6.59e-02       0.01   | 2.08e-13       -5.34 |
+0042 | 8.25e-02       0.00   | 6.59e-02       0.00   | 4.66e-13       -3.35 |
+0054 | 8.25e-02       0.00   | 6.59e-02       0.00   | 2.85e-12       -7.20 |
+0070 | 8.25e-02       0.00   | 6.59e-02       0.00   | 3.02e-12       -0.23 |
+0091 | 8.25e-02       0.00   | 6.59e-02       0.00   | 1.59e-11       -6.33 |
+0118 | 8.25e-02       0.00   | 6.59e-02       0.00   | 3.04e-11       -2.50 |
+0153 | 8.25e-02       0.00   | 6.59e-02       0.00   | 9.80e-11       -4.50 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 8.78e-04       0.00   | 3.71e-02       0.00   |
+0013 | 2.96e-03       -4.63  | 3.39e-02       0.35   |
+0016 | 6.67e-03       -3.91  | 1.27e-03       15.82  |
+0020 | 8.97e-05       19.31  | 3.08e-03       -3.98  |
+0026 | 4.07e-04       -5.77  | 3.35e-03       -0.32  |
+0033 | 4.16e-04       -0.09  | 3.31e-03       0.05   |
+0042 | 4.16e-04       0.00   | 3.30e-03       0.00   |
+0054 | 4.16e-04       0.00   | 3.30e-03       0.00   |
+0070 | 4.16e-04       -0.00  | 3.30e-03       0.00   |
+0091 | 4.16e-04       -0.00  | 3.30e-03       0.00   |
+0118 | 4.16e-04       -0.00  | 3.30e-03       0.00   |
+0153 | 4.16e-04       -0.00  | 3.30e-03       0.00   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 3.71e-02       3.62e-02       0.98   |
+0013 | 3.39e-02       3.68e-02       1.09   |
+0016 | 1.27e-03       7.94e-03       6.27   |
+0020 | 3.08e-03       2.99e-03       0.97   |
+0026 | 3.35e-03       2.94e-03       0.88   |
+0033 | 3.31e-03       2.89e-03       0.87   |
+0042 | 3.30e-03       2.89e-03       0.87   |
+0054 | 3.30e-03       2.89e-03       0.87   |
+0070 | 3.30e-03       2.89e-03       0.87   |
+0091 | 3.30e-03       2.89e-03       0.87   |
+0118 | 3.30e-03       2.89e-03       0.87   |
+0153 | 3.30e-03       2.89e-03       0.87   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 8.78e-04       3.62e-02       41.24  |
+0013 | 2.96e-03       3.68e-02       12.43  |
+0016 | 6.67e-03       7.94e-03       1.19   |
+0020 | 8.97e-05       2.99e-03       33.35  |
+0026 | 4.07e-04       2.94e-03       7.22   |
+0033 | 4.16e-04       2.89e-03       6.95   |
+0042 | 4.16e-04       2.89e-03       6.94   |
+0054 | 4.16e-04       2.89e-03       6.94   |
+0070 | 4.16e-04       2.89e-03       6.94   |
+0091 | 4.16e-04       2.89e-03       6.94   |
+0118 | 4.16e-04       2.89e-03       6.94   |
+0153 | 4.16e-04       2.89e-03       6.94   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.48e-01       0.00   | 4.32e-01       0.00   | 6.02e-01       0.00  |
+0013 | 8.13e-02       2.29   | 4.28e-01       0.04   | 3.51e-01       2.06  |
+0016 | 3.38e-02       4.23   | 4.16e-01       0.13   | 1.74e-01       3.39  |
+0020 | 1.35e-02       4.10   | 3.99e-01       0.18   | 6.04e-02       4.73  |
+0026 | 1.33e-02       0.07   | 3.99e-01       0.01   | 6.25e-02       -0.13 |
+0033 | 1.33e-02       -0.02  | 3.99e-01       0.00   | 6.55e-02       -0.20 |
+0042 | 1.33e-02       -0.00  | 3.99e-01       0.00   | 6.64e-02       -0.05 |
+0054 | 1.33e-02       -0.00  | 3.99e-01       0.00   | 6.74e-02       -0.06 |
+0070 | 1.33e-02       -0.00  | 3.99e-01       -0.00  | 6.84e-02       -0.06 |
+0091 | 1.33e-02       -0.00  | 3.99e-01       -0.00  | 6.96e-02       -0.07 |
+0118 | 1.33e-02       -0.00  | 3.99e-01       -0.00  | 7.13e-02       -0.09 |
+0153 | 1.33e-02       -0.00  | 3.99e-01       -0.00  | 7.32e-02       -0.10 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 3.70e-02       0.00   | 3.70e-02       0.00   |
+0013 | 3.40e-02       0.32   | 3.40e-02       0.32   |
+0016 | 1.71e-03       14.40  | 1.71e-03       14.40  |
+0020 | 3.01e-03       -2.53  | 3.01e-03       -2.53  |
+0026 | 3.30e-03       -0.35  | 3.30e-03       -0.35  |
+0033 | 3.29e-03       0.01   | 3.29e-03       0.01   |
+0042 | 3.29e-03       0.00   | 3.29e-03       0.00   |
+0054 | 3.29e-03       0.00   | 3.29e-03       0.00   |
+0070 | 3.29e-03       0.00   | 3.29e-03       0.00   |
+0091 | 3.29e-03       0.00   | 3.29e-03       0.00   |
+0118 | 3.29e-03       0.00   | 3.29e-03       0.00   |
+0153 | 3.29e-03       -0.00  | 3.29e-03       0.00   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 3.70e-02       3.22e-15       0.00   |
+0013 | 3.40e-02       2.56e-14       0.00   |
+0016 | 1.71e-03       1.97e-13       0.00   |
+0020 | 3.01e-03       7.47e-13       0.00   |
+0026 | 3.30e-03       1.96e-12       0.00   |
+0033 | 3.29e-03       4.68e-12       0.00   |
+0042 | 3.29e-03       1.32e-11       0.00   |
+0054 | 3.29e-03       3.59e-11       0.00   |
+0070 | 3.29e-03       7.74e-11       0.00   |
+0091 | 3.29e-03       1.84e-10       0.00   |
+0118 | 3.29e-03       4.54e-10       0.00   |
+0153 | 3.29e-03       1.08e-09       0.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 3.70e-02       3.22e-15       0.00   |
+0013 | 3.40e-02       2.56e-14       0.00   |
+0016 | 1.71e-03       1.97e-13       0.00   |
+0020 | 3.01e-03       7.47e-13       0.00   |
+0026 | 3.30e-03       1.96e-12       0.00   |
+0033 | 3.29e-03       4.68e-12       0.00   |
+0042 | 3.29e-03       1.32e-11       0.00   |
+0054 | 3.29e-03       3.59e-11       0.00   |
+0070 | 3.29e-03       7.74e-11       0.00   |
+0091 | 3.29e-03       1.84e-10       0.00   |
+0118 | 3.29e-03       4.54e-10       0.00   |
+0153 | 3.29e-03       1.08e-09       0.00   |
+test_Mesh_Projection
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_Mesh_Projection', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m', 114)" style="font-weight:bold">test_Mesh_Projection</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',114,0)">line 114</a>)
+Numerics=["Uni";"Non-uni";"Non-uni + L^2 project","Postprocessed on uni"];
+} 
+opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_Mesh_Projection.m',114,0)
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7334e-03       9.3728e-03        7.8581e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4486e-03        6.6578e-15   
+    "Postprocessed on uni"      8.8511e-04       1.5564e-03        5.7990e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   8.2126e-03       9.7675e-03        6.0834e-15   
+    "Non-uni + L^2 project"     8.9228e-03       9.7178e-03        5.1958e-15   
+    "Postprocessed on uni"      6.0416e-04       1.2864e-03        4.6678e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   8.0455e-03       9.6789e-03        6.0418e-15   
+    "Non-uni + L^2 project"     8.7804e-03       9.6908e-03        5.3766e-15   
+    "Postprocessed on uni"      7.7937e-04       1.3191e-03        4.8034e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7585e-03       9.4069e-03        7.6806e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4608e-03        6.6660e-15   
+    "Postprocessed on uni"      8.8474e-04       1.5044e-03        5.6012e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7334e-03       9.3728e-03        7.8581e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4486e-03        6.6578e-15   
+    "Postprocessed on uni"      8.8511e-04       1.5564e-03        5.7990e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7334e-03       9.3728e-03        7.8581e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4486e-03        6.6578e-15   
+    "Postprocessed on uni"      8.8511e-04       1.5564e-03        5.7990e-03   
+    "Projected PP"              8.8511e-04       1.5564e-03        6.4067e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   7.7334e-03       9.3728e-03        7.8581e-15   
+    "Non-uni + L^2 project"     8.6629e-03       9.4486e-03        6.6578e-15   
+    "Postprocessed on uni"      8.8511e-04       1.5564e-03        5.7990e-03   
+    "Projected PP"              8.8511e-04       1.5564e-03        6.4067e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       4.6570e-03       6.6020e-03        1.4609e-12   
+    "Non-uni"                   2.2944e-03       3.0905e-03        1.8581e-12   
+    "Non-uni + L^2 project"     3.7631e-03       1.5772e-03        1.4332e-12   
+    "Postprocessed on uni"      1.0863e-02       1.3047e-01        1.0035e+00   
+    "Projected PP"              1.0914e-02       1.3047e-01        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.1987e-01       3.7544e-01        4.2244e-12   
+    "Non-uni"                   2.8814e-01       3.5254e-01        7.1812e-12   
+    "Non-uni + L^2 project"     3.0923e-01       3.4915e-01        5.9038e-12   
+    "Postprocessed on uni"      4.1110e-01       1.3153e-01        5.1619e-01   
+    "Projected PP"              4.1110e-01       1.3153e-01        5.7384e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.1987e-01       3.7544e-01        4.2244e-12   
+    "Non-uni"                   2.8814e-01       3.5254e-01        7.1812e-12   
+    "Non-uni + L^2 project"     3.0923e-01       3.4915e-01        5.9038e-12   
+    "Postprocessed on uni"      4.1110e-01       1.3153e-01        5.1619e-01   
+    "Projected PP"              4.1110e-01       1.3153e-01        5.7384e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.1987e-01       3.7544e-01        4.2244e-12   
+    "Non-uni"                   2.8814e-01       3.5254e-01        7.1812e-12   
+    "Non-uni + L^2 project"     3.0923e-01       3.4915e-01        5.9038e-12   
+    "Postprocessed on uni"      4.1110e-01       1.3153e-01        5.1619e-01   
+    "Projected PP"              4.1110e-01       1.3153e-01        5.7384e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       5.3527e+00       1.7638e+00        2.4025e-07   
+    "Non-uni"                   5.0954e+00       1.6944e+00        2.0571e-07   
+    "Non-uni + L^2 project"     5.2167e+00       1.5407e+00        1.9491e-07   
+    "Postprocessed on uni"      1.1580e+01       7.3399e-01        2.0387e+00   
+    "Projected PP"              1.1580e+01       7.3399e-01        2.1502e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       5.3527e+00       1.7638e+00        2.4025e-07   
+    "Non-uni"                   5.0954e+00       1.6944e+00        2.0571e-07   
+    "Non-uni + L^2 project"     5.2167e+00       1.5407e+00        1.9491e-07   
+    "Postprocessed on uni"      1.1580e+01       7.3399e-01        2.0387e+00   
+    "Projected PP"              1.1580e+01       7.3399e-01        2.1502e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.1987e-01       3.7544e-01        4.2244e-12   
+    "Non-uni"                   3.0095e-01       3.6237e-01        7.3150e-12   
+    "Non-uni + L^2 project"     3.1277e-01       3.6033e-01        6.1638e-12   
+    "Postprocessed on uni"      4.1579e-01       1.4513e-01        5.8160e-01   
+    "Projected PP"              4.1579e-01       1.4513e-01        6.2464e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       8.9263e-03       1.0737e-02        5.2400e-15   
+    "Non-uni"                   8.7727e-03       1.0656e-02        5.6157e-15   
+    "Non-uni + L^2 project"     8.7840e-03       1.0712e-02        5.3963e-15   
+    "Postprocessed on uni"      7.7312e-04       8.0796e-04        2.6819e-03   
+    "Projected PP"              7.7312e-04       8.0796e-04        2.9149e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       4.6570e-03       6.6020e-03        1.4609e-12   
+    "Non-uni"                   4.6509e-03       6.5980e-03        1.4611e-12   
+    "Non-uni + L^2 project"     4.6523e-03       6.6000e-03        1.4595e-12   
+    "Postprocessed on uni"      1.0255e-02       1.3049e-01        1.0035e+00   
+    "Projected PP"              1.0255e-02       1.3049e-01        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       4.6570e-03       6.6020e-03        1.4609e-12   
+    "Non-uni"                   2.3153e-03       3.1039e-03        1.8611e-12   
+    "Non-uni + L^2 project"     3.7737e-03       1.5885e-03        1.4367e-12   
+    "Postprocessed on uni"      1.0862e-02       1.3047e-01        1.0035e+00   
+    "Projected PP"              1.0914e-02       1.3047e-01        1.0035e+00   
+
+test_HDG
+--------------------
+Solve PDE problem.
+[Warning: Ignoring extra legend entries.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>process_inputs', '/Applications/MATLAB_R2019a.app/toolbox/matlab/scribe/legend.p', 578)" style="font-weight:bold">legend>process_inputs</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2019a.app/toolbox/matlab/scribe/legend.p',578,0)">line 578</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend>make_legend', '/Applications/MATLAB_R2019a.app/toolbox/matlab/scribe/legend.p', 322)" style="font-weight:bold">legend>make_legend</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2019a.app/toolbox/matlab/scribe/legend.p',322,0)">line 322</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('legend', '/Applications/MATLAB_R2019a.app/toolbox/matlab/scribe/legend.p', 273)" style="font-weight:bold">legend</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2019a.app/toolbox/matlab/scribe/legend.p',273,0)">line 273</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Plot_comp2', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Plot_comp2.m', 83)" style="font-weight:bold">Plot_comp2</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/03-FEM_basics/Plot_comp2.m',83,0)">line 83</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PDE_driver', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/PDE_driver.m', 140)" style="font-weight:bold">PDE_driver</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/PDE_driver.m',140,0)">line 140</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main_driver', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/main_driver.m', 12)" style="font-weight:bold">main_driver</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/main_driver.m',12,0)">line 12</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_HDG', '/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_HDG.m', 44)" style="font-weight:bold">test_HDG</a> (<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/10-tests/test_HDG.m',44,0)">line 44</a>)] 
+Problem Info:
+1. PDE: Laplace equation
+2. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+HDG Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 3.75e-01       0.00   | 3.20e-01       0.00   | 4.22e-12       0.00  |
+0020 | 1.01e-01       1.89   | 8.10e-02       1.98   | 2.11e-15       10.96 |
+0040 | 2.58e-02       1.97   | 2.03e-02       2.00   | 9.40e-15       -2.15 |
+--------------------
+Post-processing:Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.48e-01       0.00   | 4.32e-01       0.00   | 6.02e-01       0.00  |
+0020 | 2.63e-02       2.49   | 8.75e-02       2.30   | 1.32e-01       2.19  |
+0040 | 3.87e-03       2.77   | 2.65e-02       1.72   | 2.63e-02       2.33  |
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_qh</strong>    <strong>error_list_uh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.1987e-01       3.7544e-01        4.2244e-12   
+    "Non-uni"                   3.1987e-01       3.7544e-01        4.2247e-12   
+    "Non-uni + L^2 project"     3.1987e-01       3.7544e-01        4.2244e-12   
+    "Postprocessed on uni"      4.3214e-01       1.4817e-01        6.0161e-01   
+    "Projected PP"              4.3214e-01       1.4817e-01        6.0161e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   3.6237e-01       3.0095e-01        7.3150e-12   
+    "Non-uni + L^2 project"     3.6033e-01       3.1277e-01        6.1638e-12   
+    "Postprocessed on uni"      1.4513e-01       4.1579e-01        5.8160e-01   
+    "Projected PP"              1.4513e-01       4.1579e-01        6.2464e-01   
+
+clean
+{Undefined function or variable 'clean'.
+} 
+clear
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   3.6237e-01       3.0095e-01        7.3150e-12   
+    "Non-uni + L^2 project"     3.6033e-01       3.1277e-01        6.1638e-12   
+    "Postprocessed on uni"      1.4513e-01       4.1579e-01        5.8160e-01   
+    "Projected PP"              1.4513e-01       4.1579e-01        6.2464e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   3.5254e-01       2.8814e-01        7.1795e-12   
+    "Non-uni + L^2 project"     3.4915e-01       3.0923e-01        5.9038e-12   
+    "Postprocessed on uni"      1.3153e-01       4.1110e-01        5.1619e-01   
+    "Projected PP"              1.3153e-01       4.1110e-01        5.7384e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.7638e+00       5.3527e+00        2.4025e-07   
+    "Non-uni"                   1.7591e+00       5.3509e+00        2.4025e-07   
+    "Non-uni + L^2 project"     1.7584e+00       5.3521e+00        2.4025e-07   
+    "Postprocessed on uni"      7.8739e-01       1.1804e+01        2.1753e+00   
+    "Projected PP"              7.8739e-01       1.1804e+01        2.1994e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.7638e+00       5.3527e+00        2.4025e-07   
+    "Non-uni"                   1.6944e+00       5.0954e+00        2.0571e-07   
+    "Non-uni + L^2 project"     1.5407e+00       5.2167e+00        1.9491e-07   
+    "Postprocessed on uni"      7.3399e-01       1.1580e+01        2.0387e+00   
+    "Projected PP"              7.3399e-01       1.1580e+01        2.1502e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.7638e+00       5.3527e+00        2.4025e-07   
+    "Non-uni"                   1.6944e+00       5.0954e+00        2.0571e-07   
+    "Non-uni + L^2 project"     1.5407e+00       5.2167e+00        1.9491e-07   
+    "Postprocessed on uni"      7.3399e-01       1.1580e+01        2.0387e+00   
+    "Projected PP"              7.3399e-01       1.1580e+01        2.1502e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.7638e+00       5.3527e+00        2.4025e-07   
+    "Non-uni"                   1.6166e+00       5.0783e+00        2.0587e-07   
+    "Non-uni + L^2 project"     1.5479e+00       5.2169e+00        1.9492e-07   
+    "Postprocessed on uni"      7.3168e-01       1.1582e+01        2.0520e+00   
+    "Projected PP"              7.3168e-01       1.1582e+01        2.2158e+00   
+
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 3.75e-01       0.00   | 3.20e-01       0.00   | 7.00e-15       0.00  |
+0020 | 1.01e-01       1.89   | 8.10e-02       1.98   | 3.68e-15       0.93  |
+0040 | 2.58e-02       1.97   | 2.03e-02       2.00   | 8.99e-15       -1.29 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 8.78e-04       0.00   | 3.71e-02       0.00   |
+0020 | 1.92e-05       5.52   | 4.25e-03       3.13   |
+0040 | 1.82e-06       3.40   | 5.19e-04       3.03   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 3.71e-02       3.62e-02       0.98   |
+0020 | 4.25e-03       4.23e-03       1.00   |
+0040 | 5.19e-04       5.21e-04       1.00   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 8.78e-04       3.62e-02       41.24  |
+0020 | 1.92e-05       4.23e-03       220.95 |
+0040 | 1.82e-06       5.21e-04       286.93 |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.48e-01       0.00   | 4.32e-01       0.00   | 6.02e-01       0.00  |
+0020 | 2.63e-02       2.49   | 8.75e-02       2.30   | 1.32e-01       2.19  |
+0040 | 3.87e-03       2.77   | 2.65e-02       1.72   | 2.63e-02       2.33  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 3.70e-02       0.00   | 3.70e-02       0.00   |
+0020 | 4.24e-03       3.12   | 4.24e-03       3.12   |
+0040 | 5.19e-04       3.03   | 5.19e-04       3.03   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 3.70e-02       3.22e-15       0.00   |
+0020 | 4.24e-03       6.10e-14       0.00   |
+0040 | 5.19e-04       4.36e-14       0.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 3.70e-02       3.22e-15       0.00   |
+0020 | 4.24e-03       6.10e-14       0.00   |
+0040 | 5.19e-04       4.36e-14       0.00   |
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0011 | 3.19e-01       0.00   | 3.12e-01       0.00   | 2.59e-03       0.00  |
+0022 | 1.19e-01       1.42   | 1.33e-01       1.23   | 1.02e-01       -5.29 |
+0044 | 2.80e-02       2.09   | 3.22e-02       2.04   | 3.68e-02       1.47  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0011 | 6.65e-04       0.00   | 4.48e-03       0.00   |
+0022 | 1.45e-01       -7.77  | 1.47e-01       -5.03  |
+0044 | 3.70e-02       1.97   | 3.69e-02       1.99   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0011 | 4.48e-03       5.14e-03       1.15   |
+0022 | 1.47e-01       1.28e-03       0.01   |
+0044 | 3.69e-02       5.83e-05       0.00   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0011 | 6.65e-04       5.14e-03       7.74   |
+0022 | 1.45e-01       1.28e-03       0.01   |
+0044 | 3.70e-02       5.83e-05       0.00   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0011 | 1.42e-01       0.00   | 3.71e-01       0.00   | 6.25e-01       0.00  |
+0022 | 4.82e-02       1.56   | 1.14e-01       1.70   | 2.69e-01       1.22  |
+0044 | 9.85e-03       2.29   | 3.27e-02       1.80   | 7.72e-02       1.80  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0011 | 4.57e-03       0.00   | 4.57e-03       0.00   |
+0022 | 1.47e-01       -5.00  | 1.47e-01       -5.00  |
+0044 | 3.69e-02       1.99   | 3.69e-02       1.99   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0011 | 4.57e-03       1.19e-14       0.00   |
+0022 | 1.47e-01       4.46e-14       0.00   |
+0044 | 3.69e-02       3.08e-13       0.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0011 | 4.57e-03       1.19e-14       0.00   |
+0022 | 1.47e-01       4.46e-14       0.00   |
+0044 | 3.69e-02       3.08e-13       0.00   |
+test_Functional
+--------------------
+Solve Functional problem.
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0020 | 2.70e-03       1.99   | 2.22e-03       2.01   | 2.05e-14       -1.97 |
+0040 | 6.77e-04       2.00   | 5.54e-04       2.00   | 2.50e-14       -0.29 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0020 | 1.79e-04       3.07   | 7.37e-04       2.97   |
+0040 | 2.18e-05       3.04   | 9.30e-05       2.99   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0020 | 7.37e-04       9.17e-04       1.24   |
+0040 | 9.30e-05       1.15e-04       1.23   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0020 | 1.79e-04       9.17e-04       5.11   |
+0040 | 2.18e-05       1.15e-04       5.27   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0020 | 1.01e-04       2.90   | 5.64e-05       3.40   | 4.55e-04       2.42  |
+0040 | 1.30e-05       2.95   | 5.91e-06       3.26   | 8.27e-05       2.46  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 5.25e-03       0.00   | 5.25e-03       0.00   |
+0020 | 7.04e-04       2.90   | 7.04e-04       2.90   |
+0040 | 9.09e-05       2.95   | 9.09e-05       2.95   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       1.39e-14       0.00   |
+0020 | 7.04e-04       1.98e-13       0.00   |
+0040 | 9.09e-05       8.39e-13       0.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 5.25e-03       1.39e-14       0.00   |
+0020 | 7.04e-04       1.98e-13       0.00   |
+0040 | 9.09e-05       8.39e-13       0.00   |
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0013 | 9.88e-03       0.32   | 8.06e-03       0.39   | 5.73e-15       -0.34 |
+0016 | 9.78e-03       0.05   | 7.88e-03       0.11   | 8.23e-15       -1.75 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0013 | 9.24e-04       1.87   | 5.26e-03       0.36   |
+0016 | 6.49e-04       1.70   | 5.37e-03       -0.10  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0013 | 5.26e-03       6.19e-03       1.18   |
+0016 | 5.37e-03       6.02e-03       1.12   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0013 | 9.24e-04       6.19e-03       6.70   |
+0016 | 6.49e-04       6.02e-03       9.29   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0013 | 1.53e-03       -2.70  | 9.38e-04       -1.73  | 6.34e-03       -3.66 |
+0016 | 1.53e-03       0.00   | 7.73e-04       0.93   | 6.60e-03       -0.19 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 5.25e-03       0.00   | 5.25e-03       0.00   |
+0013 | 4.70e-03       0.42   | 4.70e-03       0.42   |
+0016 | 4.80e-03       -0.10  | 4.80e-03       -0.10  |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       1.39e-14       0.00   |
+0013 | 4.70e-03       2.97e-13       0.00   |
+0016 | 4.80e-03       5.26e-13       0.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 5.25e-03       1.39e-14       0.00   |
+0013 | 4.70e-03       2.97e-13       0.00   |
+0016 | 4.80e-03       5.26e-13       0.00   |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0013 | 9.88e-03       0.32   | 8.06e-03       0.39   | 5.73e-15       -0.34 |
+0016 | 9.78e-03       0.05   | 7.88e-03       0.11   | 8.23e-15       -1.75 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0013 | 9.24e-04       1.87   | 5.26e-03       0.36   |
+0016 | 6.49e-04       1.70   | 5.37e-03       -0.10  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0013 | 5.26e-03       6.19e-03       1.18   |
+0016 | 5.37e-03       6.02e-03       1.12   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0013 | 9.24e-04       6.19e-03       6.70   |
+0016 | 6.49e-04       6.02e-03       9.29   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0013 | 1.53e-03       -2.70  | 9.38e-04       -1.73  | 6.34e-03       -3.66 |
+0016 | 1.53e-03       0.00   | 7.73e-04       0.93   | 6.60e-03       -0.19 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 5.25e-03       0.00   | 5.25e-03       0.00   |
+0013 | 4.70e-03       0.42   | 4.70e-03       0.42   |
+0016 | 4.80e-03       -0.10  | 4.80e-03       -0.10  |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       1.39e-14       0.00   |
+0013 | 4.70e-03       2.97e-13       0.00   |
+0016 | 4.80e-03       5.26e-13       0.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 5.25e-03       1.39e-14       0.00   |
+0013 | 4.70e-03       2.97e-13       0.00   |
+0016 | 4.80e-03       5.26e-13       0.00   |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/functional_driver.m',181,1)">181 </a>        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/functional_driver.m',181,1)">181 </a>        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/01-problem_driver/functional_driver.m',181,1)">181 </a>        [error_list_jstar(ii),error_list_jstar_adj(ii),Post_error_estimator] = Functional_error_cal(functional_type,hs,GQ_End_points_phy,exact_primal_func,exact_adjoint_func,primal_num_sol_star_ex,adjoint_num_sol_star_ex,GQ_weights,numerical_method_info.tau_pow,postprocessing);
+if system_dependent('IsDebugMode')==1, dbcont; end
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0013 | 7.69e-03       1.27   | 6.69e-03       1.10   | 3.91e-15       1.11  |
+0016 | 7.58e-03       0.07   | 6.62e-03       0.06   | 3.81e-15       0.13  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0013 | 1.41e-03       0.26   | 2.66e-03       2.96   |
+0016 | 1.40e-03       0.03   | 2.48e-03       0.34   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0013 | 2.66e-03       4.07e-03       1.53   |
+0016 | 2.48e-03       3.88e-03       1.56   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0013 | 1.41e-03       4.07e-03       2.89   |
+0016 | 1.40e-03       3.88e-03       2.77   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0013 | 1.51e-03       -2.66  | 6.37e-04       -0.25  | 6.16e-03       -3.54 |
+0016 | 1.64e-03       -0.38  | 6.48e-04       -0.08  | 8.14e-03       -1.34 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 7.72e-06       0.00   | 5.25e-03       0.00   |
+0013 | 8.38e-04       -17.86 | 2.13e-03       3.44   |
+0016 | 1.06e-03       -1.15  | 1.95e-03       0.43   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       5.26e-03       1.00   |
+0013 | 2.13e-03       2.97e-03       1.39   |
+0016 | 1.95e-03       3.01e-03       1.55   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 7.72e-06       5.26e-03       681.60 |
+0013 | 8.38e-04       2.97e-03       3.54   |
+0016 | 1.06e-03       3.01e-03       2.83   |
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0013 | 7.69e-03       1.27   | 6.69e-03       1.10   | 3.91e-15       1.11  |
+0016 | 7.58e-03       0.07   | 6.62e-03       0.06   | 3.81e-15       0.13  |
+0020 | 6.41e-03       0.76   | 5.77e-03       0.61   | 1.22e-14       -5.20 |
+0026 | 5.40e-03       0.65   | 5.02e-03       0.53   | 1.99e-14       -1.88 |
+0033 | 4.20e-03       1.06   | 4.15e-03       0.80   | 1.82e-14       0.37  |
+0042 | 2.56e-03       2.06   | 2.77e-03       1.68   | 1.64e-13       -9.10 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0013 | 1.41e-03       0.26   | 2.66e-03       2.96   |
+0016 | 1.40e-03       0.03   | 2.48e-03       0.34   |
+0020 | 1.34e-03       0.20   | 1.59e-03       2.01   |
+0026 | 1.20e-03       0.42   | 9.70e-04       1.88   |
+0033 | 1.05e-03       0.56   | 3.87e-04       3.85   |
+0042 | 6.24e-04       2.15   | 6.44e-05       7.44   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0013 | 2.66e-03       4.07e-03       1.53   |
+0016 | 2.48e-03       3.88e-03       1.56   |
+0020 | 1.59e-03       2.93e-03       1.84   |
+0026 | 9.70e-04       2.17e-03       2.24   |
+0033 | 3.87e-04       1.44e-03       3.71   |
+0042 | 6.44e-05       6.89e-04       10.70  |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0013 | 1.41e-03       4.07e-03       2.89   |
+0016 | 1.40e-03       3.88e-03       2.77   |
+0020 | 1.34e-03       2.93e-03       2.18   |
+0026 | 1.20e-03       2.17e-03       1.81   |
+0033 | 1.05e-03       1.44e-03       1.37   |
+0042 | 6.24e-04       6.89e-04       1.10   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0013 | 1.51e-03       -2.66  | 6.37e-04       -0.25  | 6.16e-03       -3.54 |
+0016 | 1.64e-03       -0.38  | 6.48e-04       -0.08  | 8.14e-03       -1.34 |
+0020 | 1.45e-03       0.55   | 6.71e-04       -0.15  | 7.54e-03       0.34  |
+0026 | 1.28e-03       0.48   | 6.89e-04       -0.10  | 6.18e-03       0.76  |
+0033 | 1.03e-03       0.90   | 7.15e-04       -0.15  | 4.89e-03       0.98  |
+0042 | 4.74e-04       3.22   | 7.01e-04       0.08   | 2.43e-03       2.90  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 7.72e-06       0.00   | 5.25e-03       0.00   |
+0013 | 8.38e-04       -17.86 | 2.13e-03       3.44   |
+0016 | 1.06e-03       -1.15  | 1.95e-03       0.43   |
+0020 | 8.79e-04       0.85   | 1.05e-03       2.77   |
+0026 | 6.71e-04       1.03   | 4.27e-04       3.43   |
+0033 | 4.21e-04       1.96   | 1.63e-04       4.05   |
+0042 | 1.27e-04       4.96   | 5.07e-04       -4.71  |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       5.26e-03       1.00   |
+0013 | 2.13e-03       2.97e-03       1.39   |
+0016 | 1.95e-03       3.01e-03       1.55   |
+0020 | 1.05e-03       1.93e-03       1.84   |
+0026 | 4.27e-04       1.10e-03       2.57   |
+0033 | 1.63e-04       2.58e-04       1.59   |
+0042 | 5.07e-04       3.79e-04       0.75   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 7.72e-06       5.26e-03       681.60 |
+0013 | 8.38e-04       2.97e-03       3.54   |
+0016 | 1.06e-03       3.01e-03       2.83   |
+0020 | 8.79e-04       1.93e-03       2.20   |
+0026 | 6.71e-04       1.10e-03       1.64   |
+0033 | 4.21e-04       2.58e-04       0.61   |
+0042 | 1.27e-04       3.79e-04       2.98   |
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0013 | 7.69e-03       1.27   | 6.69e-03       1.10   | 3.91e-15       1.11  |
+0016 | 7.58e-03       0.07   | 6.62e-03       0.06   | 3.81e-15       0.13  |
+0020 | 6.41e-03       0.76   | 5.77e-03       0.61   | 1.22e-14       -5.20 |
+0026 | 5.40e-03       0.65   | 5.02e-03       0.53   | 1.99e-14       -1.88 |
+0033 | 4.20e-03       1.06   | 4.15e-03       0.80   | 1.82e-14       0.37  |
+0042 | 2.56e-03       2.06   | 2.77e-03       1.68   | 1.64e-13       -9.10 |
+0054 | 2.29e-03       0.44   | 2.59e-03       0.26   | 3.04e-13       -2.46 |
+0070 | 2.27e-03       0.03   | 2.58e-03       0.02   | 7.41e-13       -3.43 |
+0091 | 2.27e-03       0.00   | 2.58e-03       0.00   | 1.86e-12       -3.51 |
+0118 | 2.27e-03       0.00   | 2.58e-03       0.00   | 4.19e-12       -3.13 |
+0153 | 2.27e-03       0.00   | 2.58e-03       0.00   | 8.05e-12       -2.51 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0013 | 1.41e-03       0.26   | 2.66e-03       2.96   |
+0016 | 1.40e-03       0.03   | 2.48e-03       0.34   |
+0020 | 1.34e-03       0.20   | 1.59e-03       2.01   |
+0026 | 1.20e-03       0.42   | 9.70e-04       1.88   |
+0033 | 1.05e-03       0.56   | 3.87e-04       3.85   |
+0042 | 6.24e-04       2.15   | 6.44e-05       7.44   |
+0054 | 5.74e-04       0.34   | 4.56e-05       1.37   |
+0070 | 5.67e-04       0.05   | 5.91e-05       -0.99  |
+0091 | 5.66e-04       0.01   | 6.02e-05       -0.07  |
+0118 | 5.66e-04       0.00   | 6.03e-05       -0.00  |
+0153 | 5.66e-04       0.00   | 6.03e-05       -0.00  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0013 | 2.66e-03       4.07e-03       1.53   |
+0016 | 2.48e-03       3.88e-03       1.56   |
+0020 | 1.59e-03       2.93e-03       1.84   |
+0026 | 9.70e-04       2.17e-03       2.24   |
+0033 | 3.87e-04       1.44e-03       3.71   |
+0042 | 6.44e-05       6.89e-04       10.70  |
+0054 | 4.56e-05       5.28e-04       11.57  |
+0070 | 5.91e-05       5.08e-04       8.59   |
+0091 | 6.02e-05       5.06e-04       8.40   |
+0118 | 6.03e-05       5.05e-04       8.38   |
+0153 | 6.03e-05       5.05e-04       8.38   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0013 | 1.41e-03       4.07e-03       2.89   |
+0016 | 1.40e-03       3.88e-03       2.77   |
+0020 | 1.34e-03       2.93e-03       2.18   |
+0026 | 1.20e-03       2.17e-03       1.81   |
+0033 | 1.05e-03       1.44e-03       1.37   |
+0042 | 6.24e-04       6.89e-04       1.10   |
+0054 | 5.74e-04       5.28e-04       0.92   |
+0070 | 5.67e-04       5.08e-04       0.90   |
+0091 | 5.66e-04       5.06e-04       0.89   |
+0118 | 5.66e-04       5.05e-04       0.89   |
+0153 | 5.66e-04       5.05e-04       0.89   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0013 | 1.51e-03       -2.66  | 6.37e-04       -0.25  | 6.16e-03       -3.54 |
+0016 | 1.64e-03       -0.38  | 6.48e-04       -0.08  | 8.14e-03       -1.34 |
+0020 | 1.45e-03       0.55   | 6.71e-04       -0.15  | 7.54e-03       0.34  |
+0026 | 1.28e-03       0.48   | 6.89e-04       -0.10  | 6.18e-03       0.76  |
+0033 | 1.03e-03       0.90   | 7.15e-04       -0.15  | 4.89e-03       0.98  |
+0042 | 4.74e-04       3.22   | 7.01e-04       0.08   | 2.43e-03       2.90  |
+0054 | 4.91e-04       -0.14  | 7.44e-04       -0.24  | 2.68e-03       -0.40 |
+0070 | 4.97e-04       -0.05  | 7.50e-04       -0.03  | 3.31e-03       -0.81 |
+0091 | 4.98e-04       -0.01  | 7.51e-04       -0.00  | 4.21e-03       -0.92 |
+0118 | 4.98e-04       -0.00  | 7.51e-04       -0.00  | 5.44e-03       -0.98 |
+0153 | 4.98e-04       -0.00  | 7.51e-04       -0.00  | 6.87e-03       -0.90 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 7.72e-06       0.00   | 5.25e-03       0.00   |
+0013 | 8.38e-04       -17.86 | 2.13e-03       3.44   |
+0016 | 1.06e-03       -1.15  | 1.95e-03       0.43   |
+0020 | 8.79e-04       0.85   | 1.05e-03       2.77   |
+0026 | 6.71e-04       1.03   | 4.27e-04       3.43   |
+0033 | 4.21e-04       1.96   | 1.63e-04       4.05   |
+0042 | 1.27e-04       4.96   | 5.07e-04       -4.71  |
+0054 | 1.71e-04       -1.17  | 6.17e-04       -0.79  |
+0070 | 1.77e-04       -0.14  | 6.31e-04       -0.08  |
+0091 | 1.78e-04       -0.02  | 6.32e-04       -0.01  |
+0118 | 1.79e-04       -0.00  | 6.32e-04       -0.00  |
+0153 | 1.79e-04       -0.00  | 6.32e-04       -0.00  |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       5.26e-03       1.00   |
+0013 | 2.13e-03       2.97e-03       1.39   |
+0016 | 1.95e-03       3.01e-03       1.55   |
+0020 | 1.05e-03       1.93e-03       1.84   |
+0026 | 4.27e-04       1.10e-03       2.57   |
+0033 | 1.63e-04       2.58e-04       1.59   |
+0042 | 5.07e-04       3.79e-04       0.75   |
+0054 | 6.17e-04       4.46e-04       0.72   |
+0070 | 6.31e-04       4.53e-04       0.72   |
+0091 | 6.32e-04       4.54e-04       0.72   |
+0118 | 6.32e-04       4.54e-04       0.72   |
+0153 | 6.32e-04       4.54e-04       0.72   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 7.72e-06       5.26e-03       681.60 |
+0013 | 8.38e-04       2.97e-03       3.54   |
+0016 | 1.06e-03       3.01e-03       2.83   |
+0020 | 8.79e-04       1.93e-03       2.20   |
+0026 | 6.71e-04       1.10e-03       1.64   |
+0033 | 4.21e-04       2.58e-04       0.61   |
+0042 | 1.27e-04       3.79e-04       2.98   |
+0054 | 1.71e-04       4.46e-04       2.61   |
+0070 | 1.77e-04       4.53e-04       2.56   |
+0091 | 1.78e-04       4.54e-04       2.54   |
+0118 | 1.79e-04       4.54e-04       2.54   |
+0153 | 1.79e-04       4.54e-04       2.54   |
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 3.75e-01       0.00   | 3.20e-01       0.00   | 7.00e-15       0.00  |
+0013 | 2.72e-01       1.22   | 2.26e-01       1.32   | 4.15e-15       1.99  |
+0016 | 2.69e-01       0.05   | 2.24e-01       0.05   | 2.52e-15       2.41  |
+0020 | 2.68e-01       0.02   | 2.22e-01       0.02   | 3.38e-14       -11.64|
+0026 | 2.68e-01       0.00   | 2.22e-01       0.00   | 1.50e-13       -5.68 |
+0033 | 2.68e-01       0.00   | 2.22e-01       0.00   | 2.04e-13       -1.29 |
+0042 | 2.68e-01       0.00   | 2.22e-01       0.00   | 4.16e-13       -2.95 |
+0054 | 1.08e-01       3.60   | 1.03e-01       3.08   | 5.00e-13       -0.73 |
+0070 | 3.59e-02       4.26   | 2.91e-02       4.85   | 1.83e-12       -5.00 |
+0091 | 1.71e-02       2.83   | 1.34e-02       2.96   | 1.05e-12       2.11  |
+0118 | 1.29e-02       1.08   | 1.01e-02       1.08   | 2.46e-12       -3.27 |
+0153 | 9.09e-03       1.36   | 7.07e-03       1.38   | 4.24e-12       -2.10 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 8.78e-04       0.00   | 3.71e-02       0.00   |
+0013 | 3.86e-03       -5.64  | 7.49e-03       6.10   |
+0016 | 4.40e-03       -0.63  | 7.09e-03       0.27   |
+0020 | 4.18e-03       0.23   | 5.60e-03       1.06   |
+0026 | 4.18e-03       -0.00  | 5.59e-03       0.01   |
+0033 | 4.17e-03       0.01   | 5.48e-03       0.08   |
+0042 | 4.16e-03       0.01   | 5.42e-03       0.04   |
+0054 | 4.46e-03       -0.28  | 6.14e-03       -0.49  |
+0070 | 3.36e-04       9.96   | 1.13e-03       6.51   |
+0091 | 2.21e-05       10.37  | 1.66e-05       16.09  |
+0118 | 2.30e-06       8.72   | 1.22e-04       -7.66  |
+0153 | 4.44e-06       -2.53  | 4.85e-05       3.54   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 3.71e-02       3.62e-02       0.98   |
+0013 | 7.49e-03       3.63e-03       0.48   |
+0016 | 7.09e-03       2.69e-03       0.38   |
+0020 | 5.60e-03       1.42e-03       0.25   |
+0026 | 5.59e-03       1.40e-03       0.25   |
+0033 | 5.48e-03       1.30e-03       0.24   |
+0042 | 5.42e-03       1.26e-03       0.23   |
+0054 | 6.14e-03       1.06e-02       1.73   |
+0070 | 1.13e-03       1.47e-03       1.30   |
+0091 | 1.66e-05       3.88e-05       2.33   |
+0118 | 1.22e-04       1.20e-04       0.98   |
+0153 | 4.85e-05       5.30e-05       1.09   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 8.78e-04       3.62e-02       41.24  |
+0013 | 3.86e-03       3.63e-03       0.94   |
+0016 | 4.40e-03       2.69e-03       0.61   |
+0020 | 4.18e-03       1.42e-03       0.34   |
+0026 | 4.18e-03       1.40e-03       0.34   |
+0033 | 4.17e-03       1.30e-03       0.31   |
+0042 | 4.16e-03       1.26e-03       0.30   |
+0054 | 4.46e-03       1.06e-02       2.38   |
+0070 | 3.36e-04       1.47e-03       4.37   |
+0091 | 2.21e-05       3.88e-05       1.75   |
+0118 | 2.30e-06       1.20e-04       51.97  |
+0153 | 4.44e-06       5.30e-05       11.93  |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.48e-01       0.00   | 4.32e-01       0.00   | 6.02e-01       0.00  |
+0013 | 1.10e-01       1.13   | 4.04e-01       0.25   | 4.83e-01       0.84  |
+0016 | 1.09e-01       0.06   | 4.03e-01       0.01   | 5.21e-01       -0.37 |
+0020 | 1.08e-01       0.02   | 4.02e-01       0.01   | 5.76e-01       -0.45 |
+0026 | 1.08e-01       0.00   | 4.02e-01       0.00   | 6.72e-01       -0.58 |
+0033 | 1.08e-01       0.00   | 4.02e-01       0.00   | 7.98e-01       -0.73 |
+0042 | 1.08e-01       0.00   | 4.02e-01       0.00   | 9.10e-01       -0.54 |
+0054 | 3.79e-02       4.18   | 4.02e-01       0.00   | 2.04e-01       5.95  |
+0070 | 1.48e-02       3.61   | 3.97e-01       0.05   | 2.07e-01       -0.05 |
+0091 | 1.53e-02       -0.12  | 3.97e-01       0.00   | 2.48e-01       -0.69 |
+0118 | 1.57e-02       -0.09  | 3.97e-01       0.00   | 2.92e-01       -0.63 |
+0153 | 1.60e-02       -0.08  | 3.97e-01       0.00   | 3.32e-01       -0.49 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.76e-05       0.00   | 3.70e-02       0.00   |
+0013 | 1.63e-03       -17.26 | 7.16e-03       6.25   |
+0016 | 2.78e-03       -2.56  | 7.06e-03       0.07   |
+0020 | 2.97e-03       -0.29  | 5.79e-03       0.89   |
+0026 | 2.98e-03       -0.01  | 5.78e-03       0.00   |
+0033 | 3.00e-03       -0.02  | 5.68e-03       0.08   |
+0042 | 2.98e-03       0.03   | 5.63e-03       0.03   |
+0054 | 6.16e-03       -2.90  | 6.28e-03       -0.43  |
+0070 | 3.59e-04       10.95  | 1.04e-03       6.95   |
+0091 | 3.98e-04       -0.39  | 1.25e-04       8.05   |
+0118 | 2.53e-04       1.75   | 1.58e-06       16.82  |
+0153 | 4.29e-04       -2.03  | 8.75e-05       -15.45 |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 3.70e-02       3.69e-02       1.00   |
+0013 | 7.16e-03       5.53e-03       0.77   |
+0016 | 7.06e-03       4.27e-03       0.61   |
+0020 | 5.79e-03       2.82e-03       0.49   |
+0026 | 5.78e-03       2.80e-03       0.48   |
+0033 | 5.68e-03       2.68e-03       0.47   |
+0042 | 5.63e-03       2.66e-03       0.47   |
+0054 | 6.28e-03       1.24e-02       1.98   |
+0070 | 1.04e-03       1.39e-03       1.35   |
+0091 | 1.25e-04       5.23e-04       4.18   |
+0118 | 1.58e-06       2.54e-04       160.75 |
+0153 | 8.75e-05       3.41e-04       3.90   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 1.76e-05       3.69e-02       2093.88 |
+0013 | 1.63e-03       5.53e-03       3.38   |
+0016 | 2.78e-03       4.27e-03       1.53   |
+0020 | 2.97e-03       2.82e-03       0.95   |
+0026 | 2.98e-03       2.80e-03       0.94   |
+0033 | 3.00e-03       2.68e-03       0.90   |
+0042 | 2.98e-03       2.66e-03       0.89   |
+0054 | 6.16e-03       1.24e-02       2.02   |
+0070 | 3.59e-04       1.39e-03       3.88   |
+0091 | 3.98e-04       5.23e-04       1.31   |
+0118 | 2.53e-04       2.54e-04       1.01   |
+0153 | 4.29e-04       3.41e-04       0.80   |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 3, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 6.95e-03       0.00   | 6.34e-03       0.00   | 6.81e-15       0.00  |
+0013 | 5.30e-03       1.03   | 4.80e-03       1.06   | 7.94e-15       -0.59 |
+0016 | 5.30e-03       0.00   | 4.80e-03       0.00   | 7.24e-15       0.45  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 3.46e-08       0.00   | 5.81e-07       0.00   |
+0013 | 8.13e-08       -3.25  | 3.65e-08       10.55  |
+0016 | 8.13e-08       0.00   | 3.91e-08       -0.33  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.81e-07       5.46e-07       0.94   |
+0013 | 3.65e-08       1.18e-07       3.23   |
+0016 | 3.91e-08       1.20e-07       3.08   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 3.46e-08       5.46e-07       15.78  |
+0013 | 8.13e-08       1.18e-07       1.45   |
+0016 | 8.13e-08       1.20e-07       1.48   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.30e-02       0.00   | 3.84e-01       0.00   | 3.00e-02       0.00  |
+0013 | 1.30e-02       -0.00  | 3.84e-01       0.00   | 5.47e-02       -2.29 |
+0016 | 1.30e-02       -0.00  | 3.84e-01       0.00   | 6.99e-02       -1.18 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 5.21e-11       0.00   | 4.54e-07       0.00   |
+0013 | 9.78e-09       -19.95 | 1.64e-07       3.87   |
+0016 | 9.77e-09       0.00   | 1.67e-07       -0.06  |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 4.54e-07       4.54e-07       1.00   |
+0013 | 1.64e-07       1.74e-07       1.06   |
+0016 | 1.67e-07       1.76e-07       1.06   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 5.21e-11       4.54e-07       8708.52 |
+0013 | 9.78e-09       1.74e-07       17.83  |
+0016 | 9.77e-09       1.76e-07       18.05  |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.07e-02       0.00   | 8.93e-03       0.00   | 5.24e-15       0.00  |
+0013 | 7.69e-03       1.27   | 6.69e-03       1.10   | 3.91e-15       1.11  |
+0016 | 7.58e-03       0.07   | 6.62e-03       0.06   | 3.81e-15       0.13  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.51e-03       0.00   | 5.78e-03       0.00   |
+0013 | 1.41e-03       0.26   | 2.66e-03       2.96   |
+0016 | 1.40e-03       0.03   | 2.48e-03       0.34   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 5.78e-03       7.29e-03       1.26   |
+0013 | 2.66e-03       4.07e-03       1.53   |
+0016 | 2.48e-03       3.88e-03       1.56   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.51e-03       7.29e-03       4.83   |
+0013 | 1.41e-03       4.07e-03       2.89   |
+0016 | 1.40e-03       3.88e-03       2.77   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 7.53e-04       0.00   | 5.96e-04       0.00   | 2.43e-03       0.00  |
+0013 | 1.51e-03       -2.66  | 6.37e-04       -0.25  | 6.16e-03       -3.54 |
+0016 | 1.64e-03       -0.38  | 6.48e-04       -0.08  | 8.14e-03       -1.34 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 7.72e-06       0.00   | 5.25e-03       0.00   |
+0013 | 8.38e-04       -17.86 | 2.13e-03       3.44   |
+0016 | 1.06e-03       -1.15  | 1.95e-03       0.43   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 5.25e-03       5.26e-03       1.00   |
+0013 | 2.13e-03       2.97e-03       1.39   |
+0016 | 1.95e-03       3.01e-03       1.55   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 7.72e-06       5.26e-03       681.60 |
+0013 | 8.38e-04       2.97e-03       3.54   |
+0016 | 1.06e-03       3.01e-03       2.83   |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 3, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 5.02e-06       0.00   | 4.59e-06       0.00   | 2.65e-15       0.00  |
+0013 | 4.80e-06       0.17   | 4.32e-06       0.23   | 2.31e-14       -8.25 |
+0016 | 4.80e-06       0.00   | 4.32e-06       0.00   | 2.06e-14       0.55  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 7.18e-10       0.00   | 2.92e-09       0.00   |
+0013 | 3.36e-10       2.90   | 2.96e-09       -0.05  |
+0016 | 3.35e-10       0.02   | 2.96e-09       0.00   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 2.92e-09       3.64e-09       1.25   |
+0013 | 2.96e-09       3.29e-09       1.11   |
+0016 | 2.96e-09       3.29e-09       1.11   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 7.18e-10       3.64e-09       5.07   |
+0013 | 3.36e-10       3.29e-09       9.80   |
+0016 | 3.35e-10       3.29e-09       9.83   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 6.84e-08       0.00   | 2.16e-07       0.00   | 2.16e-07       0.00  |
+0013 | 7.09e-08       -0.14  | 2.17e-07       -0.01  | 2.82e-07       -1.01 |
+0016 | 7.10e-08       -0.00  | 2.17e-07       -0.00  | 3.25e-07       -0.68 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 4.80e-14       0.00   | 4.77e-07       0.00   |
+0013 | 3.22e-13       -7.26  | 4.77e-07       0.00   |
+0016 | 3.25e-13       -0.04  | 4.77e-07       -0.00  |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+0010 | 4.77e-07       4.77e-07       1.00   |
+0013 | 4.77e-07       4.77e-07       1.00   |
+0016 | 4.77e-07       4.77e-07       1.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+0010 | 4.80e-14       4.77e-07       9949387.70 |
+0013 | 3.22e-13       4.77e-07       1479996.69 |
+0016 | 3.25e-13       4.77e-07       1467866.79 |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 3, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+10   | 5.02e-06       0.00   | 4.59e-06       0.00   | 5.86e-34       0.00  |
+20   | 3.15e-07       3.99   | 2.86e-07       4.00   | 1.16e-32       -4.30 |
+40   | 1.97e-08       4.00   | 1.79e-08       4.00   | 2.89e-32       -1.32 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+10   | 7.18e-10       0.00   | 2.92e-09       0.00   |
+20   | 5.44e-12       7.05   | 2.31e-11       6.98   |
+40   | 4.18e-14       7.02   | 1.81e-13       6.99   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+10   | 2.92e-09       3.64e-09       1.25   |
+20   | 2.31e-11       2.85e-11       1.24   |
+40   | 1.81e-13       2.23e-13       1.23   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+10   | 7.18e-10       3.64e-09       5.07   |
+20   | 5.44e-12       2.85e-11       5.24   |
+40   | 4.18e-14       2.23e-13       5.34   |
+--------------------
+Post-processing: Convolution Filtering
+
+Soltuion Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+10   | 6.84e-08       0.00   | 2.16e-07       0.00   | 2.16e-07       0.00  |
+20   | 2.71e-10       7.98   | 8.64e-10       7.97   | 1.21e-09       7.48  |
+40   | 1.05e-12       8.01   | 3.40e-12       7.99   | 6.66e-12       7.51  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+10   | 4.61e-14       0.00   | 4.77e-07       0.00   |
+20   | 7.27e-19       15.95  | 1.89e-09       7.98   |
+40   | 1.10e-23       16.02  | 7.35e-12       8.01   |
+--------------------
+Results for estimator
+N    | J(u)-J(u*_h)   esti_2         ratio  
+10   | 4.77e-07       4.77e-07       1.00   |
+20   | 1.89e-09       1.89e-09       1.00   |
+40   | 7.35e-12       7.35e-12       1.00   |
+
+N    | J(u)-Jh(u*_h)  esti_2         ratio  
+10   | 4.61e-14       4.77e-07       10341075.57 |
+20   | 7.27e-19       1.89e-09       2604846596.69 |
+40   | 1.10e-23       7.35e-12       671089651814.35 |
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbcont; end
+<a href="matlab: opentoline('/Users/shiqiangxia/Desktop/HDG_Adap/ultimatehdg_1d/06-functional/Functional_error_cal.m',155,1)">155 </a>end
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+if system_dependent('IsDebugMode')==1, dbquit; end
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 6.60e-03       0.00   | 4.70e-03       0.00   | 1.19e-15       0.00  |
+0011 | 3.10e-03       7.92   | 2.33e-03       7.35   | 1.32e-15       -1.06 |
+0012 | 1.69e-03       6.97   | 1.36e-03       6.16   | 1.44e-15       -1.04 |
+0013 | 1.52e-03       1.33   | 1.23e-03       1.31   | 1.57e-15       -1.10 |
+0014 | 1.47e-03       0.49   | 1.17e-03       0.60   | 1.24e-15       3.22  |
+0015 | 8.99e-04       7.11   | 8.00e-04       5.56   | 1.30e-15       -0.70 |
+0016 | 8.41e-04       1.04   | 7.62e-04       0.76   | 1.36e-15       -0.72 |
+0017 | 8.26e-04       0.31   | 7.39e-04       0.51   | 1.26e-15       1.25  |
+0018 | 8.07e-04       0.40   | 7.12e-04       0.66   | 3.12e-15       -15.81|
+0019 | 7.93e-04       0.32   | 6.89e-04       0.59   | 2.77e-15       2.22  |
+0020 | 7.68e-04       0.61   | 6.55e-04       1.00   | 8.08e-15       -20.90|
+0022 | 7.38e-04       0.43   | 6.19e-04       0.59   | 9.62e-15       -1.82 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.12e-04       0.00   | 2.13e-03       0.00   |
+0011 | 2.28e-04       -7.43  | 6.69e-04       12.14  |
+0012 | 2.45e-04       -0.80  | 4.33e-04       5.00   |
+0013 | 2.26e-04       1.02   | 2.64e-04       6.17   |
+0014 | 1.97e-04       1.85   | 1.87e-04       4.69   |
+0015 | 1.99e-04       -0.18  | 1.49e-04       3.26   |
+0016 | 1.99e-04       0.05   | 1.21e-04       3.20   |
+0017 | 1.77e-04       1.87   | 1.25e-04       -0.42  |
+0018 | 1.49e-04       3.01   | 1.21e-04       0.51   |
+0019 | 1.36e-04       1.71   | 1.29e-04       -1.24  |
+0020 | 1.03e-04       5.36   | 1.17e-04       1.96   |
+0022 | 9.77e-05       0.59   | 1.16e-04       0.11   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 2.13e-03       2.02e-03       0.95   |
+0011 | 6.69e-04       4.41e-04       0.66   |
+0012 | 4.33e-04       1.89e-04       0.44   |
+0013 | 2.64e-04       3.89e-05       0.15   |
+0014 | 1.87e-04       9.83e-06       0.05   |
+0015 | 1.49e-04       4.98e-05       0.33   |
+0016 | 1.21e-04       7.71e-05       0.63   |
+0017 | 1.25e-04       5.26e-05       0.42   |
+0018 | 1.21e-04       2.82e-05       0.23   |
+0019 | 1.29e-04       6.63e-06       0.05   |
+0020 | 1.17e-04       1.37e-05       0.12   |
+0022 | 1.16e-04       1.81e-05       0.16   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.12e-04       2.02e-03       17.93  |
+0011 | 2.28e-04       4.41e-04       1.93   |
+0012 | 2.45e-04       1.89e-04       0.77   |
+0013 | 2.26e-04       3.89e-05       0.17   |
+0014 | 1.97e-04       9.83e-06       0.05   |
+0015 | 1.99e-04       4.98e-05       0.25   |
+0016 | 1.99e-04       7.71e-05       0.39   |
+0017 | 1.77e-04       5.26e-05       0.30   |
+0018 | 1.49e-04       2.82e-05       0.19   |
+0019 | 1.36e-04       6.63e-06       0.05   |
+0020 | 1.03e-04       1.37e-05       0.13   |
+0022 | 9.77e-05       1.81e-05       0.18   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 1, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 6.60e-03       0.00   | 4.70e-03       0.00   | 1.19e-15       0.00  |
+0013 | 2.99e-03       3.02   | 2.23e-03       2.85   | 1.18e-15       0.05  |
+0016 | 1.42e-03       3.57   | 1.13e-03       3.25   | 1.19e-15       -0.07 |
+0020 | 7.68e-04       2.77   | 6.55e-04       2.46   | 8.08e-15       -8.57 |
+0026 | 3.63e-04       2.85   | 3.00e-04       2.97   | 1.24e-14       -1.64 |
+0033 | 3.07e-04       0.70   | 2.52e-04       0.73   | 4.00e-14       -4.90 |
+0042 | 1.76e-04       2.32   | 1.50e-04       2.17   | 1.17e-13       -4.45 |
+0054 | 1.37e-04       0.98   | 1.13e-04       1.13   | 1.37e-13       -0.62 |
+0070 | 6.68e-05       2.78   | 5.61e-05       2.68   | 1.21e-13       0.47  |
+0091 | 5.95e-05       0.44   | 4.72e-05       0.66   | 5.65e-13       -5.87 |
+0118 | 2.79e-05       2.91   | 2.30e-05       2.77   | 7.42e-13       -1.05 |
+0153 | 2.69e-05       0.14   | 2.18e-05       0.21   | 2.01e-12       -3.83 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.12e-04       0.00   | 2.13e-03       0.00   |
+0013 | 1.80e-04       -1.80  | 4.23e-04       6.16   |
+0016 | 1.75e-04       0.15   | 1.62e-04       4.62   |
+0020 | 1.03e-04       2.36   | 1.17e-04       1.46   |
+0026 | 2.84e-05       4.93   | 3.39e-05       4.72   |
+0033 | 2.04e-05       1.38   | 1.78e-05       2.70   |
+0042 | 1.05e-05       2.77   | 1.24e-05       1.50   |
+0054 | 5.45e-06       2.59   | 5.45e-06       3.27   |
+0070 | 2.32e-06       3.29   | 1.99e-06       3.88   |
+0091 | 1.01e-06       3.18   | 1.30e-06       1.64   |
+0118 | 5.26e-07       2.50   | 4.17e-07       4.36   |
+0153 | 3.52e-07       1.55   | 3.75e-07       0.41   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 2.13e-03       2.02e-03       0.95   |
+0013 | 4.23e-04       2.43e-04       0.57   |
+0016 | 1.62e-04       1.26e-05       0.08   |
+0020 | 1.17e-04       1.37e-05       0.12   |
+0026 | 3.39e-05       5.57e-06       0.16   |
+0033 | 1.78e-05       2.59e-06       0.15   |
+0042 | 1.24e-05       1.96e-06       0.16   |
+0054 | 5.45e-06       2.89e-09       0.00   |
+0070 | 1.99e-06       3.25e-07       0.16   |
+0091 | 1.30e-06       2.89e-07       0.22   |
+0118 | 4.17e-07       1.09e-07       0.26   |
+0153 | 3.75e-07       2.28e-08       0.06   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.12e-04       2.02e-03       17.93  |
+0013 | 1.80e-04       2.43e-04       1.35   |
+0016 | 1.75e-04       1.26e-05       0.07   |
+0020 | 1.03e-04       1.37e-05       0.13   |
+0026 | 2.84e-05       5.57e-06       0.20   |
+0033 | 2.04e-05       2.59e-06       0.13   |
+0042 | 1.05e-05       1.96e-06       0.19   |
+0054 | 5.45e-06       2.89e-09       0.00   |
+0070 | 2.32e-06       3.25e-07       0.14   |
+0091 | 1.01e-06       2.89e-07       0.29   |
+0118 | 5.26e-07       1.09e-07       0.21   |
+0153 | 3.52e-07       2.28e-08       0.06   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 2, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 2.53e-03       0.00   | 2.06e-03       0.00   | 3.44e-15       0.00  |
+0013 | 1.13e-03       3.07   | 9.26e-04       3.05   | 4.30e-15       -0.85 |
+0016 | 5.04e-04       3.88   | 4.15e-04       3.87   | 3.27e-15       1.32  |
+0020 | 2.25e-04       3.62   | 1.85e-04       3.61   | 5.03e-15       -1.93 |
+0026 | 1.01e-04       3.06   | 8.32e-05       3.06   | 3.18e-15       1.75  |
+0033 | 4.61e-05       3.27   | 3.81e-05       3.27   | 8.04e-15       -3.89 |
+0042 | 2.06e-05       3.35   | 1.70e-05       3.35   | 1.63e-14       -2.94 |
+0054 | 1.03e-05       2.74   | 8.58e-06       2.72   | 5.49e-14       -4.82 |
+0070 | 4.62e-06       3.10   | 3.84e-06       3.10   | 8.23e-14       -1.56 |
+0091 | 2.96e-06       1.70   | 2.48e-06       1.67   | 1.46e-13       -2.19 |
+0118 | 1.33e-06       3.07   | 1.12e-06       3.07   | 1.91e-13       -1.03 |
+0153 | 1.12e-06       0.68   | 9.42e-07       0.66   | 1.05e-12       -6.56 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 2.24e-06       0.00   | 1.07e-05       0.00   |
+0013 | 1.90e-07       9.41   | 8.32e-07       9.74   |
+0016 | 1.31e-07       1.77   | 1.35e-07       8.74   |
+0020 | 4.32e-08       4.98   | 4.06e-08       5.39   |
+0026 | 1.36e-08       4.40   | 1.12e-08       4.90   |
+0033 | 4.95e-09       4.25   | 3.43e-09       4.99   |
+0042 | 1.47e-09       5.04   | 1.01e-09       5.06   |
+0054 | 4.20e-10       4.98   | 3.23e-10       4.54   |
+0070 | 1.05e-10       5.33   | 1.26e-10       3.64   |
+0091 | 4.70e-11       3.08   | 2.10e-11       6.81   |
+0118 | 1.39e-11       4.69   | 6.99e-12       4.24   |
+0153 | 3.74e-12       5.06   | 2.54e-12       3.89   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 1.07e-05       8.48e-06       0.79   |
+0013 | 8.32e-07       1.02e-06       1.23   |
+0016 | 1.35e-07       2.67e-07       1.97   |
+0020 | 4.06e-08       8.39e-08       2.06   |
+0026 | 1.12e-08       2.49e-08       2.21   |
+0033 | 3.43e-09       8.37e-09       2.44   |
+0042 | 1.01e-09       2.48e-09       2.45   |
+0054 | 3.23e-10       7.43e-10       2.30   |
+0070 | 1.26e-10       2.31e-10       1.84   |
+0091 | 2.10e-11       6.81e-11       3.24   |
+0118 | 6.99e-12       2.09e-11       2.99   |
+0153 | 2.54e-12       6.28e-12       2.47   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 2.24e-06       8.48e-06       3.78   |
+0013 | 1.90e-07       1.02e-06       5.38   |
+0016 | 1.31e-07       2.67e-07       2.03   |
+0020 | 4.32e-08       8.39e-08       1.94   |
+0026 | 1.36e-08       2.49e-08       1.83   |
+0033 | 4.95e-09       8.37e-09       1.69   |
+0042 | 1.47e-09       2.48e-09       1.69   |
+0054 | 4.20e-10       7.43e-10       1.77   |
+0070 | 1.05e-10       2.31e-10       2.19   |
+0091 | 4.70e-11       6.81e-11       1.45   |
+0118 | 1.39e-11       2.09e-11       1.50   |
+0153 | 3.74e-12       6.28e-12       1.68   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 3, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+0010 | 1.36e-03       0.00   | 1.17e-03       0.00   | 3.44e-15       0.00  |
+0013 | 6.08e-04       3.08   | 5.22e-04       3.06   | 4.30e-15       -0.85 |
+0016 | 2.71e-04       3.89   | 2.33e-04       3.88   | 5.48e-15       -1.17 |
+0020 | 1.21e-04       3.62   | 1.04e-04       3.62   | 9.02e-15       -2.23 |
+0026 | 5.38e-05       3.08   | 4.64e-05       3.08   | 3.54e-15       3.57  |
+0033 | 2.40e-05       3.39   | 2.07e-05       3.39   | 2.32e-15       1.77  |
+0042 | 1.07e-05       3.35   | 9.20e-06       3.35   | 4.50e-14       -12.30|
+0054 | 4.76e-06       3.21   | 4.10e-06       3.21   | 5.24e-14       -0.61 |
+0070 | 2.12e-06       3.12   | 1.83e-06       3.12   | 8.21e-14       -1.73 |
+0091 | 9.49e-07       3.06   | 8.19e-07       3.06   | 4.65e-13       -6.61 |
+0118 | 4.33e-07       3.02   | 3.74e-07       3.01   | 1.35e-12       -4.10 |
+0153 | 2.15e-07       2.70   | 1.86e-07       2.68   | 3.19e-12       -3.31 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+0010 | 1.66e-06       0.00   | 3.97e-07       0.00   |
+0013 | 5.45e-07       4.24   | 1.61e-08       12.21  |
+0016 | 1.72e-07       5.54   | 6.47e-10       15.49  |
+0020 | 5.43e-08       5.17   | 3.23e-11       13.43  |
+0026 | 1.71e-08       4.40   | 5.92e-12       6.47   |
+0033 | 5.39e-09       4.85   | 3.23e-13       12.19  |
+0042 | 1.70e-09       4.79   | 2.93e-14       9.95   |
+0054 | 5.35e-10       4.60   | 7.11e-15       5.64   |
+0070 | 1.68e-10       4.45   | 4.66e-14       -7.25  |
+0091 | 5.28e-11       4.42   | 2.52e-13       -6.43  |
+0118 | 1.61e-11       4.58   | 6.58e-13       -3.70  |
+0153 | 4.13e-12       5.23   | 1.62e-12       -3.46  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+0010 | 3.97e-07       1.26e-06       3.18   |
+0013 | 1.61e-08       5.29e-07       32.78  |
+0016 | 6.47e-10       1.72e-07       265.46 |
+0020 | 3.23e-11       5.43e-08       1678.67 |
+0026 | 5.92e-12       1.71e-08       2890.91 |
+0033 | 3.23e-13       5.39e-09       16673.13 |
+0042 | 2.93e-14       1.70e-09       57932.00 |
+0054 | 7.11e-15       5.35e-10       75268.00 |
+0070 | 4.66e-14       1.68e-10       3612.78 |
+0091 | 2.52e-13       5.31e-11       210.81 |
+0118 | 6.58e-13       1.67e-11       25.41  |
+0153 | 1.62e-12       5.74e-12       3.55   |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+0010 | 1.66e-06       1.26e-06       0.76   |
+0013 | 5.45e-07       5.29e-07       0.97   |
+0016 | 1.72e-07       1.72e-07       1.00   |
+0020 | 5.43e-08       5.43e-08       1.00   |
+0026 | 1.71e-08       1.71e-08       1.00   |
+0033 | 5.39e-09       5.39e-09       1.00   |
+0042 | 1.70e-09       1.70e-09       1.00   |
+0054 | 5.35e-10       5.35e-10       1.00   |
+0070 | 1.68e-10       1.68e-10       1.00   |
+0091 | 5.28e-11       5.31e-11       1.00   |
+0118 | 1.61e-11       1.67e-11       1.04   |
+0153 | 4.13e-12       5.74e-12       1.39   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 3, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+10   | 1.36e-03       0.00   | 1.17e-03       0.00   | 2.18e-20       0.00  |
+13   | 6.08e-04       3.08   | 5.22e-04       3.06   | 6.86e-21       4.40  |
+16   | 2.71e-04       3.89   | 2.33e-04       3.88   | 2.16e-21       5.56  |
+20   | 1.21e-04       3.62   | 1.04e-04       3.62   | 2.77e-21       -1.11 |
+26   | 5.38e-05       3.08   | 4.64e-05       3.08   | 2.97e-21       -0.27 |
+33   | 2.40e-05       3.39   | 2.07e-05       3.39   | 9.41e-22       4.83  |
+42   | 1.07e-05       3.35   | 9.20e-06       3.35   | 2.98e-22       4.77  |
+54   | 4.76e-06       3.21   | 4.10e-06       3.21   | 3.05e-22       -0.09 |
+70   | 2.12e-06       3.12   | 1.83e-06       3.12   | 9.70e-23       4.41  |
+91   | 9.44e-07       3.08   | 8.14e-07       3.08   | 3.08e-23       4.37  |
+118  | 4.22e-07       3.10   | 3.64e-07       3.10   | 3.13e-23       -0.07 |
+153  | 1.88e-07       3.11   | 1.62e-07       3.11   | 1.01e-23       4.36  |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+10   | 1.66e-06       0.00   | 3.97e-07       0.00   |
+13   | 5.45e-07       4.24   | 1.61e-08       12.21  |
+16   | 1.72e-07       5.54   | 6.47e-10       15.49  |
+20   | 5.43e-08       5.17   | 3.24e-11       13.42  |
+26   | 1.71e-08       4.40   | 5.92e-12       6.47   |
+33   | 5.39e-09       4.85   | 3.27e-13       12.15  |
+42   | 1.70e-09       4.79   | 9.56e-15       14.65  |
+54   | 5.35e-10       4.60   | 4.07e-14       -5.76  |
+70   | 1.68e-10       4.45   | 1.08e-15       13.98  |
+91   | 5.31e-11       4.40   | 2.63e-16       5.38   |
+118  | 1.67e-11       4.45   | 8.47e-17       4.37   |
+153  | 5.26e-12       4.45   | 6.75e-19       18.60  |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+10   | 3.97e-07       1.26e-06       3.18   |
+13   | 1.61e-08       5.29e-07       32.78  |
+16   | 6.47e-10       1.72e-07       265.46 |
+20   | 3.24e-11       5.43e-08       1678.21 |
+26   | 5.92e-12       1.71e-08       2890.28 |
+33   | 3.27e-13       5.39e-09       16499.66 |
+42   | 9.56e-15       1.70e-09       177692.26 |
+54   | 4.07e-14       5.35e-10       13155.33 |
+70   | 1.08e-15       1.68e-10       155809.63 |
+91   | 2.63e-16       5.31e-11       201431.66 |
+118  | 8.47e-17       1.67e-11       197394.42 |
+153  | 6.75e-19       5.26e-12       7795080.62 |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+10   | 1.66e-06       1.26e-06       0.76   |
+13   | 5.45e-07       5.29e-07       0.97   |
+16   | 1.72e-07       1.72e-07       1.00   |
+20   | 5.43e-08       5.43e-08       1.00   |
+26   | 1.71e-08       1.71e-08       1.00   |
+33   | 5.39e-09       5.39e-09       1.00   |
+42   | 1.70e-09       1.70e-09       1.00   |
+54   | 5.35e-10       5.35e-10       1.00   |
+70   | 1.68e-10       1.68e-10       1.00   |
+91   | 5.31e-11       5.31e-11       1.00   |
+118  | 1.67e-11       1.67e-11       1.00   |
+153  | 5.26e-12       5.26e-12       1.00   |
+--------------------
+test_Functional
+--------------------
+Solve Functional problem.
+Problem Info:
+1. Functional: J(u) = (u,g)
+2. PDE: Laplace equation
+3. HDG method
+   k = 4, tau = h^0 
+--------------------
+No Post-processing:
+
+Solution Error
+N    | E_u            Order  | E_q            Order  | E_uhat         Order |
+10   | 8.59e-04       0.00   | 7.54e-04       0.00   | 2.18e-20       0.00  |
+13   | 3.83e-04       3.08   | 3.37e-04       3.07   | 6.86e-21       4.40  |
+16   | 1.71e-04       3.89   | 1.50e-04       3.89   | 8.79e-21       -1.19 |
+20   | 7.60e-05       3.62   | 6.71e-05       3.62   | 2.77e-21       5.17  |
+26   | 3.39e-05       3.08   | 2.99e-05       3.08   | 2.97e-21       -0.27 |
+33   | 1.51e-05       3.39   | 1.33e-05       3.39   | 9.40e-22       4.83  |
+42   | 6.72e-06       3.35   | 5.94e-06       3.35   | 9.62e-22       -0.10 |
+54   | 2.99e-06       3.22   | 2.64e-06       3.22   | 3.05e-22       4.57  |
+70   | 1.33e-06       3.12   | 1.18e-06       3.12   | 9.68e-23       4.42  |
+91   | 5.94e-07       3.08   | 5.25e-07       3.08   | 9.80e-23       -0.05 |
+118  | 2.65e-07       3.11   | 2.34e-07       3.11   | 3.13e-23       4.39  |
+153  | 1.18e-07       3.11   | 1.04e-07       3.11   | 3.18e-23       -0.06 |
+
+Functional Error
+N    | J(u)-Jh(u_h)   Order  | J(u)-J(u_h)    Order  |
+10   | 1.74e-06       0.00   | 2.06e-09       0.00   |
+13   | 5.48e-07       4.40   | 3.43e-11       15.61  |
+16   | 1.72e-07       5.56   | 7.27e-13       18.56  |
+20   | 5.43e-08       5.18   | 2.74e-14       14.69  |
+26   | 1.71e-08       4.40   | 1.82e-15       10.34  |
+33   | 5.39e-09       4.85   | 1.67e-16       10.01  |
+42   | 1.70e-09       4.79   | 1.89e-17       9.04   |
+54   | 5.35e-10       4.60   | 1.84e-18       9.28   |
+70   | 1.68e-10       4.45   | 2.90e-19       7.12   |
+91   | 5.31e-11       4.40   | 1.50e-20       11.29  |
+118  | 1.67e-11       4.45   | 1.39e-21       9.15   |
+153  | 5.26e-12       4.45   | 1.31e-22       9.10   |
+--------------------
+Results for estimator
+N    | J(u)-J(u_h)    esti_1         ratio  
+10   | 2.06e-09       1.74e-06       841.84 |
+13   | 3.43e-11       5.48e-07       15960.13 |
+16   | 7.27e-13       1.72e-07       237155.99 |
+20   | 2.74e-14       5.43e-08       1979612.09 |
+26   | 1.82e-15       1.71e-08       9392889.17 |
+33   | 1.67e-16       5.39e-09       32203373.73 |
+42   | 1.89e-17       1.70e-09       89635013.80 |
+54   | 1.84e-18       5.35e-10       290837718.48 |
+70   | 2.90e-19       1.68e-10       581406506.04 |
+91   | 1.50e-20       5.31e-11       3540928456.39 |
+118  | 1.39e-21       1.67e-11       12023904145.19 |
+153  | 1.31e-22       5.26e-12       40243017400.07 |
+
+N    | J(u)-Jh(u_h)   esti_1         ratio  
+10   | 1.74e-06       1.74e-06       1.00   |
+13   | 5.48e-07       5.48e-07       1.00   |
+16   | 1.72e-07       1.72e-07       1.00   |
+20   | 5.43e-08       5.43e-08       1.00   |
+26   | 1.71e-08       1.71e-08       1.00   |
+33   | 5.39e-09       5.39e-09       1.00   |
+42   | 1.70e-09       1.70e-09       1.00   |
+54   | 5.35e-10       5.35e-10       1.00   |
+70   | 1.68e-10       1.68e-10       1.00   |
+91   | 5.31e-11       5.31e-11       1.00   |
+118  | 1.67e-11       1.67e-11       1.00   |
+153  | 5.26e-12       5.26e-12       1.00   |
+--------------------
+test_Mesh_Projection
+           <strong>Numerics</strong>                                                               <strong>error_list_uh</strong>                                                                                                            <strong>error_list_qh</strong>                                                                                                              <strong>error_list_uhat</strong>                                                     
+    <strong>_______________________</strong>    <strong>___________________________________________________________________________________________________________________</strong>    <strong>________________________________________________________________________________________________________________________</strong>    <strong>________________________________________________________________________________________________________________________</strong>
+
+    "Uni"                           0.0107366        
+    0.00937279        
+    0.00944861        
+    0.00155642        
+    0.00155642        
+          0.0089263        
+     0.00773341        
+     0.00866286        
+    0.000885106        
+    0.000885106        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+     0.00579897        
+     0.00640675        
+
+    "Non-uni"                       0.0107366        
+    0.00937279        
+    0.00944861        
+    0.00155642        
+    0.00155642        
+          0.0089263        
+     0.00773341        
+     0.00866286        
+    0.000885106        
+    0.000885106        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+     0.00579897        
+     0.00640675        
+
+    "Non-uni + L^2 project"         0.0107366        
+    0.00937279        
+    0.00944861        
+    0.00155642        
+    0.00155642        
+          0.0089263        
+     0.00773341        
+     0.00866286        
+    0.000885106        
+    0.000885106        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+     0.00579897        
+     0.00640675        
+
+    "Postprocessed on uni"          0.0107366        
+    0.00937279        
+    0.00944861        
+    0.00155642        
+    0.00155642        
+          0.0089263        
+     0.00773341        
+     0.00866286        
+    0.000885106        
+    0.000885106        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+     0.00579897        
+     0.00640675        
+
+    "Projected PP"                  0.0107366        
+    0.00937279        
+    0.00944861        
+    0.00155642        
+    0.00155642        
+          0.0089263        
+     0.00773341        
+     0.00866286        
+    0.000885106        
+    0.000885106        
+        4.29477e-21        
+    3.93563e-21        
+    3.36653e-21        
+     0.00579897        
+     0.00640675        
+
+
+global class_t
+class_t = 'double'
+
+class_t =
+
+    'double'
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.0737e-02       8.9263e-03        5.2400e-15   
+    "Non-uni"                   9.3728e-03       7.7334e-03        7.8581e-15   
+    "Non-uni + L^2 project"     9.4486e-03       8.6629e-03        6.6578e-15   
+    "Postprocessed on uni"      1.5564e-03       8.8511e-04        5.7990e-03   
+    "Projected PP"              1.5564e-03       8.8511e-04        6.4067e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.0737e-02       8.9263e-03        5.2400e-15   
+    "Non-uni"                   8.2196e-03       7.0121e-03        5.4828e-15   
+    "Non-uni + L^2 project"     8.1586e-03       8.8199e-03        3.8316e-15   
+    "Postprocessed on uni"      8.5398e-04       6.4860e-04        3.0910e-03   
+    "Projected PP"              8.5398e-04       6.4860e-04        3.2366e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.0737e-02       8.9263e-03        5.2400e-15   
+    "Non-uni"                   8.1823e-03       6.9854e-03        3.1188e-15   
+    "Non-uni + L^2 project"     8.1526e-03       8.8199e-03        2.1180e-15   
+    "Postprocessed on uni"      8.6187e-04       6.4859e-04        3.1254e-03   
+    "Projected PP"              8.6187e-04       6.4859e-04        3.3089e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.0737e-02       8.9263e-03        5.2400e-15   
+    "Non-uni"                   1.0028e-02       8.1500e-03        1.6161e-14   
+    "Non-uni + L^2 project"     1.0169e-02       8.5622e-03        1.1907e-14   
+    "Postprocessed on uni"      1.4603e-03       8.3127e-04        5.8484e-03   
+    "Projected PP"              1.4603e-03       8.3127e-04        7.0298e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       6.6020e-03       4.6570e-03        1.4609e-12   
+    "Non-uni"                   6.5823e-03       4.6312e-03        1.4680e-12   
+    "Non-uni + L^2 project"     6.5891e-03       4.6416e-03        1.4576e-12   
+    "Postprocessed on uni"      1.3049e-01       1.0253e-02        1.0035e+00   
+    "Projected PP"              1.3049e-01       1.0253e-02        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       6.6020e-03       4.6570e-03        1.4609e-12   
+    "Non-uni"                   6.5864e-03       4.6376e-03        1.4652e-12   
+    "Non-uni + L^2 project"     6.5911e-03       4.6464e-03        1.4583e-12   
+    "Postprocessed on uni"      1.3049e-01       1.0253e-02        1.0035e+00   
+    "Projected PP"              1.3049e-01       1.0253e-02        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       6.6020e-03       4.6570e-03        1.4609e-12   
+    "Non-uni"                   1.6813e-03       1.3417e-03        1.9843e-12   
+    "Non-uni + L^2 project"     1.1229e-03       3.7376e-03        1.4259e-12   
+    "Postprocessed on uni"      1.3047e-01       1.0976e-02        1.0035e+00   
+    "Projected PP"              1.3047e-01       1.1042e-02        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       6.6020e-03       4.6570e-03        1.4609e-12   
+    "Non-uni"                   1.6813e-03       1.3417e-03        1.9843e-12   
+    "Non-uni + L^2 project"     1.1229e-03       3.7376e-03        1.4259e-12   
+    "Postprocessed on uni"      1.3047e-01       1.0976e-02        1.0035e+00   
+    "Projected PP"              1.3047e-01       1.1042e-02        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   1.6214e-01       1.5935e-01        3.6719e-12   
+    "Non-uni + L^2 project"     1.4459e-01       3.1671e-01        2.9325e-12   
+    "Postprocessed on uni"      5.2404e-02       4.1982e-01        2.3131e-01   
+    "Projected PP"              5.2404e-02       4.1982e-01        2.3257e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   1.6214e-01       1.5935e-01        3.6719e-12   
+    "Non-uni + L^2 project"     1.4459e-01       3.1671e-01        2.9325e-12   
+    "Postprocessed on uni"      5.2404e-02       4.1982e-01        2.3131e-01   
+    "Projected PP"              5.2404e-02       4.1982e-01        2.3257e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   1.6214e-01       1.5935e-01        3.6719e-12   
+    "Non-uni + L^2 project"     1.4459e-01       3.1671e-01        2.9325e-12   
+    "Postprocessed on uni"      5.2404e-02       4.1982e-01        2.3131e-01   
+    "Projected PP"              5.2404e-02       4.1982e-01        2.3257e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.0737e-02       8.9263e-03        5.2400e-15   
+    "Non-uni"                   9.3728e-03       7.7334e-03        7.8581e-15   
+    "Non-uni + L^2 project"     9.4486e-03       8.6629e-03        6.6578e-15   
+    "Postprocessed on uni"      1.5564e-03       8.8511e-04        5.7990e-03   
+    "Projected PP"              1.5564e-03       8.8511e-04        6.4067e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       1.0737e-02       8.9263e-03        5.2400e-15   
+    "Non-uni"                   9.3728e-03       7.7334e-03        7.8581e-15   
+    "Non-uni + L^2 project"     9.4486e-03       8.6629e-03        6.6578e-15   
+    "Postprocessed on uni"      1.5564e-03       8.8511e-04        5.7990e-03   
+    "Projected PP"              1.5564e-03       8.8511e-04        6.4067e-03   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       3.7544e-01       3.1987e-01        4.2244e-12   
+    "Non-uni"                   3.6237e-01       3.0095e-01        7.3168e-12   
+    "Non-uni + L^2 project"     3.6033e-01       3.1277e-01        6.1638e-12   
+    "Postprocessed on uni"      1.4513e-01       4.1579e-01        5.8160e-01   
+    "Projected PP"              1.4513e-01       4.1579e-01        6.2464e-01   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       6.6020e-03       4.6570e-03        1.4609e-12   
+    "Non-uni"                   1.6772e-03       1.3376e-03        1.9865e-12   
+    "Non-uni + L^2 project"     1.1180e-03       3.7369e-03        1.4266e-12   
+    "Postprocessed on uni"      1.3047e-01       1.0976e-02        1.0035e+00   
+    "Projected PP"              1.3047e-01       1.1042e-02        1.0035e+00   
+
+test_Mesh_Projection
+           <strong>Numerics</strong>            <strong>error_list_uh</strong>    <strong>error_list_qh</strong>    <strong>error_list_uhat</strong>
+    <strong>_______________________</strong>    <strong>_____________</strong>    <strong>_____________</strong>    <strong>_______________</strong>
+
+    "Uni"                       6.6020e-03       4.6570e-03        1.4609e-12   
+    "Non-uni"                   1.6772e-03       1.3376e-03        1.9865e-12   
+    "Non-uni + L^2 project"     1.1180e-03       3.7369e-03        1.4266e-12   
+    "Postprocessed on uni"      1.3047e-01       1.0976e-02        1.0035e+00   
+    "Projected PP"              1.3047e-01       1.1042e-02        1.0035e+00   
+
