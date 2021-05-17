@@ -1,4 +1,4 @@
-µ# UltimateHDG_1D
+# UltimateHDG_1D
 
 This project is the completion and extension of my previous HDG 1D code.
 
@@ -13,6 +13,8 @@ This project is the completion and extension of my previous HDG 1D code.
 
 
 ## All the folders and functions
+
+#### Check the post-processing branch for all functions 
 :white_check_mark: done
 
 :wrench: developing
