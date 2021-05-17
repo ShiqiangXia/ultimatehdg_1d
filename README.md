@@ -42,14 +42,14 @@ This project is the completion and extension of my previous HDG 1D code.
     * :white_check_mark: local recovery
 5. postprocessing
     * :white_check_mark: Evaluate at quadrature points
-    * :bulb: convoltuion
-    * :bulb: Recovery
+    * :white_check_mark: convoltuion
+    * :white_check_mark: Recovery
 6. functional
-    * :bulb: Volume integral
+    * :white_check_mark: Volume integral
     * :bulb: boundary integral
 7. adaptivity
-    * :bulb: adjoint-correction without postprocessing
-    * :bulb: postprocessing and adjoint-correction
+    * :white_check_mark: adjoint-correction without postprocessing
+    * :white_check_mark: postprocessing and adjoint-correction
 8. logs
 9. results
 10. tests
@@ -57,11 +57,6 @@ This project is the completion and extension of my previous HDG 1D code.
 
 ## Potential problems
 
-1. linespace with precision?
-2. pass GQ points and weights, instead of computing every time
-
 
 
 ## To do list
-
-Rewrite local solver and global solver into different routines because we want to do recovery later.
